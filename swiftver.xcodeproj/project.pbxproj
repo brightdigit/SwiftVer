@@ -10,12 +10,18 @@
 		B38DFEF21C0633F200C79C1F /* swiftver_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = B38DFEF11C0633F200C79C1F /* swiftver_ios.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B38DFEFF1C06340200C79C1F /* swiftver_wos.h in Headers */ = {isa = PBXBuildFile; fileRef = B38DFEFE1C06340200C79C1F /* swiftver_wos.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B38DFF0C1C06341600C79C1F /* swiftver_osx.h in Headers */ = {isa = PBXBuildFile; fileRef = B38DFF0B1C06341600C79C1F /* swiftver_osx.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B38DFF361C068A9B00C79C1F /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38DFF351C068A9B00C79C1F /* Version.swift */; };
+		B38DFF371C068A9B00C79C1F /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38DFF351C068A9B00C79C1F /* Version.swift */; };
+		B38DFF381C068A9B00C79C1F /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38DFF351C068A9B00C79C1F /* Version.swift */; };
+		B38DFF4A1C06940700C79C1F /* rfc3339.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38DFF491C06940700C79C1F /* rfc3339.swift */; };
+		B38DFF4B1C06940700C79C1F /* rfc3339.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38DFF491C06940700C79C1F /* rfc3339.swift */; };
+		B38DFF4C1C06940700C79C1F /* rfc3339.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38DFF491C06940700C79C1F /* rfc3339.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B38DFEE21C06337700C79C1F /* swiftver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swiftver.h; sourceTree = "<group>"; };
 		B38DFEE41C06337700C79C1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B38DFEEF1C0633F200C79C1F /* swiftver_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = swiftver_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B38DFEEF1C0633F200C79C1F /* SwiftVer_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftVer_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38DFEF11C0633F200C79C1F /* swiftver_ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swiftver_ios.h; sourceTree = "<group>"; };
 		B38DFEF31C0633F200C79C1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B38DFEFC1C06340200C79C1F /* swiftver_wos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = swiftver_wos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +30,8 @@
 		B38DFF091C06341600C79C1F /* swiftver_osx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = swiftver_osx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38DFF0B1C06341600C79C1F /* swiftver_osx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swiftver_osx.h; sourceTree = "<group>"; };
 		B38DFF0D1C06341600C79C1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B38DFF351C068A9B00C79C1F /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		B38DFF491C06940700C79C1F /* rfc3339.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rfc3339.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +73,7 @@
 		B38DFEE01C06337700C79C1F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B38DFEEF1C0633F200C79C1F /* swiftver_ios.framework */,
+				B38DFEEF1C0633F200C79C1F /* SwiftVer_iOS.framework */,
 				B38DFEFC1C06340200C79C1F /* swiftver_wos.framework */,
 				B38DFF091C06341600C79C1F /* swiftver_osx.framework */,
 			);
@@ -75,8 +83,10 @@
 		B38DFEE11C06337700C79C1F /* swiftver */ = {
 			isa = PBXGroup;
 			children = (
+				B38DFF491C06940700C79C1F /* rfc3339.swift */,
 				B38DFEE21C06337700C79C1F /* swiftver.h */,
 				B38DFEE41C06337700C79C1F /* Info.plist */,
+				B38DFF351C068A9B00C79C1F /* Version.swift */,
 			);
 			path = swiftver;
 			sourceTree = "<group>";
@@ -138,9 +148,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B38DFEEE1C0633F200C79C1F /* swiftver_ios */ = {
+		B38DFEEE1C0633F200C79C1F /* SwiftVer_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B38DFEF61C0633F200C79C1F /* Build configuration list for PBXNativeTarget "swiftver_ios" */;
+			buildConfigurationList = B38DFEF61C0633F200C79C1F /* Build configuration list for PBXNativeTarget "SwiftVer_iOS" */;
 			buildPhases = (
 				B38DFEEA1C0633F200C79C1F /* Sources */,
 				B38DFEEB1C0633F200C79C1F /* Frameworks */,
@@ -151,9 +161,9 @@
 			);
 			dependencies = (
 			);
-			name = swiftver_ios;
+			name = SwiftVer_iOS;
 			productName = swiftver_ios;
-			productReference = B38DFEEF1C0633F200C79C1F /* swiftver_ios.framework */;
+			productReference = B38DFEEF1C0633F200C79C1F /* SwiftVer_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B38DFEFB1C06340200C79C1F /* swiftver_wos */ = {
@@ -224,7 +234,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B38DFEEE1C0633F200C79C1F /* swiftver_ios */,
+				B38DFEEE1C0633F200C79C1F /* SwiftVer_iOS */,
 				B38DFEFB1C06340200C79C1F /* swiftver_wos */,
 				B38DFF081C06341600C79C1F /* swiftver_osx */,
 			);
@@ -260,6 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B38DFF361C068A9B00C79C1F /* Version.swift in Sources */,
+				B38DFF4A1C06940700C79C1F /* rfc3339.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B38DFF371C068A9B00C79C1F /* Version.swift in Sources */,
+				B38DFF4B1C06940700C79C1F /* rfc3339.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B38DFF381C068A9B00C79C1F /* Version.swift in Sources */,
+				B38DFF4C1C06940700C79C1F /* rfc3339.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +333,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -359,7 +374,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -372,6 +386,7 @@
 		B38DFEF41C0633F200C79C1F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -379,15 +394,17 @@
 				INFOPLIST_FILE = swiftver_ios/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.swiftver-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.SwiftVer-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		B38DFEF51C0633F200C79C1F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -395,7 +412,7 @@
 				INFOPLIST_FILE = swiftver_ios/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.swiftver-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.SwiftVer-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -405,6 +422,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -416,6 +434,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -425,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -444,6 +464,7 @@
 		B38DFF0F1C06341600C79C1F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -459,12 +480,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		B38DFF101C06341600C79C1F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -495,7 +518,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B38DFEF61C0633F200C79C1F /* Build configuration list for PBXNativeTarget "swiftver_ios" */ = {
+		B38DFEF61C0633F200C79C1F /* Build configuration list for PBXNativeTarget "SwiftVer_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B38DFEF41C0633F200C79C1F /* Debug */,
