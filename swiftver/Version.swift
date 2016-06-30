@@ -56,7 +56,7 @@ public struct VersionControlInfo {
       self.BASENAME = BASENAME
       self.UUID = UUID
       self.NUM = NUM
-      self.DATE = dateForRFC3339DateTimeString(DATE)
+      self.DATE = date(forRFC3339DateTimeString: DATE)
       self.BRANCH = BRANCH
       self.TAG = TAG
       self.TICK = TICK
@@ -72,7 +72,7 @@ public struct Version {
   public let build:UInt8
   public let versionControl: VersionControlInfo?
   
-  public init?(bundle: NSBundle, versionControl: VersionControlInfo? = nil) {
+  public init?(bundle: Bundle, versionControl: VersionControlInfo? = nil) {
     guard let versionString = bundle.infoDictionary?["CFBundleShortVersionString"] as? String else {
       return nil
     }

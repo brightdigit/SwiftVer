@@ -208,14 +208,18 @@
 		B38DFED61C06337700C79C1F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = BrightDigit;
 				TargetAttributes = {
 					B38DFEEE1C0633F200C79C1F = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = MLT7M394S7;
+						DevelopmentTeamName = "BRIGHT DIGIT LLC";
 					};
 					B38DFEFB1C06340200C79C1F = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = MLT7M394S7;
+						DevelopmentTeamName = "BRIGHT DIGIT LLC";
 					};
 					B38DFF081C06341600C79C1F = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -333,6 +337,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -374,6 +379,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -415,6 +421,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.SwiftVer-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -456,6 +463,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -503,6 +511,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -525,6 +534,7 @@
 				B38DFEF51C0633F200C79C1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B38DFF011C06340200C79C1F /* Build configuration list for PBXNativeTarget "swiftver_wos" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +543,7 @@
 				B38DFF031C06340200C79C1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B38DFF0E1C06341600C79C1F /* Build configuration list for PBXNativeTarget "swiftver_osx" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +552,7 @@
 				B38DFF101C06341600C79C1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
