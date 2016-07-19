@@ -36,7 +36,7 @@ private func getThreadLocalRFC3339DateFormatter() -> DateFormatter {
 /// :param: create closure that will be invoked to create the object
 /// :returns: object of type T
 private func cachedThreadLocalObjectWithKey<T: AnyObject>(_ key: String, create: () -> T) -> T {
-    let threadDictionary = Thread.current().threadDictionary
+    let threadDictionary = Thread.current.threadDictionary
         if let cachedObject = threadDictionary[key] as? T {
             return cachedObject
         }
