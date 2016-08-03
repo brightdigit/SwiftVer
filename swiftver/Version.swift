@@ -9,15 +9,15 @@
 import Foundation
 
 public enum VersionControlType {
-  public static let lookup: [String:VersionControlType] = ["Git": .Git, "Mercurial": .Mercurial, "Subversion": .Subversion, "Bazaar" : .Bazaar]
+  public static let lookup: [String:VersionControlType] = ["Git": .git, "Mercurial": .mercurial, "Subversion": .subversion, "Bazaar" : .bazaar]
   //Git, Mercurial, Subversion, Bazaar, Unknown
-  case Git, Mercurial, Subversion, Bazaar, Unknown
+  case git, mercurial, subversion, bazaar, unknown
   
   public init (TYPE: String) {
     if let value = VersionControlType.lookup[TYPE] {
       self = value
     } else {
-      self = .Unknown
+      self = .unknown
     }
   }
 }
@@ -27,7 +27,7 @@ public struct VersionControlInfo {
   public let BASENAME:String
   public let UUID:	String?
   public let NUM:	Int
-  public let DATE: NSDate?
+  public let DATE: Date?
   public let BRANCH:	String
   public let TAG:	String?
   public let TICK:	Int?

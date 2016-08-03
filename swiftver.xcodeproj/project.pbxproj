@@ -215,6 +215,7 @@
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = MLT7M394S7;
 						DevelopmentTeamName = "BRIGHT DIGIT LLC";
+						LastSwiftMigration = 0800;
 					};
 					B38DFEFB1C06340200C79C1F = {
 						CreatedOnToolsVersion = 7.1.1;

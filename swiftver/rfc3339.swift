@@ -5,7 +5,7 @@ import Foundation
 ///
 /// :param: rfc3339DateTimeString string with format "yyyy-MM-ddTHH:mm:ssZ"
 /// :returns: NSDate, or nil if string cannot be parsed
-public func date(forRFC3339DateTimeString rfc3339DateTimeString: String) -> NSDate? {
+public func date(forRFC3339DateTimeString rfc3339DateTimeString: String) -> Date? {
     let formatter = getThreadLocalRFC3339DateFormatter()
     return formatter.date(from: rfc3339DateTimeString)
 }
@@ -14,7 +14,7 @@ public func date(forRFC3339DateTimeString rfc3339DateTimeString: String) -> NSDa
 ///
 /// :param: date NSDate
 /// :returns: String
-public func rfc3339DateTimeStringForDate(date: Date) -> String {
+public func rfc3339DateTimeStringForDate(_ date: Date) -> String {
     let formatter = getThreadLocalRFC3339DateFormatter()
     return formatter.string(from: date)
 }
