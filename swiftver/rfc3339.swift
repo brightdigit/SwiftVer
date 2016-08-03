@@ -22,11 +22,11 @@ public func rfc3339DateTimeStringForDate(date: Date) -> String {
 // Date formatters are not thread-safe, so use a thread-local instance
 private func getThreadLocalRFC3339DateFormatter() -> DateFormatter {
     return cachedThreadLocalObjectWithKey(key: "net.kristopherjohnson.getThreadLocalRFC3339DateFormatter") {
-        let en_US_POSIX = Locale(localeIdentifier: "en_US_POSIX")
+        let en_US_POSIX = Locale(identifier: "en_US_POSIX")
         let rfc3339DateFormatter = DateFormatter()
         rfc3339DateFormatter.locale = en_US_POSIX
         rfc3339DateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssXXX"
-        rfc3339DateFormatter.timeZone = TimeZone(forSecondsFromGMT: 0)
+        rfc3339DateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
         return rfc3339DateFormatter
     }
 }
@@ -36,7 +36,7 @@ private func getThreadLocalRFC3339DateFormatter() -> DateFormatter {
 /// :param: create closure that will be invoked to create the object
 /// :returns: object of type T
 private func cachedThreadLocalObjectWithKey<T: AnyObject>(key: String, create: () -> T) -> T {
-    let threadDictionary = Thread.current().threadDictionary
+    let threadDictionary = Thread.current.threadDictionary
         if let cachedObject = threadDictionary[key] as? T {
             return cachedObject
         }
