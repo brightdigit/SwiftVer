@@ -67,8 +67,29 @@ public struct VersionControlInfo {
   }
 }
 
+public struct SemVer : CustomStringConvertible  {
+  public let Major:UInt8
+  public let Minor:UInt8
+  public let Patch:UInt8
+  
+  public init?(versionString: String) {
+    let values = versionString.components(separatedBy: ".").flatMap{  UInt8($0) }
+    if values.count == 3 {
+      self.Major = values.first!
+      self.Minor = values[1]
+      self.Patch = values[2]
+    } else {
+      return nil
+    }
+  }
+  
+  public var description:String {
+    return "\(self.Major).\(self.Minor).\(self.Patch)"
+  }
+}
+
 public struct Version {
-  public let version:Float
+  public let version:SemVer
   public let build:UInt8
   public let versionControl: VersionControlInfo?
   
@@ -77,7 +98,7 @@ public struct Version {
       return nil
     }
     
-    guard let version = Float(versionString) else {
+    guard let version = SemVer(versionString: versionString) else {
       return nil
     }
     
