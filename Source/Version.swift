@@ -15,11 +15,11 @@ extension Dictionary where Value : Equatable {
 }
 
 public enum VersionControlType : CustomStringConvertible {
-  public static let lookup: [String:VersionControlType] = ["Git": .git, "Mercurial": .mercurial, "Subversion": .subversion, "Bazaar" : .bazaar]
+  public static let lookup: [String:VersionControlType] = ["git": .git, "mercurial": .mercurial, "subversion": .subversion, "bazaar" : .bazaar]
   case git, mercurial, subversion, bazaar, unknown
   
   public init (TYPE: String) {
-    if let value = VersionControlType.lookup[TYPE] {
+    if let value = VersionControlType.lookup[TYPE.lowercased()] {
       self = value
     } else {
       self = .unknown

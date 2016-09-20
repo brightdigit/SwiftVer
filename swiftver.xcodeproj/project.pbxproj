@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B3DA725E1D919E9A00C95C36 /* rfc3339.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DA725C1D919E9A00C95C36 /* rfc3339.swift */; };
-		B3DA725F1D919E9A00C95C36 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DA725D1D919E9A00C95C36 /* Version.swift */; };
+		B3FE6A161D91D3630085656C /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A141D91D3630085656C /* Version.swift */; };
+		B3FE6A171D91D3630085656C /* rfc3339.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A151D91D3630085656C /* rfc3339.swift */; };
 		D95E1BE71D88D63400F94976 /* SwiftVer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95E1BDD1D88D63300F94976 /* SwiftVer.framework */; };
 		D95E1BEC1D88D63400F94976 /* SwiftVerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1BEB1D88D63400F94976 /* SwiftVerTests.swift */; };
 		D95E1BEE1D88D63400F94976 /* SwiftVer.h in Headers */ = {isa = PBXBuildFile; fileRef = D95E1BE01D88D63300F94976 /* SwiftVer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,8 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B3DA725C1D919E9A00C95C36 /* rfc3339.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rfc3339.swift; sourceTree = "<group>"; };
-		B3DA725D1D919E9A00C95C36 /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		B3FE6A141D91D3630085656C /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		B3FE6A151D91D3630085656C /* rfc3339.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rfc3339.swift; sourceTree = "<group>"; };
 		D95E1BDD1D88D63300F94976 /* SwiftVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95E1BE01D88D63300F94976 /* SwiftVer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftVer.h; sourceTree = "<group>"; };
 		D95E1BE11D88D63300F94976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,8 +78,8 @@
 		D95E1BDF1D88D63300F94976 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				B3DA725C1D919E9A00C95C36 /* rfc3339.swift */,
-				B3DA725D1D919E9A00C95C36 /* Version.swift */,
+				B3FE6A141D91D3630085656C /* Version.swift */,
+				B3FE6A151D91D3630085656C /* rfc3339.swift */,
 				D95E1BE01D88D63300F94976 /* SwiftVer.h */,
 				D95E1BE11D88D63300F94976 /* Info.plist */,
 			);
@@ -216,8 +216,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3DA725F1D919E9A00C95C36 /* Version.swift in Sources */,
-				B3DA725E1D919E9A00C95C36 /* rfc3339.swift in Sources */,
+				B3FE6A161D91D3630085656C /* Version.swift in Sources */,
+				B3FE6A171D91D3630085656C /* rfc3339.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +281,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -328,7 +328,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -351,7 +351,7 @@
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.SwiftVer;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.--PROJECT-NAME--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -371,7 +371,7 @@
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.SwiftVer;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.--PROJECT-NAME--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
