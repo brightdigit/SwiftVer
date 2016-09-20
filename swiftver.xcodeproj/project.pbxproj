@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B3FE6A161D91D3630085656C /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A141D91D3630085656C /* Version.swift */; };
-		B3FE6A171D91D3630085656C /* rfc3339.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A151D91D3630085656C /* rfc3339.swift */; };
 		D95E1BE71D88D63400F94976 /* SwiftVer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95E1BDD1D88D63300F94976 /* SwiftVer.framework */; };
 		D95E1BEC1D88D63400F94976 /* SwiftVerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1BEB1D88D63400F94976 /* SwiftVerTests.swift */; };
 		D95E1BEE1D88D63400F94976 /* SwiftVer.h in Headers */ = {isa = PBXBuildFile; fileRef = D95E1BE01D88D63300F94976 /* SwiftVer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D95E1BF91D88E01300F94976 /* wk.png in Resources */ = {isa = PBXBuildFile; fileRef = D95E1BF81D88E01300F94976 /* wk.png */; };
+		D95E1BEE1D88D63400F94976 /* SwiftVer.h in Headers */ = {isa = PBXBuildFile; fileRef = D95E1BE01D88D63300F94976 /* SwiftVer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,8 +25,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B3FE6A141D91D3630085656C /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
-		B3FE6A151D91D3630085656C /* rfc3339.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rfc3339.swift; sourceTree = "<group>"; };
 		D95E1BDD1D88D63300F94976 /* SwiftVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95E1BE01D88D63300F94976 /* SwiftVer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftVer.h; sourceTree = "<group>"; };
 		D95E1BE11D88D63300F94976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +32,7 @@
 		D95E1BEB1D88D63400F94976 /* SwiftVerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftVerTests.swift; sourceTree = "<group>"; };
 		D95E1BED1D88D63400F94976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D95E1BF81D88E01300F94976 /* wk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wk.png; path = Resources/wk.png; sourceTree = SOURCE_ROOT; };
+		D95E1BEB1D88D63400F94976 /* SwiftVerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftVerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +76,7 @@
 		D95E1BDF1D88D63300F94976 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				B3FE6A141D91D3630085656C /* Version.swift */,
-				B3FE6A151D91D3630085656C /* rfc3339.swift */,
+			isa = PBXGroup;
 				D95E1BE01D88D63300F94976 /* SwiftVer.h */,
 				D95E1BE11D88D63300F94976 /* Info.plist */,
 			);
@@ -216,8 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3FE6A161D91D3630085656C /* Version.swift in Sources */,
-				B3FE6A171D91D3630085656C /* rfc3339.swift in Sources */,
+			isa = PBXSourcesBuildPhase;
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +277,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -328,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
