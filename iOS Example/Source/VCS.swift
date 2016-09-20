@@ -2,17 +2,17 @@
 
 let VCS_TYPE			= "git"
 let VCS_BASENAME		= "SwiftVer"
-let VCS_UUID:	String?	= "c1a216b8705a827789e05f8811825d464d8a52e9"
-let VCS_NUM:	Int		= 1
-let VCS_DATE			= "2016-09-20T16:35:37Z"
+let VCS_UUID:	String?	= "1046fb20999149ca0d7a6952c0c0c4db9988087a"
+let VCS_NUM:	Int		= 14
+let VCS_DATE			= "2016-09-20T17:07:01Z"
 let VCS_BRANCH:	String	= "feature/cocoapods"
-let VCS_TAG:	String?	= nil
-let VCS_TICK:	Int?	= 1
+let VCS_TAG:	String?	= "Swift2"
+let VCS_TICK:	Int?	= 11
 let VCS_EXTRA:	String?	= nil
 
-let VCS_ACTION_STAMP:	String?	= "2016-09-20T16:35:37Z!leogdion@brightdigit.com"
-let VCS_FULL_HASH:		String	= "c1a216b8705a827789e05f8811825d464d8a52e9"
-let VCS_SHORT_HASH:		String	= "c1a216b"
+let VCS_ACTION_STAMP:	String?	= "2016-09-20T17:07:01Z!leogdion@brightdigit.com"
+let VCS_FULL_HASH:		String	= "589078ea6f7edb564361bada14af6e4ddc06ebe6"
+let VCS_SHORT_HASH:		String	= "589078e"
 
 let VCS_WC_MODIFIED:	Bool	= true
 

@@ -8,16 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		B3DA72611D91A19800C95C36 /* VCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DA72601D91A19800C95C36 /* VCS.swift */; };
+		B3DA726C1D91AAE100C95C36 /* SwiftVer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3DA726B1D91AAE100C95C36 /* SwiftVer.framework */; };
+		B3DA726D1D91AAE100C95C36 /* SwiftVer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3DA726B1D91AAE100C95C36 /* SwiftVer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D95E1C451D88E71A00F94976 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1C441D88E71A00F94976 /* AppDelegate.swift */; };
 		D95E1C471D88E71A00F94976 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1C461D88E71A00F94976 /* ViewController.swift */; };
 		D95E1C4A1D88E71A00F94976 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95E1C481D88E71A00F94976 /* Main.storyboard */; };
 		D95E1C4C1D88E71A00F94976 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95E1C4B1D88E71A00F94976 /* Assets.xcassets */; };
 		D95E1C4F1D88E71A00F94976 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95E1C4D1D88E71A00F94976 /* LaunchScreen.storyboard */; };
-		D95E1C8A1D88F39300F94976 /* SwiftVer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95E1C891D88F39300F94976 /* SwiftVer.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B3DA726A1D91AAB200C95C36 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B3DA726D1D91AAE100C95C36 /* SwiftVer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B3DA72601D91A19800C95C36 /* VCS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCS.swift; sourceTree = "<group>"; };
+		B3DA726B1D91AAE100C95C36 /* SwiftVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95E1C411D88E71A00F94976 /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95E1C441D88E71A00F94976 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D95E1C461D88E71A00F94976 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,7 +41,6 @@
 		D95E1C4B1D88E71A00F94976 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D95E1C4E1D88E71A00F94976 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D95E1C501D88E71A00F94976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D95E1C891D88F39300F94976 /* SwiftVer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftVer.framework; path = "../build/Debug-iphoneos/SwiftVer.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D95E1C8A1D88F39300F94976 /* SwiftVer.framework in Frameworks */,
+				B3DA726C1D91AAE100C95C36 /* SwiftVer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +58,7 @@
 		D95E1C381D88E71A00F94976 = {
 			isa = PBXGroup;
 			children = (
+				B3DA726B1D91AAE100C95C36 /* SwiftVer.framework */,
 				D95E1C431D88E71A00F94976 /* Source */,
 				D95E1C421D88E71A00F94976 /* Products */,
 				D95E1C881D88F39300F94976 /* Frameworks */,
@@ -74,7 +90,6 @@
 		D95E1C881D88F39300F94976 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D95E1C891D88F39300F94976 /* SwiftVer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -90,6 +105,7 @@
 				D95E1C3D1D88E71A00F94976 /* Sources */,
 				D95E1C3E1D88E71A00F94976 /* Frameworks */,
 				D95E1C3F1D88E71A00F94976 /* Resources */,
+				B3DA726A1D91AAB200C95C36 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

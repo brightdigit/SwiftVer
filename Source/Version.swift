@@ -8,7 +8,13 @@
 
 import Foundation
 
-public enum VersionControlType {
+extension Dictionary where Value : Equatable {
+  func allKeysForValue(val : Value) -> [Key] {
+    return self.filter { $1 == val }.map { $0.0 }
+  }
+}
+
+public enum VersionControlType : CustomStringConvertible {
   public static let lookup: [String:VersionControlType] = ["Git": .git, "Mercurial": .mercurial, "Subversion": .subversion, "Bazaar" : .bazaar]
   case git, mercurial, subversion, bazaar, unknown
   
@@ -18,6 +24,10 @@ public enum VersionControlType {
     } else {
       self = .unknown
     }
+  }
+  
+  public var description: String {
+    return VersionControlType.lookup.allKeysForValue(val: self).first ?? "Unknown"
   }
 }
 
@@ -67,32 +77,32 @@ public struct VersionControlInfo {
 }
 
 public struct SemVer : CustomStringConvertible  {
-  public let Major:UInt8
-  public let Minor:UInt8
-  public let Patch:UInt8?
+  public let major:UInt8
+  public let minor:UInt8
+  public let patch:UInt8?
   
   public init?(versionString: String) {
     let values = versionString.components(separatedBy: ".").flatMap{  UInt8($0) }
     if values.count == 2 || values.count == 3 {
-      self.Major = values.first!
-      self.Minor = values[1]
-      self.Patch = values.count == 3 ? values[2] : nil
+      self.major = values.first!
+      self.minor = values[1]
+      self.patch = values.count == 3 ? values[2] : nil
     } else {
       return nil
     }
   }
   
   public var description:String {
-    if let patch = self.Patch {
-      return "\(self.Major).\(self.Minor).\(patch)"
+    if let patch = self.patch {
+      return "\(self.major).\(self.minor).\(patch)"
     } else {
-      return "\(self.Major).\(self.Minor)"
+      return "\(self.major).\(self.minor)"
     }
   }
 }
 
 public struct Version {
-  public let version:SemVer
+  public let semver:SemVer
   public let build:UInt8
   public let versionControl: VersionControlInfo?
   
@@ -101,7 +111,7 @@ public struct Version {
       return nil
     }
     
-    guard let version = SemVer(versionString: versionString) else {
+    guard let semver = SemVer(versionString: versionString) else {
       return nil
     }
     
@@ -115,7 +125,7 @@ public struct Version {
     }
     
     self.build = build
-    self.version = version
+    self.semver = semver
     self.versionControl = versionControl
   }
 }
