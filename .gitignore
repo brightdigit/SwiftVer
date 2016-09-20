@@ -34,6 +34,9 @@ build/
 DerivedData/
 
 ## Various settings
+# Xcode
+#
+build/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -63,6 +66,13 @@ playground.xcworkspace
 # Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
 # Packages/
 .build/
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate 
 
 # CocoaPods
 #
@@ -91,3 +101,5 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 __PROJECT_NAME__.framework.zip
+
+VCS.swift

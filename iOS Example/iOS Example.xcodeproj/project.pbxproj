@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3DA72611D91A19800C95C36 /* VCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DA72601D91A19800C95C36 /* VCS.swift */; };
 		D95E1C451D88E71A00F94976 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1C441D88E71A00F94976 /* AppDelegate.swift */; };
 		D95E1C471D88E71A00F94976 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1C461D88E71A00F94976 /* ViewController.swift */; };
 		D95E1C4A1D88E71A00F94976 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95E1C481D88E71A00F94976 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B3DA72601D91A19800C95C36 /* VCS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCS.swift; sourceTree = "<group>"; };
 		D95E1C411D88E71A00F94976 /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95E1C441D88E71A00F94976 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D95E1C461D88E71A00F94976 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		D95E1C431D88E71A00F94976 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				B3DA72601D91A19800C95C36 /* VCS.swift */,
 				D95E1C441D88E71A00F94976 /* AppDelegate.swift */,
 				D95E1C461D88E71A00F94976 /* ViewController.swift */,
 				D95E1C481D88E71A00F94976 /* Main.storyboard */,
@@ -83,6 +86,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D95E1C531D88E71A00F94976 /* Build configuration list for PBXNativeTarget "iOS Example" */;
 			buildPhases = (
+				B3DA72621D91A1CD00C95C36 /* ShellScript */,
 				D95E1C3D1D88E71A00F94976 /* Sources */,
 				D95E1C3E1D88E71A00F94976 /* Frameworks */,
 				D95E1C3F1D88E71A00F94976 /* Resources */,
@@ -143,11 +147,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B3DA72621D91A1CD00C95C36 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/autorevision/autorevision.sh\" -t swift > \"${SRCROOT}/Source/VCS.swift\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D95E1C3D1D88E71A00F94976 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3DA72611D91A19800C95C36 /* VCS.swift in Sources */,
 				D95E1C471D88E71A00F94976 /* ViewController.swift in Sources */,
 				D95E1C451D88E71A00F94976 /* AppDelegate.swift in Sources */,
 			);
