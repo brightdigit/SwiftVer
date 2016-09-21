@@ -6,7 +6,7 @@
 //  Copyright © 2016 BrightDigit, LLC. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for SwiftVer.
 FOUNDATION_EXPORT double SwiftVerVersionNumber;
