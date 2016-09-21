@@ -20,6 +20,14 @@
 		B37840C11D92D1C1008FE737 /* VCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DA72601D91A19800C95C36 /* VCS.swift */; };
 		B37840C31D92D346008FE737 /* SwiftVer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37840C21D92D346008FE737 /* SwiftVer.framework */; };
 		B37840C41D92D346008FE737 /* SwiftVer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B37840C21D92D346008FE737 /* SwiftVer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B37840F41D932E3E008FE737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840F31D932E3E008FE737 /* AppDelegate.swift */; };
+		B37840F61D932E3E008FE737 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840F51D932E3E008FE737 /* ViewController.swift */; };
+		B37840F91D932E3E008FE737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37840F71D932E3E008FE737 /* Main.storyboard */; };
+		B37840FB1D932E3E008FE737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B37840FA1D932E3E008FE737 /* Assets.xcassets */; };
+		B37841011D932EA7008FE737 /* SwiftVer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37841001D932EA7008FE737 /* SwiftVer.framework */; };
+		B37841021D932EA7008FE737 /* SwiftVer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B37841001D932EA7008FE737 /* SwiftVer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B37841041D932F31008FE737 /* VCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DA72601D91A19800C95C36 /* VCS.swift */; };
+		B37841051D932F31008FE737 /* Version.Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840BE1D92D19A008FE737 /* Version.Array.swift */; };
 		B3D7C8781D931FEC0083D5B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D7C8771D931FEC0083D5B6 /* AppDelegate.swift */; };
 		B3D7C87A1D931FEC0083D5B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D7C8791D931FEC0083D5B6 /* ViewController.swift */; };
 		B3D7C87C1D931FEC0083D5B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D7C87B1D931FEC0083D5B6 /* Assets.xcassets */; };
@@ -89,6 +97,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B37841031D932EA7008FE737 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B37841021D932EA7008FE737 /* SwiftVer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B3D7C8891D9322370083D5B6 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -126,6 +145,13 @@
 		B37840BC1D92D0FC008FE737 /* RowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowController.swift; sourceTree = "<group>"; };
 		B37840BE1D92D19A008FE737 /* Version.Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Version.Array.swift; path = ../Shared/Version.Array.swift; sourceTree = "<group>"; };
 		B37840C21D92D346008FE737 /* SwiftVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B37840F11D932E3E008FE737 /* tvOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tvOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B37840F31D932E3E008FE737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B37840F51D932E3E008FE737 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B37840F81D932E3E008FE737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B37840FA1D932E3E008FE737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B37840FC1D932E3E008FE737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B37841001D932EA7008FE737 /* SwiftVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D7C8751D931FEC0083D5B6 /* macOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D7C8771D931FEC0083D5B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3D7C8791D931FEC0083D5B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +176,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B37840C31D92D346008FE737 /* SwiftVer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B37840EE1D932E3E008FE737 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B37841011D932EA7008FE737 /* SwiftVer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +253,18 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		B37840F21D932E3E008FE737 /* tvOS Example */ = {
+			isa = PBXGroup;
+			children = (
+				B37840F31D932E3E008FE737 /* AppDelegate.swift */,
+				B37840F51D932E3E008FE737 /* ViewController.swift */,
+				B37840F71D932E3E008FE737 /* Main.storyboard */,
+				B37840FA1D932E3E008FE737 /* Assets.xcassets */,
+				B37840FC1D932E3E008FE737 /* Info.plist */,
+			);
+			path = "tvOS Example";
+			sourceTree = "<group>";
+		};
 		B3D7C8761D931FEC0083D5B6 /* macOS Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,11 +280,13 @@
 		D95E1C381D88E71A00F94976 = {
 			isa = PBXGroup;
 			children = (
+				B37841001D932EA7008FE737 /* SwiftVer.framework */,
 				B3D7C8861D9322360083D5B6 /* SwiftVer.framework */,
 				B37840C21D92D346008FE737 /* SwiftVer.framework */,
 				B3DA726B1D91AAE100C95C36 /* SwiftVer.framework */,
 				D95E1C431D88E71A00F94976 /* Source */,
 				B3D7C8761D931FEC0083D5B6 /* macOS Example */,
+				B37840F21D932E3E008FE737 /* tvOS Example */,
 				D95E1C421D88E71A00F94976 /* Products */,
 				D95E1C881D88F39300F94976 /* Frameworks */,
 			);
@@ -251,6 +299,7 @@
 				B37840991D92CD7F008FE737 /* watchOS Example.app */,
 				B37840A51D92CD7F008FE737 /* watchOS Example Extension.appex */,
 				B3D7C8751D931FEC0083D5B6 /* macOS Example.app */,
+				B37840F11D932E3E008FE737 /* tvOS Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -311,6 +360,25 @@
 			productReference = B37840A51D92CD7F008FE737 /* watchOS Example Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
+		B37840F01D932E3E008FE737 /* tvOS Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B37840FF1D932E3E008FE737 /* Build configuration list for PBXNativeTarget "tvOS Example" */;
+			buildPhases = (
+				B37841061D932F45008FE737 /* ShellScript */,
+				B37840ED1D932E3E008FE737 /* Sources */,
+				B37840EE1D932E3E008FE737 /* Frameworks */,
+				B37840EF1D932E3E008FE737 /* Resources */,
+				B37841031D932EA7008FE737 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "tvOS Example";
+			productName = "tvOS Example";
+			productReference = B37840F11D932E3E008FE737 /* tvOS Example.app */;
+			productType = "com.apple.product-type.application";
+		};
 		B3D7C8741D931FEC0083D5B6 /* macOS Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3D7C8831D931FEC0083D5B6 /* Build configuration list for PBXNativeTarget "macOS Example" */;
@@ -370,6 +438,11 @@
 						DevelopmentTeam = MLT7M394S7;
 						ProvisioningStyle = Automatic;
 					};
+					B37840F01D932E3E008FE737 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = MLT7M394S7;
+						ProvisioningStyle = Automatic;
+					};
 					B3D7C8741D931FEC0083D5B6 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = MLT7M394S7;
@@ -398,6 +471,7 @@
 				B37840981D92CD7F008FE737 /* watchOS Example */,
 				B37840A41D92CD7F008FE737 /* watchOS Example Extension */,
 				B3D7C8741D931FEC0083D5B6 /* macOS Example */,
+				B37840F01D932E3E008FE737 /* tvOS Example */,
 			);
 		};
 /* End PBXProject section */
@@ -417,6 +491,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B37840AF1D92CD7F008FE737 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B37840EF1D932E3E008FE737 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B37840FB1D932E3E008FE737 /* Assets.xcassets in Resources */,
+				B37840F91D932E3E008FE737 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +525,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		B37841061D932F45008FE737 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Shared/autorevision/autorevision.sh\" -t swift > \"${SRCROOT}/Source/VCS.swift\"";
+		};
 		B3D7C88A1D9322D00083D5B6 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -480,6 +576,17 @@
 				B37840C11D92D1C1008FE737 /* VCS.swift in Sources */,
 				B37840AD1D92CD7F008FE737 /* ExtensionDelegate.swift in Sources */,
 				B37840AB1D92CD7F008FE737 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B37840ED1D932E3E008FE737 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B37841041D932F31008FE737 /* VCS.swift in Sources */,
+				B37841051D932F31008FE737 /* Version.Array.swift in Sources */,
+				B37840F61D932E3E008FE737 /* ViewController.swift in Sources */,
+				B37840F41D932E3E008FE737 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +634,14 @@
 				B378409C1D92CD7F008FE737 /* Base */,
 			);
 			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		B37840F71D932E3E008FE737 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B37840F81D932E3E008FE737 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		B3D7C87D1D931FEC0083D5B6 /* Main.storyboard */ = {
@@ -624,6 +739,40 @@
 			};
 			name = Release;
 		};
+		B37840FD1D932E3E008FE737 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				INFOPLIST_FILE = "tvOS Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.tvOS-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		B37840FE1D932E3E008FE737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				INFOPLIST_FILE = "tvOS Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.tvOS-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 		B3D7C8811D931FEC0083D5B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -633,7 +782,6 @@
 				DEVELOPMENT_TEAM = MLT7M394S7;
 				INFOPLIST_FILE = "macOS Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.macOS-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -650,7 +798,6 @@
 				DEVELOPMENT_TEAM = MLT7M394S7;
 				INFOPLIST_FILE = "macOS Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.macOS-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -699,6 +846,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -743,6 +891,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -796,6 +945,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		B37840FF1D932E3E008FE737 /* Build configuration list for PBXNativeTarget "tvOS Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B37840FD1D932E3E008FE737 /* Debug */,
+				B37840FE1D932E3E008FE737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		B3D7C8831D931FEC0083D5B6 /* Build configuration list for PBXNativeTarget "macOS Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -803,6 +960,7 @@
 				B3D7C8821D931FEC0083D5B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D95E1C3C1D88E71A00F94976 /* Build configuration list for PBXProject "Examples" */ = {
 			isa = XCConfigurationList;
