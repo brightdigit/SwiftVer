@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B37840531D9272C6008FE737 /* SwiftVerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1BEB1D88D63400F94976 /* SwiftVerTests.swift */; };
 		B37840551D92757F008FE737 /* VersionControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840541D92757F008FE737 /* VersionControlType.swift */; };
 		B37840561D92757F008FE737 /* VersionControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840541D92757F008FE737 /* VersionControlType.swift */; };
 		B37840571D92757F008FE737 /* VersionControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840541D92757F008FE737 /* VersionControlType.swift */; };
@@ -24,7 +23,21 @@
 		B378407F1D9277DD008FE737 /* VersionControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840541D92757F008FE737 /* VersionControlType.swift */; };
 		B37840801D9277DD008FE737 /* VersionControlInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840581D927595008FE737 /* VersionControlInfo.swift */; };
 		B37840811D9277DD008FE737 /* SemVer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378405C1D9275DB008FE737 /* SemVer.swift */; };
-		B37840821D927802008FE737 /* SwiftVerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1BEB1D88D63400F94976 /* SwiftVerTests.swift */; };
+		B37840841D927A15008FE737 /* rfc3339Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840831D927A15008FE737 /* rfc3339Tests.swift */; };
+		B37840851D927A15008FE737 /* rfc3339Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840831D927A15008FE737 /* rfc3339Tests.swift */; };
+		B37840861D927A15008FE737 /* rfc3339Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840831D927A15008FE737 /* rfc3339Tests.swift */; };
+		B37840881D927A26008FE737 /* SemVerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840871D927A26008FE737 /* SemVerTests.swift */; };
+		B37840891D927A26008FE737 /* SemVerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840871D927A26008FE737 /* SemVerTests.swift */; };
+		B378408A1D927A26008FE737 /* SemVerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840871D927A26008FE737 /* SemVerTests.swift */; };
+		B378408C1D927A34008FE737 /* VersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378408B1D927A34008FE737 /* VersionTests.swift */; };
+		B378408D1D927A34008FE737 /* VersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378408B1D927A34008FE737 /* VersionTests.swift */; };
+		B378408E1D927A34008FE737 /* VersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378408B1D927A34008FE737 /* VersionTests.swift */; };
+		B37840901D927A45008FE737 /* VersionControlInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378408F1D927A45008FE737 /* VersionControlInfoTests.swift */; };
+		B37840911D927A45008FE737 /* VersionControlInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378408F1D927A45008FE737 /* VersionControlInfoTests.swift */; };
+		B37840921D927A45008FE737 /* VersionControlInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378408F1D927A45008FE737 /* VersionControlInfoTests.swift */; };
+		B37840941D927A58008FE737 /* VersionControlTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840931D927A58008FE737 /* VersionControlTypeTests.swift */; };
+		B37840951D927A58008FE737 /* VersionControlTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840931D927A58008FE737 /* VersionControlTypeTests.swift */; };
+		B37840961D927A58008FE737 /* VersionControlTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840931D927A58008FE737 /* VersionControlTypeTests.swift */; };
 		B38B1A0D1D921090007AAAD7 /* SwiftVer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38B1A041D921090007AAAD7 /* SwiftVer.framework */; };
 		B38B1A1B1D9210CA007AAAD7 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A141D91D3630085656C /* Version.swift */; };
 		B38B1A1C1D9210CA007AAAD7 /* rfc3339.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A151D91D3630085656C /* rfc3339.swift */; };
@@ -35,7 +48,6 @@
 		B3FE6A161D91D3630085656C /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A141D91D3630085656C /* Version.swift */; };
 		B3FE6A171D91D3630085656C /* rfc3339.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A151D91D3630085656C /* rfc3339.swift */; };
 		D95E1BE71D88D63400F94976 /* SwiftVer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95E1BDD1D88D63300F94976 /* SwiftVer.framework */; };
-		D95E1BEC1D88D63400F94976 /* SwiftVerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1BEB1D88D63400F94976 /* SwiftVerTests.swift */; };
 		D95E1BEE1D88D63400F94976 /* SwiftVer.h in Headers */ = {isa = PBXBuildFile; fileRef = D95E1BE01D88D63300F94976 /* SwiftVer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -71,6 +83,11 @@
 		B37840681D92779E008FE737 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		B378406D1D92779E008FE737 /* SwiftVerTests tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftVerTests tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B37840741D92779E008FE737 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
+		B37840831D927A15008FE737 /* rfc3339Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rfc3339Tests.swift; sourceTree = "<group>"; };
+		B37840871D927A26008FE737 /* SemVerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemVerTests.swift; sourceTree = "<group>"; };
+		B378408B1D927A34008FE737 /* VersionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionTests.swift; sourceTree = "<group>"; };
+		B378408F1D927A45008FE737 /* VersionControlInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionControlInfoTests.swift; sourceTree = "<group>"; };
+		B37840931D927A58008FE737 /* VersionControlTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionControlTypeTests.swift; sourceTree = "<group>"; };
 		B38B19F71D92105B007AAAD7 /* SwiftVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38B19FA1D92105B007AAAD7 /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
 		B38B1A041D921090007AAAD7 /* SwiftVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,7 +100,6 @@
 		D95E1BE01D88D63300F94976 /* SwiftVer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftVer.h; sourceTree = "<group>"; };
 		D95E1BE11D88D63300F94976 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		D95E1BE61D88D63400F94976 /* SwiftVerTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftVerTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D95E1BEB1D88D63400F94976 /* SwiftVerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftVerTests.swift; sourceTree = "<group>"; };
 		D95E1BED1D88D63400F94976 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,16 +185,16 @@
 		D95E1BDF1D88D63300F94976 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				B3FE6A141D91D3630085656C /* Version.swift */,
-				B3FE6A151D91D3630085656C /* rfc3339.swift */,
 				D95E1BE01D88D63300F94976 /* SwiftVer.h */,
 				D95E1BE11D88D63300F94976 /* Info-iOS.plist */,
-				B38B19FA1D92105B007AAAD7 /* Info-watchOS.plist */,
 				B38B1A071D921090007AAAD7 /* Info-macOS.plist */,
 				B37840681D92779E008FE737 /* Info-tvOS.plist */,
-				B37840541D92757F008FE737 /* VersionControlType.swift */,
-				B37840581D927595008FE737 /* VersionControlInfo.swift */,
+				B38B19FA1D92105B007AAAD7 /* Info-watchOS.plist */,
+				B3FE6A151D91D3630085656C /* rfc3339.swift */,
 				B378405C1D9275DB008FE737 /* SemVer.swift */,
+				B3FE6A141D91D3630085656C /* Version.swift */,
+				B37840581D927595008FE737 /* VersionControlInfo.swift */,
+				B37840541D92757F008FE737 /* VersionControlType.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -189,7 +205,11 @@
 				D95E1BED1D88D63400F94976 /* Info-iOS.plist */,
 				B38B1A131D921090007AAAD7 /* Info-macOS.plist */,
 				B37840741D92779E008FE737 /* Info-tvOS.plist */,
-				D95E1BEB1D88D63400F94976 /* SwiftVerTests.swift */,
+				B37840831D927A15008FE737 /* rfc3339Tests.swift */,
+				B37840871D927A26008FE737 /* SemVerTests.swift */,
+				B378408B1D927A34008FE737 /* VersionTests.swift */,
+				B378408F1D927A45008FE737 /* VersionControlInfoTests.swift */,
+				B37840931D927A58008FE737 /* VersionControlTypeTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -400,6 +420,7 @@
 					};
 					D95E1BE51D88D63400F94976 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = MLT7M394S7;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -496,7 +517,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B37840821D927802008FE737 /* SwiftVerTests.swift in Sources */,
+				B37840861D927A15008FE737 /* rfc3339Tests.swift in Sources */,
+				B37840961D927A58008FE737 /* VersionControlTypeTests.swift in Sources */,
+				B378408E1D927A34008FE737 /* VersionTests.swift in Sources */,
+				B378408A1D927A26008FE737 /* SemVerTests.swift in Sources */,
+				B37840921D927A45008FE737 /* VersionControlInfoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,7 +553,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B37840531D9272C6008FE737 /* SwiftVerTests.swift in Sources */,
+				B37840851D927A15008FE737 /* rfc3339Tests.swift in Sources */,
+				B37840951D927A58008FE737 /* VersionControlTypeTests.swift in Sources */,
+				B378408D1D927A34008FE737 /* VersionTests.swift in Sources */,
+				B37840891D927A26008FE737 /* SemVerTests.swift in Sources */,
+				B37840911D927A45008FE737 /* VersionControlInfoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,7 +577,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D95E1BEC1D88D63400F94976 /* SwiftVerTests.swift in Sources */,
+				B37840841D927A15008FE737 /* rfc3339Tests.swift in Sources */,
+				B37840941D927A58008FE737 /* VersionControlTypeTests.swift in Sources */,
+				B378408C1D927A34008FE737 /* VersionTests.swift in Sources */,
+				B37840881D927A26008FE737 /* SemVerTests.swift in Sources */,
+				B37840901D927A45008FE737 /* VersionControlInfoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -919,6 +952,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = MLT7M394S7;
 				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info-iOS.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.--PROJECT-NAME--Tests";
@@ -931,6 +965,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = MLT7M394S7;
 				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info-iOS.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.--PROJECT-NAME--Tests";

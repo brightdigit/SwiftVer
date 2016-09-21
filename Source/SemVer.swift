@@ -14,10 +14,11 @@ public struct SemVer : CustomStringConvertible  {
   public let patch:UInt8?
   
   public init?(versionString: String) {
-    let values = versionString.components(separatedBy: ".").flatMap{  UInt8($0) }
-    if values.count == 2 || values.count == 3 {
-      self.major = values.first!
-      self.minor = values[1]
+    let values = versionString.components(separatedBy: ".").map{  UInt8($0) }
+    
+    if case let major?? = values.first, let minor = values[1], values.count == 2 || values.count == 3 {
+      self.major = major
+      self.minor = minor
       self.patch = values.count == 3 ? values[2] : nil
     } else {
       return nil
