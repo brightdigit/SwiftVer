@@ -1002,6 +1002,7 @@
 				B37840781D92779E008FE737 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B37840791D92779E008FE737 /* Build configuration list for PBXNativeTarget "SwiftVerTests tvOS" */ = {
 			isa = XCConfigurationList;
@@ -1010,6 +1011,7 @@
 				B378407B1D92779E008FE737 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B38B19FC1D92105B007AAAD7 /* Build configuration list for PBXNativeTarget "SwiftVer watchOS" */ = {
 			isa = XCConfigurationList;
