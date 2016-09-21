@@ -29,7 +29,6 @@
 		D95E1BE71D88D63400F94976 /* SwiftVer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95E1BDD1D88D63300F94976 /* SwiftVer.framework */; };
 		D95E1BEC1D88D63400F94976 /* SwiftVerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1BEB1D88D63400F94976 /* SwiftVerTests.swift */; };
 		D95E1BEE1D88D63400F94976 /* SwiftVer.h in Headers */ = {isa = PBXBuildFile; fileRef = D95E1BE01D88D63300F94976 /* SwiftVer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D95E1BF91D88E01300F94976 /* wk.png in Resources */ = {isa = PBXBuildFile; fileRef = D95E1BF81D88E01300F94976 /* wk.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +66,6 @@
 		D95E1BE61D88D63400F94976 /* SwiftVerTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftVerTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95E1BEB1D88D63400F94976 /* SwiftVerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftVerTests.swift; sourceTree = "<group>"; };
 		D95E1BED1D88D63400F94976 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
-		D95E1BF81D88E01300F94976 /* wk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wk.png; path = Resources/wk.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				D95E1BDF1D88D63300F94976 /* Source */,
-				D95E1BF71D88DFFD00F94976 /* Resources */,
 				D95E1BEA1D88D63400F94976 /* Tests */,
 				D95E1BDE1D88D63300F94976 /* Products */,
 			);
@@ -156,15 +153,6 @@
 				B38B1A131D921090007AAAD7 /* Info-macOS.plist */,
 				D95E1BEB1D88D63400F94976 /* SwiftVerTests.swift */,
 			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		D95E1BF71D88DFFD00F94976 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				D95E1BF81D88E01300F94976 /* wk.png */,
-			);
-			name = Resources;
 			path = Tests;
 			sourceTree = "<group>";
 		};
@@ -371,7 +359,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D95E1BF91D88E01300F94976 /* wk.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +459,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -495,7 +482,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};

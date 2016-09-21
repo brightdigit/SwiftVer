@@ -18,6 +18,8 @@ Pod::Spec.new do |s|
   s.authors = { 'PROJECT_OWNER' => 'USER_EMAIL' }
   s.source = { :git => 'https://github.com/brightdigit/SwiftVer.git', :tag => s.version }
   s.ios.deployment_target = '8.0'
+  s.osx.deployment_target = '10.10'
+  s.watchos.deployment_target = '2.0'
   s.source_files = 'Source/*.swift'
   s.resource_bundles = {
     'SwiftVer' => ['Resources/**/*.{png}']
