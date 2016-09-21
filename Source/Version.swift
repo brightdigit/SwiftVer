@@ -13,8 +13,15 @@ public struct Version {
   public let build:UInt8
   public let versionControl: VersionControlInfo?
   
-  public init?(bundle: Bundle, versionControl: VersionControlInfo? = nil) {
-    guard let versionString = bundle.infoDictionary?["CFBundleShortVersionString"] as? String else {
+  public struct InfoDictionaryKeys {
+    public static let version = "CFBundleShortVersionString"
+    public static let build = "CFBundleVersion"
+  }
+  
+  public init?(bundle: VersionContainerProtocol, versionControl: VersionControlInfo? = nil) {
+    let keys = type(of: self).InfoDictionaryKeys.self
+    
+    guard let versionString = bundle.infoDictionary?[keys.version] as? String else {
       return nil
     }
     
@@ -23,11 +30,21 @@ public struct Version {
     }
     
     
-    guard let buildString = bundle.infoDictionary?["CFBundleVersion"] as? String else {
+    guard let buildValue = bundle.infoDictionary?[keys.build] else {
       return nil
     }
     
-    guard let build = UInt8(buildString) else {
+    let buildOpt: UInt8?
+    
+    if let buildInt = buildValue as? Int {
+      buildOpt = UInt8(buildInt)
+    } else if let buildString = buildValue as? String {
+      buildOpt = UInt8(buildString)
+    } else {
+      return nil
+    }
+    
+    guard let build = buildOpt else {
       return nil
     }
     
