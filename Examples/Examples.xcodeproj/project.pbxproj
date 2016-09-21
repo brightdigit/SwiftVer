@@ -253,7 +253,7 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		B37840F21D932E3E008FE737 /* tvOS Example */ = {
+		B37840F21D932E3E008FE737 /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
 				B37840F31D932E3E008FE737 /* AppDelegate.swift */,
@@ -262,10 +262,11 @@
 				B37840FA1D932E3E008FE737 /* Assets.xcassets */,
 				B37840FC1D932E3E008FE737 /* Info.plist */,
 			);
-			path = "tvOS Example";
+			name = tvOS;
+			path = "../tvOS Example";
 			sourceTree = "<group>";
 		};
-		B3D7C8761D931FEC0083D5B6 /* macOS Example */ = {
+		B3D7C8761D931FEC0083D5B6 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
 				B3D7C8771D931FEC0083D5B6 /* AppDelegate.swift */,
@@ -274,7 +275,8 @@
 				B3D7C87D1D931FEC0083D5B6 /* Main.storyboard */,
 				B3D7C8801D931FEC0083D5B6 /* Info.plist */,
 			);
-			path = "macOS Example";
+			name = macOS;
+			path = "../macOS Example";
 			sourceTree = "<group>";
 		};
 		D95E1C381D88E71A00F94976 = {
@@ -285,8 +287,6 @@
 				B37840C21D92D346008FE737 /* SwiftVer.framework */,
 				B3DA726B1D91AAE100C95C36 /* SwiftVer.framework */,
 				D95E1C431D88E71A00F94976 /* Source */,
-				B3D7C8761D931FEC0083D5B6 /* macOS Example */,
-				B37840F21D932E3E008FE737 /* tvOS Example */,
 				D95E1C421D88E71A00F94976 /* Products */,
 				D95E1C881D88F39300F94976 /* Frameworks */,
 			);
@@ -310,7 +310,9 @@
 				B3DA72601D91A19800C95C36 /* VCS.swift */,
 				B37840BE1D92D19A008FE737 /* Version.Array.swift */,
 				B37840E21D92DA48008FE737 /* iOS */,
+				B3D7C8761D931FEC0083D5B6 /* macOS */,
 				B37840E31D92DA58008FE737 /* watchOS */,
+				B37840F21D932E3E008FE737 /* tvOS */,
 			);
 			path = Source;
 			sourceTree = "<group>";
