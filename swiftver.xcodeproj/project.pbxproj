@@ -17,6 +17,14 @@
 		B378405D1D9275DB008FE737 /* SemVer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378405C1D9275DB008FE737 /* SemVer.swift */; };
 		B378405E1D9275DB008FE737 /* SemVer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378405C1D9275DB008FE737 /* SemVer.swift */; };
 		B378405F1D9275DB008FE737 /* SemVer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378405C1D9275DB008FE737 /* SemVer.swift */; };
+		B378406E1D92779E008FE737 /* SwiftVer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37840651D92779E008FE737 /* SwiftVer.framework */; };
+		B378407C1D9277DD008FE737 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A141D91D3630085656C /* Version.swift */; };
+		B378407D1D9277DD008FE737 /* rfc3339.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A151D91D3630085656C /* rfc3339.swift */; };
+		B378407E1D9277DD008FE737 /* SwiftVer.h in Headers */ = {isa = PBXBuildFile; fileRef = D95E1BE01D88D63300F94976 /* SwiftVer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B378407F1D9277DD008FE737 /* VersionControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840541D92757F008FE737 /* VersionControlType.swift */; };
+		B37840801D9277DD008FE737 /* VersionControlInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840581D927595008FE737 /* VersionControlInfo.swift */; };
+		B37840811D9277DD008FE737 /* SemVer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378405C1D9275DB008FE737 /* SemVer.swift */; };
+		B37840821D927802008FE737 /* SwiftVerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1BEB1D88D63400F94976 /* SwiftVerTests.swift */; };
 		B38B1A0D1D921090007AAAD7 /* SwiftVer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38B1A041D921090007AAAD7 /* SwiftVer.framework */; };
 		B38B1A1B1D9210CA007AAAD7 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A141D91D3630085656C /* Version.swift */; };
 		B38B1A1C1D9210CA007AAAD7 /* rfc3339.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A151D91D3630085656C /* rfc3339.swift */; };
@@ -32,6 +40,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B378406F1D92779E008FE737 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D95E1BD41D88D63200F94976 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B37840641D92779E008FE737;
+			remoteInfo = "swiftver-tvos";
+		};
 		B38B1A0E1D921090007AAAD7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D95E1BD41D88D63200F94976 /* Project object */;
@@ -52,6 +67,10 @@
 		B37840541D92757F008FE737 /* VersionControlType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionControlType.swift; sourceTree = "<group>"; };
 		B37840581D927595008FE737 /* VersionControlInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionControlInfo.swift; sourceTree = "<group>"; };
 		B378405C1D9275DB008FE737 /* SemVer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemVer.swift; sourceTree = "<group>"; };
+		B37840651D92779E008FE737 /* SwiftVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B37840681D92779E008FE737 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
+		B378406D1D92779E008FE737 /* SwiftVerTests tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftVerTests tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B37840741D92779E008FE737 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		B38B19F71D92105B007AAAD7 /* SwiftVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38B19FA1D92105B007AAAD7 /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
 		B38B1A041D921090007AAAD7 /* SwiftVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +88,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B37840611D92779E008FE737 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B378406A1D92779E008FE737 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B378406E1D92779E008FE737 /* SwiftVer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B38B19F31D92105B007AAAD7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -126,6 +160,8 @@
 				B38B19F71D92105B007AAAD7 /* SwiftVer.framework */,
 				B38B1A041D921090007AAAD7 /* SwiftVer.framework */,
 				B38B1A0C1D921090007AAAD7 /* SwiftVerTests macOS.xctest */,
+				B37840651D92779E008FE737 /* SwiftVer.framework */,
+				B378406D1D92779E008FE737 /* SwiftVerTests tvOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,6 +175,7 @@
 				D95E1BE11D88D63300F94976 /* Info-iOS.plist */,
 				B38B19FA1D92105B007AAAD7 /* Info-watchOS.plist */,
 				B38B1A071D921090007AAAD7 /* Info-macOS.plist */,
+				B37840681D92779E008FE737 /* Info-tvOS.plist */,
 				B37840541D92757F008FE737 /* VersionControlType.swift */,
 				B37840581D927595008FE737 /* VersionControlInfo.swift */,
 				B378405C1D9275DB008FE737 /* SemVer.swift */,
@@ -151,6 +188,7 @@
 			children = (
 				D95E1BED1D88D63400F94976 /* Info-iOS.plist */,
 				B38B1A131D921090007AAAD7 /* Info-macOS.plist */,
+				B37840741D92779E008FE737 /* Info-tvOS.plist */,
 				D95E1BEB1D88D63400F94976 /* SwiftVerTests.swift */,
 			);
 			path = Tests;
@@ -159,6 +197,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		B37840621D92779E008FE737 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B378407E1D9277DD008FE737 /* SwiftVer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B38B19F41D92105B007AAAD7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -186,6 +232,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		B37840641D92779E008FE737 /* SwiftVer tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B37840761D92779E008FE737 /* Build configuration list for PBXNativeTarget "SwiftVer tvOS" */;
+			buildPhases = (
+				B37840601D92779E008FE737 /* Sources */,
+				B37840611D92779E008FE737 /* Frameworks */,
+				B37840621D92779E008FE737 /* Headers */,
+				B37840631D92779E008FE737 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftVer tvOS";
+			productName = "swiftver-tvos";
+			productReference = B37840651D92779E008FE737 /* SwiftVer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B378406C1D92779E008FE737 /* SwiftVerTests tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B37840791D92779E008FE737 /* Build configuration list for PBXNativeTarget "SwiftVerTests tvOS" */;
+			buildPhases = (
+				B37840691D92779E008FE737 /* Sources */,
+				B378406A1D92779E008FE737 /* Frameworks */,
+				B378406B1D92779E008FE737 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B37840701D92779E008FE737 /* PBXTargetDependency */,
+			);
+			name = "SwiftVerTests tvOS";
+			productName = "swiftver-tvosTests";
+			productReference = B378406D1D92779E008FE737 /* SwiftVerTests tvOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B38B19F61D92105B007AAAD7 /* SwiftVer watchOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B38B19FC1D92105B007AAAD7 /* Build configuration list for PBXNativeTarget "SwiftVer watchOS" */;
@@ -286,6 +368,16 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "BrightDigit, LLC";
 				TargetAttributes = {
+					B37840641D92779E008FE737 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = MLT7M394S7;
+						ProvisioningStyle = Automatic;
+					};
+					B378406C1D92779E008FE737 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = MLT7M394S7;
+						ProvisioningStyle = Automatic;
+					};
 					B38B19F61D92105B007AAAD7 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = MLT7M394S7;
@@ -326,14 +418,30 @@
 			targets = (
 				D95E1BDC1D88D63300F94976 /* SwiftVer iOS */,
 				B38B1A031D921090007AAAD7 /* SwiftVer macOS */,
+				B37840641D92779E008FE737 /* SwiftVer tvOS */,
 				B38B19F61D92105B007AAAD7 /* SwiftVer watchOS */,
 				D95E1BE51D88D63400F94976 /* SwiftVerTests iOS */,
 				B38B1A0B1D921090007AAAD7 /* SwiftVerTests macOS */,
+				B378406C1D92779E008FE737 /* SwiftVerTests tvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B37840631D92779E008FE737 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B378406B1D92779E008FE737 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B38B19F51D92105B007AAAD7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -372,6 +480,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B37840601D92779E008FE737 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B378407C1D9277DD008FE737 /* Version.swift in Sources */,
+				B378407D1D9277DD008FE737 /* rfc3339.swift in Sources */,
+				B37840801D9277DD008FE737 /* VersionControlInfo.swift in Sources */,
+				B37840811D9277DD008FE737 /* SemVer.swift in Sources */,
+				B378407F1D9277DD008FE737 /* VersionControlType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B37840691D92779E008FE737 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B37840821D927802008FE737 /* SwiftVerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B38B19F21D92105B007AAAD7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -427,6 +555,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B37840701D92779E008FE737 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B37840641D92779E008FE737 /* SwiftVer tvOS */;
+			targetProxy = B378406F1D92779E008FE737 /* PBXContainerItemProxy */;
+		};
 		B38B1A0F1D921090007AAAD7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B38B1A031D921090007AAAD7 /* SwiftVer macOS */;
@@ -440,6 +573,80 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		B37840771D92779E008FE737 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info-tvOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.swiftver-tvos";
+				PRODUCT_NAME = SwiftVer;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		B37840781D92779E008FE737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info-tvOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.swiftver-tvos";
+				PRODUCT_NAME = SwiftVer;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		B378407A1D92779E008FE737 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info-tvOS.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.swiftver-tvosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		B378407B1D92779E008FE737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info-tvOS.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brightdigit.swiftver-tvosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
 		B38B19FD1D92105B007AAAD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -735,6 +942,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B37840761D92779E008FE737 /* Build configuration list for PBXNativeTarget "SwiftVer tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B37840771D92779E008FE737 /* Debug */,
+				B37840781D92779E008FE737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B37840791D92779E008FE737 /* Build configuration list for PBXNativeTarget "SwiftVerTests tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B378407A1D92779E008FE737 /* Debug */,
+				B378407B1D92779E008FE737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		B38B19FC1D92105B007AAAD7 /* Build configuration list for PBXNativeTarget "SwiftVer watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
