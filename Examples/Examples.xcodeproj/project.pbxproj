@@ -105,7 +105,7 @@
 		B37840AE1D92CD7F008FE737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B37840B01D92CD7F008FE737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B37840BC1D92D0FC008FE737 /* RowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowController.swift; sourceTree = "<group>"; };
-		B37840BE1D92D19A008FE737 /* Version.Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Version.Array.swift; path = "../../Shared Example/Version.Array.swift"; sourceTree = "<group>"; };
+		B37840BE1D92D19A008FE737 /* Version.Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Version.Array.swift; path = ../Shared/Version.Array.swift; sourceTree = "<group>"; };
 		B37840C21D92D346008FE737 /* SwiftVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3DA72601D91A19800C95C36 /* VCS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCS.swift; sourceTree = "<group>"; };
 		B3DA726B1D91AAE100C95C36 /* SwiftVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,17 +138,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B378409A1D92CD7F008FE737 /* watchOS Example */ = {
+		B378409A1D92CD7F008FE737 /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				B378409B1D92CD7F008FE737 /* Interface.storyboard */,
 				B378409E1D92CD7F008FE737 /* Assets.xcassets */,
 				B37840A01D92CD7F008FE737 /* Info.plist */,
 			);
+			name = Application;
 			path = "watchOS Example";
 			sourceTree = "<group>";
 		};
-		B37840A91D92CD7F008FE737 /* watchOS Example Extension */ = {
+		B37840A91D92CD7F008FE737 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				B37840AA1D92CD7F008FE737 /* InterfaceController.swift */,
@@ -157,7 +158,31 @@
 				B37840B01D92CD7F008FE737 /* Info.plist */,
 				B37840BC1D92D0FC008FE737 /* RowController.swift */,
 			);
+			name = Extension;
 			path = "watchOS Example Extension";
+			sourceTree = "<group>";
+		};
+		B37840E21D92DA48008FE737 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D95E1C441D88E71A00F94976 /* AppDelegate.swift */,
+				D95E1C461D88E71A00F94976 /* ViewController.swift */,
+				D95E1C481D88E71A00F94976 /* Main.storyboard */,
+				D95E1C4B1D88E71A00F94976 /* Assets.xcassets */,
+				D95E1C4D1D88E71A00F94976 /* LaunchScreen.storyboard */,
+				D95E1C501D88E71A00F94976 /* Info.plist */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		B37840E31D92DA58008FE737 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				B378409A1D92CD7F008FE737 /* Application */,
+				B37840A91D92CD7F008FE737 /* Extension */,
+			);
+			name = watchOS;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		D95E1C381D88E71A00F94976 = {
@@ -166,8 +191,6 @@
 				B37840C21D92D346008FE737 /* SwiftVer.framework */,
 				B3DA726B1D91AAE100C95C36 /* SwiftVer.framework */,
 				D95E1C431D88E71A00F94976 /* Source */,
-				B378409A1D92CD7F008FE737 /* watchOS Example */,
-				B37840A91D92CD7F008FE737 /* watchOS Example Extension */,
 				D95E1C421D88E71A00F94976 /* Products */,
 				D95E1C881D88F39300F94976 /* Frameworks */,
 			);
@@ -187,13 +210,9 @@
 			isa = PBXGroup;
 			children = (
 				B3DA72601D91A19800C95C36 /* VCS.swift */,
-				D95E1C441D88E71A00F94976 /* AppDelegate.swift */,
-				D95E1C461D88E71A00F94976 /* ViewController.swift */,
-				D95E1C481D88E71A00F94976 /* Main.storyboard */,
-				D95E1C4B1D88E71A00F94976 /* Assets.xcassets */,
-				D95E1C4D1D88E71A00F94976 /* LaunchScreen.storyboard */,
-				D95E1C501D88E71A00F94976 /* Info.plist */,
 				B37840BE1D92D19A008FE737 /* Version.Array.swift */,
+				B37840E21D92DA48008FE737 /* iOS */,
+				B37840E31D92DA58008FE737 /* watchOS */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -289,7 +308,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D95E1C3C1D88E71A00F94976 /* Build configuration list for PBXProject "iOS Example" */;
+			buildConfigurationList = D95E1C3C1D88E71A00F94976 /* Build configuration list for PBXProject "Examples" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -351,7 +370,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Shared Example/autorevision/autorevision.sh\" -t swift > \"${SRCROOT}/Source/VCS.swift\"";
+			shellScript = "\"${SRCROOT}/Shared/autorevision/autorevision.sh\" -t swift > \"${SRCROOT}/Source/VCS.swift\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -617,6 +636,7 @@
 				B37840B71D92CD7F008FE737 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B37840BA1D92CD7F008FE737 /* Build configuration list for PBXNativeTarget "watchOS Example" */ = {
 			isa = XCConfigurationList;
@@ -625,8 +645,9 @@
 				B37840B51D92CD7F008FE737 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		D95E1C3C1D88E71A00F94976 /* Build configuration list for PBXProject "iOS Example" */ = {
+		D95E1C3C1D88E71A00F94976 /* Build configuration list for PBXProject "Examples" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D95E1C511D88E71A00F94976 /* Debug */,
