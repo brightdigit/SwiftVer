@@ -11,12 +11,15 @@ import SwiftVer
 
 class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
   
+  @IBOutlet weak var tableView: NSTableView!
   public let values = Version.example.values
   
   override func viewDidLoad() {
     super.viewDidLoad()
 
     // Do any additional setup after loading the view.
+    self.tableView.tableColumns[0].headerCell.title = "Label"
+    self.tableView.tableColumns[1].headerCell.title = "Value"
   }
 
   override var representedObject: Any? {
@@ -30,34 +33,27 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
   }
   
   func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-    var image:NSImage?
-    var text:String = ""
-    var cellIdentifier: String = ""
+
+    let text:String?
+    let cellIdentifier: String
     
-    // 1
-    /*
-    guard let item = directoryItems?[row] else {
-      return nil
-    }
+    let pair = values[row]
     
     // 2
     if tableColumn == tableView.tableColumns[0] {
-      image = item.icon
-      text = item.name
-      cellIdentifier = "NameCellID"
-    } else if tableColumn == tableView.tableColumns[1] {
-      text = item.date.description
-      cellIdentifier = "DateCellID"
-    } else if tableColumn == tableView.tableColumns[2] {
-      text = item.isFolder ? "--" : sizeFormatter.stringFromByteCount(item.size)
-      cellIdentifier = "SizeCellID"
+      
+      cellIdentifier = "LabelCellID"
+      text = pair.label
+    } else {
+      text = pair.value
+      cellIdentifier = "ValueCellID"
     }
-    */
     // 3
+    
   
     if let cell = tableView.make(withIdentifier: cellIdentifier, owner: nil) as? NSTableCellView {
-      cell.textField?.stringValue = text
-      cell.imageView?.image = image ?? nil
+      cell.textField?.stringValue = (text ?? "Not Set")
+      //cell.imageView?.image = image ?? nil
       return cell
     }
     return nil

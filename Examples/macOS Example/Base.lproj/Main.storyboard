@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
@@ -695,7 +695,7 @@
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <tableColumns>
-                                        <tableColumn width="116" minWidth="40" maxWidth="1000" id="RHe-lX-VnA">
+                                        <tableColumn identifier="LabelCellID" width="116" minWidth="40" maxWidth="1000" id="RHe-lX-VnA">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -728,7 +728,7 @@
                                                 </tableCellView>
                                             </prototypeCellViews>
                                         </tableColumn>
-                                        <tableColumn width="326" minWidth="40" maxWidth="1000" id="bhE-vj-i9N">
+                                        <tableColumn identifier="ValueCellID" width="326" minWidth="40" maxWidth="1000" id="bhE-vj-i9N">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -762,11 +762,15 @@
                                             </prototypeCellViews>
                                         </tableColumn>
                                     </tableColumns>
+                                    <connections>
+                                        <outlet property="dataSource" destination="XfG-lQ-9wD" id="1e4-wF-2tZ"/>
+                                        <outlet property="delegate" destination="XfG-lQ-9wD" id="bIf-xF-jhu"/>
+                                    </connections>
                                 </tableView>
                             </subviews>
                         </clipView>
                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="0gn-Zq-1h2">
-                            <rect key="frame" x="1" y="33.5" width="49" height="15"/>
+                            <rect key="frame" x="1" y="34" width="49" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="VbF-UP-MDI">
@@ -778,6 +782,9 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
+                    <connections>
+                        <outlet property="tableView" destination="1nk-Gh-UoA" id="TT2-ch-GmK"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
