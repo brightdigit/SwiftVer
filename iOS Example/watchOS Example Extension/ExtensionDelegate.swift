@@ -8,6 +8,7 @@
 
 import WatchKit
 
+@available(watchOSApplicationExtension 3.0, *)
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
