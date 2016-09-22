@@ -348,6 +348,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B37840B81D92CD7F008FE737 /* Build configuration list for PBXNativeTarget "watchOS Example Extension" */;
 			buildPhases = (
+				B340201E1D94654A006309EA /* ShellScript */,
 				B37840A11D92CD7F008FE737 /* Sources */,
 				B37840A21D92CD7F008FE737 /* Frameworks */,
 				B37840A31D92CD7F008FE737 /* Resources */,
@@ -524,6 +525,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		B340201E1D94654A006309EA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Shared/autorevision/autorevision.sh\" -t swift > \"${SRCROOT}/Source/VCS.swift\"";
+		};
 		B37841061D932F45008FE737 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
