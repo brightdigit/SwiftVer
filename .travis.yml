@@ -31,4 +31,4 @@ script:
       pod lib lint;
     fi
 
-  - ./Tests/CheckCocoaPodsQualityIndexes.rb SwiftVer
+  - ruby ./Tests/CheckCocoaPodsQualityIndexes.rb SwiftVer
