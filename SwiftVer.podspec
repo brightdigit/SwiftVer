@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.homepage         = 'https://github.com/brightdigit/SwiftVer'
   s.authors = { 'Leo G Dion' => 'leogdion@brightdigit.com' }
-  s.source = { :git => 'https://github.com/brightdigit/SwiftVer.git', :tag => 'release/' + s.version.to_s }
+  s.source = { :git => 'https://github.com/brightdigit/SwiftVer.git', :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.10'
   s.watchos.deployment_target = '2.0'
