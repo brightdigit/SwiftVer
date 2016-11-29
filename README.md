@@ -16,6 +16,8 @@ THEN YOU'RE DONE, GO STAR [swift3-module-template](https://github.com/fulldecent
 
 ----
 
+[![header](https://raw.githubusercontent.com/brightdigit/swiftver/release/1.0.1/Assets/Images/Logo.png)](https://business.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-onboarding-logo)
+
 # SwiftVer
 
 [![CI Status](http://img.shields.io/travis/brightdigit/SwiftVer.svg?style=flat)](https://travis-ci.org/brightdigit/SwiftVer)
@@ -34,6 +36,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+- XCode 8.0
+- macOS 10.10+, iOS 8.0+, watchOS 2.0+
 
 ## Installation
 
@@ -78,6 +82,10 @@ github "brightdigit/SwiftVer" ~> 0.1
 ```
 
 Run `carthage update` to build the framework and drag the built `SwiftVer.framework` into your Xcode project.
+
+
+## Usage 
+https://raw.githubusercontent.com/Autorevision/autorevision/master/autorevision.sh
 
 
 ## Author
