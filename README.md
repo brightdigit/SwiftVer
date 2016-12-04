@@ -15,10 +15,6 @@
 
 ![screenshoot](https://raw.githubusercontent.com/brightdigit/swiftver/master/Assets/Images/sample-image.png)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
 ## Requirements
 
 - XCode 8.0
