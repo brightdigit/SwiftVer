@@ -128,8 +128,7 @@ public struct VersionControlInfo {
 
 ## Author
 
-Leo G Dion
-
+Leo G Dion, [BrightDigit, LLC](http://www.brightdigit.com)
 
 ## License
 
