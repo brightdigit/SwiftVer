@@ -3,7 +3,7 @@
 # SwiftVer
 
 [![Twitter](https://img.shields.io/badge/Twitter-@BrightDigit-blue.svg?style=flat)](http://twitter.com/brightdigit)
-[![Codecov](https://img.shields.io/codecov/c/github/brightdigit/swiftver.svg?maxAge=2592000)](https://codecov.io/gh/brightdigit/swiftver)
+[![Codecov](https://img.shields.io/codecov/c/github/brightdigit/swiftver.svg)](https://codecov.io/gh/brightdigit/swiftver)
 [![Travis](https://img.shields.io/travis/brightdigit/swiftver.svg)](https://travis-ci.org/brightdigit/swiftver)
 [![Beerpay](https://img.shields.io/beerpay/brightdigit/swiftver.svg?maxAge=2592000)](https://beerpay.io/brightdigit/swiftver)
 [![Gitter](https://img.shields.io/gitter/room/swiftver-framework/Lobby.js.svg?maxAge=2592000)](https://gitter.im/swiftver-framework/Lobby)
