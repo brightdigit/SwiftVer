@@ -1,4 +1,4 @@
-![header](https://raw.githubusercontent.com/brightdigit/swiftver/release/1.0.1/Assets/Images/Logo.png)
+![header](https://raw.githubusercontent.com/brightdigit/swiftver/master/Assets/Images/Logo.png)
 
 # SwiftVer
 
@@ -13,7 +13,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/SwiftVer.svg?style=flat)](https://cocoapods.org/pods/SwiftVer)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-<a href="https://placehold.it/400?text=Screen+shot"><img width=200 height=200 src="https://placehold.it/400?text=Screen+shot" alt="Screenshot" /></a>
+![screenshoot](https://raw.githubusercontent.com/brightdigit/swiftver/master/Assets/Images/sample-image.png)
 
 ## Example
 
@@ -70,6 +70,27 @@ Run `carthage update` to build the framework and drag the built `SwiftVer.framew
 
 
 ## Usage 
+
+### Parsing the Version from a Bundle
+
+The `Version` bundle initializer takes in a bundle and failable. If your Bundle does to contain a valid version string in the format of `major.minor` or `major.minor.patch`, the initializer will fail.
+
+```swift
+guard let version = Version(bundle: Bundle.main) else {
+	// invalid version format 
+}
+
+```
+
+#### Valid
+![xcode screenshot version 1.0.1](https://raw.githubusercontent.com/brightdigit/swiftver/master/Assets/Images/version_format_xcode_1.0.1.png)
+
+![xcode screenshot version 1.0](https://raw.githubusercontent.com/brightdigit/swiftver/master/Assets/Images/version_format_xcode_1.0.png)
+
+#### Invalid
+![xcode screenshot version 1](https://raw.githubusercontent.com/brightdigit/swiftver/master/Assets/Images/version_format_xcode_1.png)
+
+### Integrating Version Control Info with [Autorevision](https://autorevision.github.io)
 
 
 ## Author
