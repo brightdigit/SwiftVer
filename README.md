@@ -13,6 +13,8 @@
 [![Platform](https://img.shields.io/cocoapods/p/SwiftVer.svg?style=flat)](https://cocoapods.org/pods/SwiftVer)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
+Be able to parse your version information from your bundles as well as revision metadata from your VCS repository.
+
 ![screenshoot](https://raw.githubusercontent.com/brightdigit/swiftver/master/Assets/Images/sample-image.png)
 
 ## Requirements
