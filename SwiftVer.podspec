@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'SwiftVer'
-  s.version = '1.0.1'
+  s.version = '1.1.0-alpha1'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.summary = 'Parses bundle and autorevision version information for use in applications and about pages.'
 
