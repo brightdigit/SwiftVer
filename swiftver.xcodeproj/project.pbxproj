@@ -18,14 +18,14 @@
 		B378405F1D9275DB008FE737 /* SemVer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378405C1D9275DB008FE737 /* SemVer.swift */; };
 		B378406E1D92779E008FE737 /* SwiftVer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37840651D92779E008FE737 /* SwiftVer.framework */; };
 		B378407C1D9277DD008FE737 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A141D91D3630085656C /* Version.swift */; };
-		B378407D1D9277DD008FE737 /* rfc3339.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A151D91D3630085656C /* rfc3339.swift */; };
+		B378407D1D9277DD008FE737 /* RFC3339DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A151D91D3630085656C /* RFC3339DateFormatter.swift */; };
 		B378407E1D9277DD008FE737 /* SwiftVer.h in Headers */ = {isa = PBXBuildFile; fileRef = D95E1BE01D88D63300F94976 /* SwiftVer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B378407F1D9277DD008FE737 /* VersionControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840541D92757F008FE737 /* VersionControlType.swift */; };
 		B37840801D9277DD008FE737 /* VersionControlInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840581D927595008FE737 /* VersionControlInfo.swift */; };
 		B37840811D9277DD008FE737 /* SemVer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378405C1D9275DB008FE737 /* SemVer.swift */; };
-		B37840841D927A15008FE737 /* rfc3339Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840831D927A15008FE737 /* rfc3339Tests.swift */; };
-		B37840851D927A15008FE737 /* rfc3339Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840831D927A15008FE737 /* rfc3339Tests.swift */; };
-		B37840861D927A15008FE737 /* rfc3339Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840831D927A15008FE737 /* rfc3339Tests.swift */; };
+		B37840841D927A15008FE737 /* RFC3339DateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840831D927A15008FE737 /* RFC3339DateFormatterTests.swift */; };
+		B37840851D927A15008FE737 /* RFC3339DateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840831D927A15008FE737 /* RFC3339DateFormatterTests.swift */; };
+		B37840861D927A15008FE737 /* RFC3339DateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840831D927A15008FE737 /* RFC3339DateFormatterTests.swift */; };
 		B37840881D927A26008FE737 /* SemVerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840871D927A26008FE737 /* SemVerTests.swift */; };
 		B37840891D927A26008FE737 /* SemVerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840871D927A26008FE737 /* SemVerTests.swift */; };
 		B378408A1D927A26008FE737 /* SemVerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840871D927A26008FE737 /* SemVerTests.swift */; };
@@ -47,13 +47,13 @@
 		B37840EC1D92E033008FE737 /* testVCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840E91D92E033008FE737 /* testVCS.swift */; };
 		B38B1A0D1D921090007AAAD7 /* SwiftVer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38B1A041D921090007AAAD7 /* SwiftVer.framework */; };
 		B38B1A1B1D9210CA007AAAD7 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A141D91D3630085656C /* Version.swift */; };
-		B38B1A1C1D9210CA007AAAD7 /* rfc3339.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A151D91D3630085656C /* rfc3339.swift */; };
+		B38B1A1C1D9210CA007AAAD7 /* RFC3339DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A151D91D3630085656C /* RFC3339DateFormatter.swift */; };
 		B38B1A1D1D9210CA007AAAD7 /* SwiftVer.h in Headers */ = {isa = PBXBuildFile; fileRef = D95E1BE01D88D63300F94976 /* SwiftVer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B38B1A1E1D9210CA007AAAD7 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A141D91D3630085656C /* Version.swift */; };
-		B38B1A1F1D9210CA007AAAD7 /* rfc3339.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A151D91D3630085656C /* rfc3339.swift */; };
+		B38B1A1F1D9210CA007AAAD7 /* RFC3339DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A151D91D3630085656C /* RFC3339DateFormatter.swift */; };
 		B38B1A201D9210CA007AAAD7 /* SwiftVer.h in Headers */ = {isa = PBXBuildFile; fileRef = D95E1BE01D88D63300F94976 /* SwiftVer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3FE6A161D91D3630085656C /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A141D91D3630085656C /* Version.swift */; };
-		B3FE6A171D91D3630085656C /* rfc3339.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A151D91D3630085656C /* rfc3339.swift */; };
+		B3FE6A171D91D3630085656C /* RFC3339DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A151D91D3630085656C /* RFC3339DateFormatter.swift */; };
 		D95E1BE71D88D63400F94976 /* SwiftVer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95E1BDD1D88D63300F94976 /* SwiftVer.framework */; };
 		D95E1BEE1D88D63400F94976 /* SwiftVer.h in Headers */ = {isa = PBXBuildFile; fileRef = D95E1BE01D88D63300F94976 /* SwiftVer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -95,7 +95,7 @@
 		B37840681D92779E008FE737 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		B378406D1D92779E008FE737 /* SwiftVerTests tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftVerTests tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B37840741D92779E008FE737 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
-		B37840831D927A15008FE737 /* rfc3339Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = rfc3339Tests.swift; path = SwiftVerTests/rfc3339Tests.swift; sourceTree = "<group>"; };
+		B37840831D927A15008FE737 /* RFC3339DateFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RFC3339DateFormatterTests.swift; path = SwiftVerTests/RFC3339DateFormatterTests.swift; sourceTree = "<group>"; };
 		B37840871D927A26008FE737 /* SemVerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SemVerTests.swift; path = SwiftVerTests/SemVerTests.swift; sourceTree = "<group>"; };
 		B378408B1D927A34008FE737 /* VersionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VersionTests.swift; path = SwiftVerTests/VersionTests.swift; sourceTree = "<group>"; };
 		B378408F1D927A45008FE737 /* VersionControlInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VersionControlInfoTests.swift; path = SwiftVerTests/VersionControlInfoTests.swift; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 		B38B1A0C1D921090007AAAD7 /* SwiftVerTests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftVerTests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38B1A131D921090007AAAD7 /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
 		B3FE6A141D91D3630085656C /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
-		B3FE6A151D91D3630085656C /* rfc3339.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rfc3339.swift; sourceTree = "<group>"; };
+		B3FE6A151D91D3630085656C /* RFC3339DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFC3339DateFormatter.swift; sourceTree = "<group>"; };
 		D95E1BDD1D88D63300F94976 /* SwiftVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95E1BE01D88D63300F94976 /* SwiftVer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftVer.h; sourceTree = "<group>"; };
 		D95E1BE11D88D63300F94976 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
@@ -209,7 +209,7 @@
 				B38B1A071D921090007AAAD7 /* Info-macOS.plist */,
 				B37840681D92779E008FE737 /* Info-tvOS.plist */,
 				B38B19FA1D92105B007AAAD7 /* Info-watchOS.plist */,
-				B3FE6A151D91D3630085656C /* rfc3339.swift */,
+				B3FE6A151D91D3630085656C /* RFC3339DateFormatter.swift */,
 				B378405C1D9275DB008FE737 /* SemVer.swift */,
 				B3FE6A141D91D3630085656C /* Version.swift */,
 				B37840581D927595008FE737 /* VersionControlInfo.swift */,
@@ -226,7 +226,7 @@
 				D95E1BED1D88D63400F94976 /* Info-iOS.plist */,
 				B38B1A131D921090007AAAD7 /* Info-macOS.plist */,
 				B37840741D92779E008FE737 /* Info-tvOS.plist */,
-				B37840831D927A15008FE737 /* rfc3339Tests.swift */,
+				B37840831D927A15008FE737 /* RFC3339DateFormatterTests.swift */,
 				B37840871D927A26008FE737 /* SemVerTests.swift */,
 				B378408B1D927A34008FE737 /* VersionTests.swift */,
 				B378408F1D927A45008FE737 /* VersionControlInfoTests.swift */,
@@ -277,6 +277,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B37840761D92779E008FE737 /* Build configuration list for PBXNativeTarget "SwiftVer tvOS" */;
 			buildPhases = (
+				B35AF9DF1F095E820025CBCF /* swiftformat */,
+				B35AF9DD1F095E630025CBCF /* swiftlint */,
 				B37840601D92779E008FE737 /* Sources */,
 				B37840611D92779E008FE737 /* Frameworks */,
 				B37840621D92779E008FE737 /* Headers */,
@@ -313,6 +315,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B38B19FC1D92105B007AAAD7 /* Build configuration list for PBXNativeTarget "SwiftVer watchOS" */;
 			buildPhases = (
+				B35AF9E01F095E9B0025CBCF /* swiftformat */,
+				B35AF9DE1F095E700025CBCF /* swiftlint */,
 				B38B19F21D92105B007AAAD7 /* Sources */,
 				B38B19F31D92105B007AAAD7 /* Frameworks */,
 				B38B19F41D92105B007AAAD7 /* Headers */,
@@ -331,6 +335,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B38B1A151D921090007AAAD7 /* Build configuration list for PBXNativeTarget "SwiftVer macOS" */;
 			buildPhases = (
+				B35AF9DB1F095E3E0025CBCF /* swiftformat */,
+				B35AF9DC1F095E540025CBCF /* swiftlint */,
 				B38B19FF1D921090007AAAD7 /* Sources */,
 				B38B1A001D921090007AAAD7 /* Frameworks */,
 				B38B1A011D921090007AAAD7 /* Headers */,
@@ -367,6 +373,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D95E1BF11D88D63400F94976 /* Build configuration list for PBXNativeTarget "SwiftVer iOS" */;
 			buildPhases = (
+				B35AF9DA1F0957950025CBCF /* swiftformat */,
+				B35AF9D91F0957710025CBCF /* swiftlint */,
 				D95E1BD81D88D63300F94976 /* Sources */,
 				D95E1BD91D88D63300F94976 /* Frameworks */,
 				D95E1BDA1D88D63300F94976 /* Headers */,
@@ -406,7 +414,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "BrightDigit, LLC";
 				TargetAttributes = {
 					B37840641D92779E008FE737 = {
@@ -521,6 +529,121 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B35AF9D91F0957710025CBCF /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		B35AF9DA1F0957950025CBCF /* swiftformat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = swiftformat;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat >/dev/null; then\nswiftformat \"${SRCROOT}/Source/\" --disable trailingCommas --indent 2 --allman false --removelines enabled --header strip --insertlines disabled --empty void --ranges spaced --trimwhitespace always --linebreaks lf --commas always --comments indent --ifdef indent --hexliterals uppercase --semicolons inline\nelse\necho \"warning: SwiftFormat not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		B35AF9DB1F095E3E0025CBCF /* swiftformat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = swiftformat;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat >/dev/null; then\nswiftformat \"${SRCROOT}/Source/\" --disable trailingCommas --indent 2 --allman false --removelines enabled --header strip --insertlines disabled --empty void --ranges spaced --trimwhitespace always --linebreaks lf --commas always --comments indent --ifdef indent --hexliterals uppercase --semicolons inline\nelse\necho \"warning: SwiftFormat not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		B35AF9DC1F095E540025CBCF /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		B35AF9DD1F095E630025CBCF /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		B35AF9DE1F095E700025CBCF /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		B35AF9DF1F095E820025CBCF /* swiftformat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = swiftformat;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat >/dev/null; then\nswiftformat \"${SRCROOT}/Source/\" --disable trailingCommas --indent 2 --allman false --removelines enabled --header strip --insertlines disabled --empty void --ranges spaced --trimwhitespace always --linebreaks lf --commas always --comments indent --ifdef indent --hexliterals uppercase --semicolons inline\nelse\necho \"warning: SwiftFormat not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		B35AF9E01F095E9B0025CBCF /* swiftformat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = swiftformat;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat >/dev/null; then\nswiftformat \"${SRCROOT}/Source/\" --disable trailingCommas --indent 2 --allman false --removelines enabled --header strip --insertlines disabled --empty void --ranges spaced --trimwhitespace always --linebreaks lf --commas always --comments indent --ifdef indent --hexliterals uppercase --semicolons inline\nelse\necho \"warning: SwiftFormat not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B37840601D92779E008FE737 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -528,7 +651,7 @@
 			files = (
 				B37840E71D92DD72008FE737 /* VersionContainerProtocol.swift in Sources */,
 				B378407C1D9277DD008FE737 /* Version.swift in Sources */,
-				B378407D1D9277DD008FE737 /* rfc3339.swift in Sources */,
+				B378407D1D9277DD008FE737 /* RFC3339DateFormatter.swift in Sources */,
 				B37840801D9277DD008FE737 /* VersionControlInfo.swift in Sources */,
 				B37840811D9277DD008FE737 /* SemVer.swift in Sources */,
 				B378407F1D9277DD008FE737 /* VersionControlType.swift in Sources */,
@@ -539,7 +662,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B37840861D927A15008FE737 /* rfc3339Tests.swift in Sources */,
+				B37840861D927A15008FE737 /* RFC3339DateFormatterTests.swift in Sources */,
 				B37840961D927A58008FE737 /* VersionControlTypeTests.swift in Sources */,
 				B378408E1D927A34008FE737 /* VersionTests.swift in Sources */,
 				B378408A1D927A26008FE737 /* SemVerTests.swift in Sources */,
@@ -554,7 +677,7 @@
 			files = (
 				B37840E81D92DD72008FE737 /* VersionContainerProtocol.swift in Sources */,
 				B38B1A1B1D9210CA007AAAD7 /* Version.swift in Sources */,
-				B38B1A1C1D9210CA007AAAD7 /* rfc3339.swift in Sources */,
+				B38B1A1C1D9210CA007AAAD7 /* RFC3339DateFormatter.swift in Sources */,
 				B378405B1D927595008FE737 /* VersionControlInfo.swift in Sources */,
 				B378405F1D9275DB008FE737 /* SemVer.swift in Sources */,
 				B37840571D92757F008FE737 /* VersionControlType.swift in Sources */,
@@ -567,7 +690,7 @@
 			files = (
 				B37840E61D92DD72008FE737 /* VersionContainerProtocol.swift in Sources */,
 				B38B1A1E1D9210CA007AAAD7 /* Version.swift in Sources */,
-				B38B1A1F1D9210CA007AAAD7 /* rfc3339.swift in Sources */,
+				B38B1A1F1D9210CA007AAAD7 /* RFC3339DateFormatter.swift in Sources */,
 				B378405A1D927595008FE737 /* VersionControlInfo.swift in Sources */,
 				B378405E1D9275DB008FE737 /* SemVer.swift in Sources */,
 				B37840561D92757F008FE737 /* VersionControlType.swift in Sources */,
@@ -578,7 +701,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B37840851D927A15008FE737 /* rfc3339Tests.swift in Sources */,
+				B37840851D927A15008FE737 /* RFC3339DateFormatterTests.swift in Sources */,
 				B37840951D927A58008FE737 /* VersionControlTypeTests.swift in Sources */,
 				B378408D1D927A34008FE737 /* VersionTests.swift in Sources */,
 				B37840891D927A26008FE737 /* SemVerTests.swift in Sources */,
@@ -593,7 +716,7 @@
 			files = (
 				B37840E51D92DD72008FE737 /* VersionContainerProtocol.swift in Sources */,
 				B3FE6A161D91D3630085656C /* Version.swift in Sources */,
-				B3FE6A171D91D3630085656C /* rfc3339.swift in Sources */,
+				B3FE6A171D91D3630085656C /* RFC3339DateFormatter.swift in Sources */,
 				B37840591D927595008FE737 /* VersionControlInfo.swift in Sources */,
 				B378405D1D9275DB008FE737 /* SemVer.swift in Sources */,
 				B37840551D92757F008FE737 /* VersionControlType.swift in Sources */,
@@ -604,7 +727,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B37840841D927A15008FE737 /* rfc3339Tests.swift in Sources */,
+				B37840841D927A15008FE737 /* RFC3339DateFormatterTests.swift in Sources */,
 				B37840941D927A58008FE737 /* VersionControlTypeTests.swift in Sources */,
 				B378408C1D927A34008FE737 /* VersionTests.swift in Sources */,
 				B37840881D927A26008FE737 /* SemVerTests.swift in Sources */,
@@ -837,7 +960,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -845,7 +970,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -874,10 +1003,11 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROJECT_BUNDLE_VERSION_SHORT = 1.1.0;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0.1;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -893,7 +1023,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -901,7 +1033,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -923,9 +1059,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROJECT_BUNDLE_VERSION_SHORT = 1.1.0;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0.1;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

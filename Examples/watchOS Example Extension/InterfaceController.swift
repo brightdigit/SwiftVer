@@ -22,7 +22,7 @@ class InterfaceController: WKInterfaceController {
     self.table.setNumberOfRows(self.values.count, withRowType: "row")
     
     for (index, pair) in self.values.enumerated() {
-     
+      //swiftlint:disable:next force_cast
       let row = self.table.rowController(at: index) as! RowController
       row.titleLabel.setText(pair.label)
       row.valueLabel.setText(pair.value ?? "Not Set")

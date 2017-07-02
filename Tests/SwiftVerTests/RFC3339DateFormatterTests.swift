@@ -8,7 +8,7 @@
 
 import XCTest
 
-class rfc3339Tests: XCTestCase {
+class RFC3339DateFormatterTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
