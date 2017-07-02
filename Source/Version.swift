@@ -4,13 +4,15 @@ public struct Version {
   public let semver: SemVer
   public let build: UInt8
   public let versionControl: VersionControlInfo?
+  public let dictionary: StageBuildDictionaryProtocol
 
   public struct InfoDictionaryKeys {
     public static let version = "CFBundleShortVersionString"
     public static let build = "CFBundleVersion"
   }
 
-  public init?(bundle: VersionContainerProtocol, versionControl: VersionControlInfo? = nil) {
+  /// :nodoc:
+  public init?(bundle: VersionContainerProtocol, dictionary: StageBuildDictionaryProtocol, buildNumberCumulative: Bool, versionControl: VersionControlInfo? = nil) {
     let keys = type(of: self).InfoDictionaryKeys.self
 
     guard let versionString = bundle.infoDictionary?[keys.version] as? String else {
@@ -25,12 +27,12 @@ public struct Version {
       return nil
     }
 
-    let buildOpt: UInt8?
+    let buildOpt: Int?
 
     if let buildInt = buildValue as? Int {
-      buildOpt = UInt8(buildInt)
+      buildOpt = Int(buildInt)
     } else if let buildString = buildValue as? String {
-      buildOpt = UInt8(buildString)
+      buildOpt = Int(buildString)
     } else {
       return nil
     }
@@ -39,7 +41,8 @@ public struct Version {
       return nil
     }
 
-    self.build = build
+    self.dictionary = dictionary
+    self.build = buildNumberCumulative ? UInt8(build - dictionary.minimumStageBuildNumber(forSemVer: semver) + 1) : UInt8(build)
     self.semver = semver
     self.versionControl = versionControl
   }

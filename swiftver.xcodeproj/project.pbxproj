@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B337BEF91F0962EA00518323 /* VersionControlInfo.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF51F0962E000518323 /* VersionControlInfo.Extension.swift */; };
+		B337BEFA1F0962EA00518323 /* SemVer.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF61F0962E000518323 /* SemVer.Extension.swift */; };
+		B337BEFB1F0962EA00518323 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF81F0962E000518323 /* Stage.swift */; };
+		B337BEFC1F0962EA00518323 /* Version.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF71F0962E000518323 /* Version.Extension.swift */; };
+		B337BEFD1F0962EA00518323 /* VersionControlInfo.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF51F0962E000518323 /* VersionControlInfo.Extension.swift */; };
+		B337BEFE1F0962EA00518323 /* SemVer.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF61F0962E000518323 /* SemVer.Extension.swift */; };
+		B337BEFF1F0962EA00518323 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF81F0962E000518323 /* Stage.swift */; };
+		B337BF001F0962EA00518323 /* Version.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF71F0962E000518323 /* Version.Extension.swift */; };
+		B337BF011F0962EA00518323 /* VersionControlInfo.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF51F0962E000518323 /* VersionControlInfo.Extension.swift */; };
+		B337BF021F0962EA00518323 /* SemVer.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF61F0962E000518323 /* SemVer.Extension.swift */; };
+		B337BF031F0962EA00518323 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF81F0962E000518323 /* Stage.swift */; };
+		B337BF041F0962EA00518323 /* Version.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF71F0962E000518323 /* Version.Extension.swift */; };
+		B337BF051F0962EB00518323 /* VersionControlInfo.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF51F0962E000518323 /* VersionControlInfo.Extension.swift */; };
+		B337BF061F0962EB00518323 /* SemVer.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF61F0962E000518323 /* SemVer.Extension.swift */; };
+		B337BF071F0962EB00518323 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF81F0962E000518323 /* Stage.swift */; };
+		B337BF081F0962EB00518323 /* Version.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF71F0962E000518323 /* Version.Extension.swift */; };
 		B37840551D92757F008FE737 /* VersionControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840541D92757F008FE737 /* VersionControlType.swift */; };
 		B37840561D92757F008FE737 /* VersionControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840541D92757F008FE737 /* VersionControlType.swift */; };
 		B37840571D92757F008FE737 /* VersionControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840541D92757F008FE737 /* VersionControlType.swift */; };
@@ -88,6 +104,10 @@
 		B337BEF21F09510E00518323 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 		B337BEF31F09510E00518323 /* SwiftVer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwiftVer.podspec; sourceTree = "<group>"; };
 		B337BEF41F09510E00518323 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		B337BEF51F0962E000518323 /* VersionControlInfo.Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionControlInfo.Extension.swift; sourceTree = "<group>"; };
+		B337BEF61F0962E000518323 /* SemVer.Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemVer.Extension.swift; sourceTree = "<group>"; };
+		B337BEF71F0962E000518323 /* Version.Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.Extension.swift; sourceTree = "<group>"; };
+		B337BEF81F0962E000518323 /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 		B37840541D92757F008FE737 /* VersionControlType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionControlType.swift; sourceTree = "<group>"; };
 		B37840581D927595008FE737 /* VersionControlInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionControlInfo.swift; sourceTree = "<group>"; };
 		B378405C1D9275DB008FE737 /* SemVer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemVer.swift; sourceTree = "<group>"; };
@@ -204,6 +224,10 @@
 		D95E1BDF1D88D63300F94976 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				B337BEF51F0962E000518323 /* VersionControlInfo.Extension.swift */,
+				B337BEF61F0962E000518323 /* SemVer.Extension.swift */,
+				B337BEF81F0962E000518323 /* Stage.swift */,
+				B337BEF71F0962E000518323 /* Version.Extension.swift */,
 				D95E1BE01D88D63300F94976 /* SwiftVer.h */,
 				D95E1BE11D88D63300F94976 /* Info-iOS.plist */,
 				B38B1A071D921090007AAAD7 /* Info-macOS.plist */,
@@ -652,8 +676,12 @@
 				B37840E71D92DD72008FE737 /* VersionContainerProtocol.swift in Sources */,
 				B378407C1D9277DD008FE737 /* Version.swift in Sources */,
 				B378407D1D9277DD008FE737 /* RFC3339DateFormatter.swift in Sources */,
+				B337BF041F0962EA00518323 /* Version.Extension.swift in Sources */,
+				B337BF031F0962EA00518323 /* Stage.swift in Sources */,
 				B37840801D9277DD008FE737 /* VersionControlInfo.swift in Sources */,
 				B37840811D9277DD008FE737 /* SemVer.swift in Sources */,
+				B337BF011F0962EA00518323 /* VersionControlInfo.Extension.swift in Sources */,
+				B337BF021F0962EA00518323 /* SemVer.Extension.swift in Sources */,
 				B378407F1D9277DD008FE737 /* VersionControlType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -678,8 +706,12 @@
 				B37840E81D92DD72008FE737 /* VersionContainerProtocol.swift in Sources */,
 				B38B1A1B1D9210CA007AAAD7 /* Version.swift in Sources */,
 				B38B1A1C1D9210CA007AAAD7 /* RFC3339DateFormatter.swift in Sources */,
+				B337BF081F0962EB00518323 /* Version.Extension.swift in Sources */,
+				B337BF071F0962EB00518323 /* Stage.swift in Sources */,
 				B378405B1D927595008FE737 /* VersionControlInfo.swift in Sources */,
 				B378405F1D9275DB008FE737 /* SemVer.swift in Sources */,
+				B337BF051F0962EB00518323 /* VersionControlInfo.Extension.swift in Sources */,
+				B337BF061F0962EB00518323 /* SemVer.Extension.swift in Sources */,
 				B37840571D92757F008FE737 /* VersionControlType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,8 +723,12 @@
 				B37840E61D92DD72008FE737 /* VersionContainerProtocol.swift in Sources */,
 				B38B1A1E1D9210CA007AAAD7 /* Version.swift in Sources */,
 				B38B1A1F1D9210CA007AAAD7 /* RFC3339DateFormatter.swift in Sources */,
+				B337BF001F0962EA00518323 /* Version.Extension.swift in Sources */,
+				B337BEFF1F0962EA00518323 /* Stage.swift in Sources */,
 				B378405A1D927595008FE737 /* VersionControlInfo.swift in Sources */,
 				B378405E1D9275DB008FE737 /* SemVer.swift in Sources */,
+				B337BEFD1F0962EA00518323 /* VersionControlInfo.Extension.swift in Sources */,
+				B337BEFE1F0962EA00518323 /* SemVer.Extension.swift in Sources */,
 				B37840561D92757F008FE737 /* VersionControlType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -717,8 +753,12 @@
 				B37840E51D92DD72008FE737 /* VersionContainerProtocol.swift in Sources */,
 				B3FE6A161D91D3630085656C /* Version.swift in Sources */,
 				B3FE6A171D91D3630085656C /* RFC3339DateFormatter.swift in Sources */,
+				B337BEFC1F0962EA00518323 /* Version.Extension.swift in Sources */,
+				B337BEFB1F0962EA00518323 /* Stage.swift in Sources */,
 				B37840591D927595008FE737 /* VersionControlInfo.swift in Sources */,
 				B378405D1D9275DB008FE737 /* SemVer.swift in Sources */,
+				B337BEF91F0962EA00518323 /* VersionControlInfo.Extension.swift in Sources */,
+				B337BEFA1F0962EA00518323 /* SemVer.Extension.swift in Sources */,
 				B37840551D92757F008FE737 /* VersionControlType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
