@@ -12,6 +12,8 @@ env:
   matrix:
     - DESTINATION="OS=10.0,name=iPhone 7 Plus"     SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     POD_LINT="NO"
 script:
+  - gem install xcpretty-travis-formatter
+  - brew install swiftformat swiftlint
   - set -o pipefail
   - xcodebuild -version
   - xcodebuild -showsdks
