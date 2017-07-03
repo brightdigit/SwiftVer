@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Version {
+public struct Version: CustomStringConvertible {
   public let semver: SemVer
   public let build: UInt8
   public let versionControl: VersionControlInfo?
@@ -11,8 +11,18 @@ public struct Version {
     public static let build = "CFBundleVersion"
   }
 
-  /// :nodoc:
-  public init?(bundle: VersionContainerProtocol, dictionary: StageBuildDictionaryProtocol, buildNumberCumulative: Bool, versionControl: VersionControlInfo? = nil) {
+  public static let suffixFormatter: NumberFormatter = {
+    let formatter = NumberFormatter()
+    formatter.minimumFractionDigits = 9
+    formatter.minimumIntegerDigits = 1
+    return formatter
+  }()
+
+  public init?(
+    bundle: VersionContainerProtocol,
+    dictionary: StageBuildDictionaryProtocol,
+    buildNumberCumulative: Bool,
+    versionControl: VersionControlInfo? = nil) {
     let keys = type(of: self).InfoDictionaryKeys.self
 
     guard let versionString = bundle.infoDictionary?[keys.version] as? String else {
@@ -42,8 +52,102 @@ public struct Version {
     }
 
     self.dictionary = dictionary
-    self.build = buildNumberCumulative ? UInt8(build - dictionary.minimumStageBuildNumber(forSemVer: semver) + 1) : UInt8(build)
+    self.build = buildNumberCumulative ?
+      UInt8(build - dictionary.minimumStageBuildNumber(forSemVer: semver)
+        + 1) :
+      UInt8(build)
     self.semver = semver
     self.versionControl = versionControl
+  }
+  public var description: String {
+    return shortDescription
+  }
+
+  public var buildNumber: Int {
+    return Int(build) - dictionary.minimumStageBuildNumber(forSemVer: semver) + 1
+  }
+
+  public var semverMiniumBuild: Int {
+    return Int(build) - dictionary.minimumSemVerBuildNumber(forSemVer: semver) + 1
+  }
+
+  public var stage: Stage? {
+    return dictionary.stage(withBuildForVersion: self)?.stage
+  }
+
+  public var fullDescription: String {
+    let suffix = self.suffix
+    let suffixString = Version.suffixFormatter.string(for: suffix)!.components(separatedBy: ".")[1]
+    return "\(self.semver).\(suffixString)"
+  }
+
+  public var suffix: Double {
+    return (Double(semverMiniumBuild) +
+      (Double(versionControl?.TICK ?? 0) + extra / 1000.0)
+      / 10000.0) / 100.0
+  }
+
+  public var extra: Double {
+    if let extraString = self.versionControl?.EXTRA {
+      return Double(extraString) ?? 0
+    } else {
+      return 0
+    }
+  }
+
+  public var shortDescription: String {
+    let stage: Stage
+    let minimumBuild: UInt8
+    if let stagebuild = self.dictionary.stage(withBuildForVersion: self) {
+      stage = stagebuild.stage
+      minimumBuild = stagebuild.minimum - 1
+    } else {
+      stage = .production
+      minimumBuild = 0
+    }
+    switch stage {
+    case .production:
+      return "\(self.semver) (\(String(format: "%04X", self.build)))"
+    default:
+      return "\(self.semver)-\(stage)\(self.build - minimumBuild)"
+    }
+  }
+
+  public static func from(
+    bundle: Bundle,
+    dictionary: StageBuildDictionaryProtocol,
+    buildNumberCumulative: Bool,
+    withVersionControlInfoWithJsonResource resource: String) -> Version? {
+    let versionControlInfo = VersionControlInfo(jsonResource: resource, fromBundle: bundle)
+    return Version(
+      bundle: bundle,
+      dictionary: dictionary,
+      buildNumberCumulative: buildNumberCumulative,
+      versionControl: versionControlInfo)
+  }
+
+  public init(semver: SemVer, nonCumulativeBuildNumber: UInt8,
+              dictionary: StageBuildDictionaryProtocol) {
+    self.semver = semver
+    build = nonCumulativeBuildNumber
+    versionControl = nil
+    self.dictionary = dictionary
+  }
+
+  public init(cumulativeBuildNumber: Int, dictionary: StageBuildDictionaryProtocol) {
+    let semvers = dictionary.semvers
+    let semverMinBuilds = semvers.map {
+      (semver: $0, minBuildNumber: dictionary.minimumStageBuildNumber(forSemVer: $0))
+    }
+
+    let pair = semverMinBuilds.filter {
+      $0.minBuildNumber <= cumulativeBuildNumber
+    }.min(by: {
+      $0.minBuildNumber < $1.minBuildNumber
+    })!
+    self.dictionary = dictionary
+    semver = pair.semver
+    build = UInt8(cumulativeBuildNumber - pair.minBuildNumber + 1)
+    versionControl = nil
   }
 }

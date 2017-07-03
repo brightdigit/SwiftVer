@@ -7,7 +7,13 @@ extension Dictionary where Value: Equatable {
 }
 
 public enum VersionControlType: CustomStringConvertible {
-  public static let lookup: [String: VersionControlType] = ["git": .git, "mercurial": .mercurial, "subversion": .subversion, "bazaar": .bazaar]
+  public static let lookup: [String: VersionControlType] = [
+    "git": .git,
+    "mercurial": .mercurial,
+    "subversion": .subversion,
+    "bazaar": .bazaar
+  ]
+
   case git, mercurial, subversion, bazaar, unknown
 
   public init(TYPE: String) {

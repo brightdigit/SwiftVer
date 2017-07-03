@@ -1,32 +1,9 @@
 import Foundation
-import SwiftVer
 
-/// :nodoc:
-extension SemVer: Hashable {
-  public var hashValue: Int {
-    return description.hashValue
-  }
-}
-
-/// :nodoc:
 public typealias StageBuildDictionaryBase = [SemVer: [Stage: UInt8]]
 
-/// :nodoc:
 public typealias StageBuild = (stage: Stage, minimum: UInt8)
 
-/// :nodoc:
-public protocol SemVerSequence: Sequence {
-  associatedtype Iterator = SemVer
-}
-
-/// :nodoc:
-public protocol StageBuildDictionaryProtocol {
-  func stage(withBuildForVersion version: Version) -> StageBuild?
-  func minimumBuild(forSemVer semVer: SemVer) -> UInt8?
-  var semvers: [SemVer] { get }
-}
-
-/// :nodoc:
 public enum Stage: CustomStringConvertible {
   public struct StageBuildDictionary: StageBuildDictionaryProtocol {
     public static let empty = StageBuildDictionary(dictionary: StageBuildDictionaryBase())
@@ -89,38 +66,4 @@ public enum Stage: CustomStringConvertible {
     }
     return nil
   }
-
-  //  public static let dictionary: StageBuildDictionaryProtocol! = {
-  //    guard let url = ConferencesBundles.framework.url(
-  //      forResource: "versions",
-  //      withExtension: "plist") else {
-  //      return StageBuildDictionary.empty
-  //    }
-  //
-  //    guard let data = try? Data(contentsOf: url) else {
-  //      return StageBuildDictionary.empty
-  //    }
-  //
-  //    guard let plistOpt = try? PropertyListSerialization.propertyList(
-  //      from: data,
-  //      options: PropertyListSerialization.ReadOptions(),
-  //      format: nil) as? [String: [String: Int]],
-  //      let plist = plistOpt else {
-  //      return StageBuildDictionary.empty
-  //    }
-  //
-  //    let dictionary = plist.reduce(
-  //      StageBuildDictionaryBase(), { (previous, pair) -> StageBuildDictionaryBase in
-  //        var mutable = previous
-  //        mutable[SemVer(versionString: pair.key)!] = pair.value.reduce(
-  //          [Stage: UInt8](), { (previous, pair) -> [Stage: UInt8] in
-  //            var mutable = previous
-  //            mutable[Stage(string: pair.key)!] = UInt8(pair.value)
-  //            return mutable
-  //        })
-  //        return mutable
-  //    })
-  //
-  //    return StageBuildDictionary(dictionary: dictionary)
-  //  }()
 }
