@@ -1,39 +1,7 @@
 import XCTest
 @testable import SwiftVer
 
-struct MockBundle: VersionContainerProtocol {
-  public let infoDictionary: [String: Any]?
-
-  public init(version: Any?, build: Any?) {
-    var infoDictionary = [String: Any]()
-
-    if let version = version {
-      infoDictionary[Version.InfoDictionaryKeys.version] = version
-    }
-
-    if let build = build {
-      infoDictionary[Version.InfoDictionaryKeys.build] = build
-    }
-
-    self.infoDictionary = infoDictionary.count > 0 ? infoDictionary : nil
-  }
-}
-
-let versionControlInfo = VersionControlInfo(
-  TYPE: VCS_TYPE,
-  BASENAME: VCS_BASENAME,
-  UUID: VCS_UUID,
-  NUM: VCS_NUM,
-  DATE: VCS_DATE,
-  BRANCH: VCS_BRANCH,
-  TAG: VCS_TAG,
-  TICK: VCS_TICK,
-  EXTRA: VCS_EXTRA,
-  FULLHASH: VCS_FULL_HASH,
-  SHORTHASH: VCS_SHORT_HASH,
-  MODIFIED: VCS_WC_MODIFIED)
-
-class VersionTests: XCTestCase {
+class IntraVersionTests: XCTestCase {
 
   override func setUp() {
     super.setUp()
@@ -49,7 +17,7 @@ class VersionTests: XCTestCase {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     let bundle = MockBundle(version: "1.2.3", build: 4)
-    let version = Version(bundle: bundle, versionControl: versionControlInfo)
+    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, buildNumberCumulative: false, versionControl: versionControlInfo)
 
     XCTAssertEqual(version?.semver.major, 1)
     XCTAssertEqual(version?.semver.minor, 2)
@@ -65,9 +33,9 @@ class VersionTests: XCTestCase {
     XCTAssertEqual(version?.versionControl?.TAG, versionControlInfo.TAG)
     XCTAssertEqual(version?.versionControl?.TICK, versionControlInfo.TICK)
     XCTAssertEqual(version?.versionControl?.EXTRA, versionControlInfo.EXTRA)
-    XCTAssertEqual(version?.versionControl?.FULL_HASH, versionControlInfo.FULL_HASH)
-    XCTAssertEqual(version?.versionControl?.SHORT_HASH, versionControlInfo.SHORT_HASH)
-    XCTAssertEqual(version?.versionControl?.WC_MODIFIED, versionControlInfo.WC_MODIFIED)
+    XCTAssertEqual(version?.versionControl?.FULLHASH, versionControlInfo.FULLHASH)
+    XCTAssertEqual(version?.versionControl?.SHORTHASH, versionControlInfo.SHORTHASH)
+    XCTAssertEqual(version?.versionControl?.MODIFIED, versionControlInfo.MODIFIED)
   }
 
   func testMissingBundleVersion() {
@@ -75,7 +43,7 @@ class VersionTests: XCTestCase {
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 
     let bundle = MockBundle(version: nil, build: 4)
-    let version = Version(bundle: bundle, versionControl: versionControlInfo)
+    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, buildNumberCumulative: false, versionControl: versionControlInfo)
 
     XCTAssertNil(version)
   }
@@ -85,7 +53,7 @@ class VersionTests: XCTestCase {
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 
     let bundle = MockBundle(version: "dfasdfs", build: 4)
-    let version = Version(bundle: bundle, versionControl: versionControlInfo)
+    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, buildNumberCumulative: false, versionControl: versionControlInfo)
 
     XCTAssertNil(version)
   }
@@ -95,7 +63,7 @@ class VersionTests: XCTestCase {
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 
     let bundle = MockBundle(version: "1.2.3", build: nil)
-    let version = Version(bundle: bundle, versionControl: versionControlInfo)
+    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, buildNumberCumulative: false, versionControl: versionControlInfo)
 
     XCTAssertNil(version)
   }
@@ -105,7 +73,7 @@ class VersionTests: XCTestCase {
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 
     let bundle = MockBundle(version: "1.2.3", build: "asdfdsaf")
-    let version = Version(bundle: bundle, versionControl: versionControlInfo)
+    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, buildNumberCumulative: false, versionControl: versionControlInfo)
 
     XCTAssertNil(version)
   }

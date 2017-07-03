@@ -39,9 +39,9 @@
 		B37840881D927A26008FE737 /* SemVerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840871D927A26008FE737 /* SemVerTests.swift */; };
 		B37840891D927A26008FE737 /* SemVerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840871D927A26008FE737 /* SemVerTests.swift */; };
 		B378408A1D927A26008FE737 /* SemVerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840871D927A26008FE737 /* SemVerTests.swift */; };
-		B378408C1D927A34008FE737 /* VersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378408B1D927A34008FE737 /* VersionTests.swift */; };
-		B378408D1D927A34008FE737 /* VersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378408B1D927A34008FE737 /* VersionTests.swift */; };
-		B378408E1D927A34008FE737 /* VersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378408B1D927A34008FE737 /* VersionTests.swift */; };
+		B378408C1D927A34008FE737 /* IntraVersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378408B1D927A34008FE737 /* IntraVersionTests.swift */; };
+		B378408D1D927A34008FE737 /* IntraVersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378408B1D927A34008FE737 /* IntraVersionTests.swift */; };
+		B378408E1D927A34008FE737 /* IntraVersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378408B1D927A34008FE737 /* IntraVersionTests.swift */; };
 		B37840901D927A45008FE737 /* VersionControlInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378408F1D927A45008FE737 /* VersionControlInfoTests.swift */; };
 		B37840911D927A45008FE737 /* VersionControlInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378408F1D927A45008FE737 /* VersionControlInfoTests.swift */; };
 		B37840921D927A45008FE737 /* VersionControlInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378408F1D927A45008FE737 /* VersionControlInfoTests.swift */; };
@@ -55,6 +55,12 @@
 		B37840EA1D92E033008FE737 /* testVCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840E91D92E033008FE737 /* testVCS.swift */; };
 		B37840EB1D92E033008FE737 /* testVCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840E91D92E033008FE737 /* testVCS.swift */; };
 		B37840EC1D92E033008FE737 /* testVCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840E91D92E033008FE737 /* testVCS.swift */; };
+		B38A19C61F0ACCFE0044B910 /* MockBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A19C51F0ACCFE0044B910 /* MockBundle.swift */; };
+		B38A19C71F0ACCFE0044B910 /* MockBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A19C51F0ACCFE0044B910 /* MockBundle.swift */; };
+		B38A19C81F0ACCFE0044B910 /* MockBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A19C51F0ACCFE0044B910 /* MockBundle.swift */; };
+		B38A19C91F0ACE7B0044B910 /* GlobalVersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A19C41F0ACCCC0044B910 /* GlobalVersionTests.swift */; };
+		B38A19CA1F0ACE7B0044B910 /* GlobalVersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A19C41F0ACCCC0044B910 /* GlobalVersionTests.swift */; };
+		B38A19CB1F0ACE7C0044B910 /* GlobalVersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A19C41F0ACCCC0044B910 /* GlobalVersionTests.swift */; };
 		B38B1A0D1D921090007AAAD7 /* SwiftVer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38B1A041D921090007AAAD7 /* SwiftVer.framework */; };
 		B38B1A1B1D9210CA007AAAD7 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A141D91D3630085656C /* Version.swift */; };
 		B38B1A1C1D9210CA007AAAD7 /* RFC3339DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A151D91D3630085656C /* RFC3339DateFormatter.swift */; };
@@ -114,11 +120,13 @@
 		B37840741D92779E008FE737 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		B37840831D927A15008FE737 /* RFC3339DateFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RFC3339DateFormatterTests.swift; path = SwiftVerTests/RFC3339DateFormatterTests.swift; sourceTree = "<group>"; };
 		B37840871D927A26008FE737 /* SemVerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SemVerTests.swift; path = SwiftVerTests/SemVerTests.swift; sourceTree = "<group>"; };
-		B378408B1D927A34008FE737 /* VersionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VersionTests.swift; path = SwiftVerTests/VersionTests.swift; sourceTree = "<group>"; };
+		B378408B1D927A34008FE737 /* IntraVersionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntraVersionTests.swift; path = SwiftVerTests/IntraVersionTests.swift; sourceTree = "<group>"; };
 		B378408F1D927A45008FE737 /* VersionControlInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VersionControlInfoTests.swift; path = SwiftVerTests/VersionControlInfoTests.swift; sourceTree = "<group>"; };
 		B37840931D927A58008FE737 /* VersionControlTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VersionControlTypeTests.swift; path = SwiftVerTests/VersionControlTypeTests.swift; sourceTree = "<group>"; };
 		B37840E41D92DD72008FE737 /* VersionContainerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionContainerProtocol.swift; sourceTree = "<group>"; };
 		B37840E91D92E033008FE737 /* testVCS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = testVCS.swift; path = SwiftVerTests/testVCS.swift; sourceTree = "<group>"; };
+		B38A19C41F0ACCCC0044B910 /* GlobalVersionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GlobalVersionTests.swift; path = SwiftVerTests/GlobalVersionTests.swift; sourceTree = "<group>"; };
+		B38A19C51F0ACCFE0044B910 /* MockBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockBundle.swift; path = SwiftVerTests/MockBundle.swift; sourceTree = "<group>"; };
 		B38B19F71D92105B007AAAD7 /* SwiftVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38B19FA1D92105B007AAAD7 /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
 		B38B1A041D921090007AAAD7 /* SwiftVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,15 +250,17 @@
 		D95E1BEA1D88D63400F94976 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				B35326581F0A843B00604112 /* versions-intra.plist */,
-				B35326501F0A830D00604112 /* versions-global.plist */,
-				B37840E91D92E033008FE737 /* testVCS.swift */,
 				D95E1BED1D88D63400F94976 /* Info-iOS.plist */,
 				B38B1A131D921090007AAAD7 /* Info-macOS.plist */,
 				B37840741D92779E008FE737 /* Info-tvOS.plist */,
+				B35326501F0A830D00604112 /* versions-global.plist */,
+				B35326581F0A843B00604112 /* versions-intra.plist */,
+				B38A19C41F0ACCCC0044B910 /* GlobalVersionTests.swift */,
+				B378408B1D927A34008FE737 /* IntraVersionTests.swift */,
+				B38A19C51F0ACCFE0044B910 /* MockBundle.swift */,
 				B37840831D927A15008FE737 /* RFC3339DateFormatterTests.swift */,
 				B37840871D927A26008FE737 /* SemVerTests.swift */,
-				B378408B1D927A34008FE737 /* VersionTests.swift */,
+				B37840E91D92E033008FE737 /* testVCS.swift */,
 				B378408F1D927A45008FE737 /* VersionControlInfoTests.swift */,
 				B37840931D927A58008FE737 /* VersionControlTypeTests.swift */,
 			);
@@ -736,10 +746,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B38A19C81F0ACCFE0044B910 /* MockBundle.swift in Sources */,
 				B37840861D927A15008FE737 /* RFC3339DateFormatterTests.swift in Sources */,
 				B37840961D927A58008FE737 /* VersionControlTypeTests.swift in Sources */,
-				B378408E1D927A34008FE737 /* VersionTests.swift in Sources */,
+				B378408E1D927A34008FE737 /* IntraVersionTests.swift in Sources */,
 				B378408A1D927A26008FE737 /* SemVerTests.swift in Sources */,
+				B38A19CB1F0ACE7C0044B910 /* GlobalVersionTests.swift in Sources */,
 				B37840EC1D92E033008FE737 /* testVCS.swift in Sources */,
 				B37840921D927A45008FE737 /* VersionControlInfoTests.swift in Sources */,
 			);
@@ -779,10 +791,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B38A19C71F0ACCFE0044B910 /* MockBundle.swift in Sources */,
 				B37840851D927A15008FE737 /* RFC3339DateFormatterTests.swift in Sources */,
 				B37840951D927A58008FE737 /* VersionControlTypeTests.swift in Sources */,
-				B378408D1D927A34008FE737 /* VersionTests.swift in Sources */,
+				B378408D1D927A34008FE737 /* IntraVersionTests.swift in Sources */,
 				B37840891D927A26008FE737 /* SemVerTests.swift in Sources */,
+				B38A19CA1F0ACE7B0044B910 /* GlobalVersionTests.swift in Sources */,
 				B37840EB1D92E033008FE737 /* testVCS.swift in Sources */,
 				B37840911D927A45008FE737 /* VersionControlInfoTests.swift in Sources */,
 			);
@@ -807,10 +821,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B38A19C61F0ACCFE0044B910 /* MockBundle.swift in Sources */,
 				B37840841D927A15008FE737 /* RFC3339DateFormatterTests.swift in Sources */,
 				B37840941D927A58008FE737 /* VersionControlTypeTests.swift in Sources */,
-				B378408C1D927A34008FE737 /* VersionTests.swift in Sources */,
+				B378408C1D927A34008FE737 /* IntraVersionTests.swift in Sources */,
 				B37840881D927A26008FE737 /* SemVerTests.swift in Sources */,
+				B38A19C91F0ACE7B0044B910 /* GlobalVersionTests.swift in Sources */,
 				B37840EA1D92E033008FE737 /* testVCS.swift in Sources */,
 				B37840901D927A45008FE737 /* VersionControlInfoTests.swift in Sources */,
 			);

@@ -1,4 +1,19 @@
 import XCTest
+@testable import SwiftVer
+
+let versionControlInfo = VersionControlInfo(
+  TYPE: VCS_TYPE,
+  BASENAME: VCS_BASENAME,
+  UUID: VCS_UUID,
+  NUM: VCS_NUM,
+  DATE: VCS_DATE,
+  BRANCH: VCS_BRANCH,
+  TAG: VCS_TAG,
+  TICK: VCS_TICK,
+  EXTRA: VCS_EXTRA,
+  FULLHASH: VCS_FULL_HASH,
+  SHORTHASH: VCS_SHORT_HASH,
+  MODIFIED: VCS_WC_MODIFIED)
 
 class VersionControlInfoTests: XCTestCase {
 

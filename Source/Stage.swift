@@ -5,7 +5,40 @@ public typealias StageBuildDictionaryBase = [SemVer: [Stage: UInt8]]
 public typealias StageBuild = (stage: Stage, minimum: UInt8)
 
 public enum Stage: CustomStringConvertible {
-  public struct StageBuildDictionary: StageBuildDictionaryProtocol {
+  public static func dictionary(fromPlistAtURL url: URL) -> StageBuildDictionaryProtocol? {
+
+    guard let data = try? Data(contentsOf: url) else {
+      return Stage.StageBuildDictionary.empty
+    }
+
+    guard let plistOpt = try? PropertyListSerialization.propertyList(
+      from: data,
+      options: PropertyListSerialization.ReadOptions(),
+      format: nil) as? [String: [String: Int]],
+      let plist = plistOpt else {
+      return Stage.StageBuildDictionary.empty
+    }
+
+    let dictionary = plist.reduce(
+      StageBuildDictionaryBase(), { (previous, pair) -> StageBuildDictionaryBase in
+        var mutable = previous
+        mutable[SemVer(versionString: pair.key)!] = pair.value.reduce(
+          [Stage: UInt8](), { (previous, pair) -> [Stage: UInt8] in
+            var mutable = previous
+            mutable[Stage(string: pair.key)!] = UInt8(pair.value)
+            return mutable
+        })
+        return mutable
+    })
+
+    return Stage.StageBuildDictionary(dictionary: dictionary)
+  }
+
+  public static var emptyDictionary: StageBuildDictionaryProtocol {
+    return StageBuildDictionary.empty
+  }
+
+  internal struct StageBuildDictionary: StageBuildDictionaryProtocol {
     public static let empty = StageBuildDictionary(dictionary: StageBuildDictionaryBase())
     public var semvers: [SemVer] {
       return Array(dictionary.keys)
