@@ -11,6 +11,12 @@
 		B337BEFF1F0962EA00518323 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF81F0962E000518323 /* Stage.swift */; };
 		B337BF031F0962EA00518323 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF81F0962E000518323 /* Stage.swift */; };
 		B337BF071F0962EB00518323 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF81F0962E000518323 /* Stage.swift */; };
+		B35326551F0A841100604112 /* versions-global.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35326501F0A830D00604112 /* versions-global.plist */; };
+		B35326561F0A841100604112 /* versions-global.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35326501F0A830D00604112 /* versions-global.plist */; };
+		B35326571F0A841200604112 /* versions-global.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35326501F0A830D00604112 /* versions-global.plist */; };
+		B35326591F0A846700604112 /* versions-intra.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35326581F0A843B00604112 /* versions-intra.plist */; };
+		B353265A1F0A846800604112 /* versions-intra.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35326581F0A843B00604112 /* versions-intra.plist */; };
+		B353265B1F0A846800604112 /* versions-intra.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35326581F0A843B00604112 /* versions-intra.plist */; };
 		B37840551D92757F008FE737 /* VersionControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840541D92757F008FE737 /* VersionControlType.swift */; };
 		B37840561D92757F008FE737 /* VersionControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840541D92757F008FE737 /* VersionControlType.swift */; };
 		B37840571D92757F008FE737 /* VersionControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840541D92757F008FE737 /* VersionControlType.swift */; };
@@ -97,6 +103,8 @@
 		B337BEF31F09510E00518323 /* SwiftVer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwiftVer.podspec; sourceTree = "<group>"; };
 		B337BEF41F09510E00518323 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		B337BEF81F0962E000518323 /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
+		B35326501F0A830D00604112 /* versions-global.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "versions-global.plist"; path = "SwiftVerTests/versions-global.plist"; sourceTree = "<group>"; };
+		B35326581F0A843B00604112 /* versions-intra.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "versions-intra.plist"; path = "SwiftVerTests/versions-intra.plist"; sourceTree = "<group>"; };
 		B37840541D92757F008FE737 /* VersionControlType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionControlType.swift; sourceTree = "<group>"; };
 		B37840581D927595008FE737 /* VersionControlInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionControlInfo.swift; sourceTree = "<group>"; };
 		B378405C1D9275DB008FE737 /* SemVer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemVer.swift; sourceTree = "<group>"; };
@@ -234,6 +242,8 @@
 		D95E1BEA1D88D63400F94976 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				B35326581F0A843B00604112 /* versions-intra.plist */,
+				B35326501F0A830D00604112 /* versions-global.plist */,
 				B37840E91D92E033008FE737 /* testVCS.swift */,
 				D95E1BED1D88D63400F94976 /* Info-iOS.plist */,
 				B38B1A131D921090007AAAD7 /* Info-macOS.plist */,
@@ -504,6 +514,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B353265B1F0A846800604112 /* versions-intra.plist in Resources */,
+				B35326571F0A841200604112 /* versions-global.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +537,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B353265A1F0A846800604112 /* versions-intra.plist in Resources */,
+				B35326561F0A841100604112 /* versions-global.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +553,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B35326591F0A846700604112 /* versions-intra.plist in Resources */,
+				B35326551F0A841100604112 /* versions-global.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
