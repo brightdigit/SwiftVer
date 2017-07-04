@@ -14,8 +14,8 @@ env:
 script:
   - gem install xcpretty-travis-formatter
   - brew install swiftformat swiftlint
-  - set -o pipefail
-  - ./build.sh
+  #- set -o pipefail
+  #- ./build.sh
   #- xcodebuild -workspace "$WORKSPACE" -list
 
   # Build and test Framework in Debug
@@ -28,9 +28,9 @@ script:
   #- xcodebuild -workspace "$WORKSPACE" -scheme "$EXAMPLE_SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty
 
   # Run `pod lib lint` if specified
-  - if [ $POD_LINT == "YES" ]; then
-      pod lib lint;
-    fi
+  #- if [ $POD_LINT == "YES" ]; then
+  #    pod lib lint;
+  #  fi
 
   - xcodebuild -project SwiftVer.xcodeproj -scheme "SwiftVer macOS" -destination 'platform=OS X,arch=x86_64' -enableCodeCoverage YES test
   - bash <(curl -s https://codecov.io/bash) -cF macOS
