@@ -15,9 +15,6 @@ script:
   - gem install xcpretty-travis-formatter
   - brew install swiftformat swiftlint
   - set -o pipefail
-  - xcodebuild -version
-  - xcodebuild -showsdks
-  - xcodebuild -list
   - ./build.sh
   #- xcodebuild -workspace "$WORKSPACE" -list
 
@@ -35,6 +32,10 @@ script:
       pod lib lint;
     fi
 
+  - xcodebuild -project SwiftVer.xcodeproj -scheme "SwiftVer macOS" -destination 'platform=OS X,arch=x86_64' -enableCodeCoverage YES test
+  - bash <(curl -s https://codecov.io/bash) -cF macOS
+  - xcodebuild -project SwiftVer.xcodeproj -scheme "SwiftVer iOS" -destination "platform=iOS Simulator,name=iPhone 7 Plus,OS=11.0" -enableCodeCoverage YES test
+  - bash <(curl -s https://codecov.io/bash) -cF iOS
+  - xcodebuild -project SwiftVer.xcodeproj -scheme "SwiftVer tvOS" -destination "platform=tvOS Simulator,name=Apple TV 1080p,OS=11.0" -enableCodeCoverage YES test
+  - bash <(curl -s https://codecov.io/bash) -cF tvOS
   #- ruby ./Tests/CheckCocoaPodsQualityIndexes.rb SwiftVer
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
