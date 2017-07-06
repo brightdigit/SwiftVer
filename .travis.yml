@@ -14,7 +14,8 @@ env:
 script:
   - gem install xcpretty-travis-formatter
   - brew update
-  - brew install swiftformat swiftlint
+  - brew tap Homebrew/bundle
+  - brew bundle
   #- set -o pipefail
   #- ./build.sh
   #- xcodebuild -workspace "$WORKSPACE" -list
