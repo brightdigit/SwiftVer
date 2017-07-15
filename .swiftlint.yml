@@ -1,6 +1,7 @@
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Pods
   - Tests/SwiftVerTests/testVCS.swift
+  - Examples/Source/VCS.swift
 
 included: # paths to include during linting. `--path` is ignored if present.
   - Source

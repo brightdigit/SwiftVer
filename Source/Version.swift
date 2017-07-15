@@ -78,7 +78,7 @@ public struct Version: CustomStringConvertible {
   public var fullDescription: String {
     let suffix = self.suffix
     let suffixString = Version.suffixFormatter.string(for: suffix)!.components(separatedBy: ".")[1]
-    return "\(self.semver).\(suffixString)"
+    return "\(semver).\(suffixString)"
   }
 
   public var suffix: Double {
@@ -107,9 +107,9 @@ public struct Version: CustomStringConvertible {
     }
     switch stage {
     case .production:
-      return "\(self.semver) (\(String(format: "%04X", self.build)))"
+      return "\(semver) (\(String(format: "%04X", build)))"
     default:
-      return "\(self.semver)-\(stage)\(self.build - minimumBuild)"
+      return "\(semver)-\(stage)\(build - minimumBuild)"
     }
   }
 
