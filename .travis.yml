@@ -1,8 +1,6 @@
 language: objective-c
 os: osx
-osx_image:
-  - xcode8.3
-  - xcode9
+osx_image: xcode9
 script:
   - gem install xcpretty-travis-formatter
   - brew update
