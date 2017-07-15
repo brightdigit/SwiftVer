@@ -19,9 +19,9 @@ public struct SemVer: CustomStringConvertible, Comparable, Equatable, Hashable {
 
   public var description: String {
     if let patch = self.patch {
-      return "\(self.major).\(self.minor).\(patch)"
+      return "\(major).\(minor).\(patch)"
     } else {
-      return "\(self.major).\(self.minor)"
+      return "\(major).\(minor)"
     }
   }
 
