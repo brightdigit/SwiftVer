@@ -72,7 +72,7 @@ xcuserdata
 DerivedData
 *.hmap
 *.ipa
-*.xcuserstate 
+*.xcuserstate
 
 # CocoaPods
 #
@@ -103,3 +103,5 @@ fastlane/test_output
 __PROJECT_NAME__.framework.zip
 
 VCS.swift
+
+Products
