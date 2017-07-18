@@ -5,6 +5,12 @@ public struct SemVer: CustomStringConvertible, Comparable, Equatable, Hashable {
   public let minor: UInt8
   public let patch: UInt8?
 
+  public init(major: UInt8, minor: UInt8, patch: UInt8? = nil) {
+    self.major = major
+    self.minor = minor
+    self.patch = patch
+  }
+
   public init?(versionString: String) {
     let values = versionString.components(separatedBy: ".").map { UInt8($0) }
 

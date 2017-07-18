@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B31FED101F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31FED0F1F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift */; };
+		B31FED111F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31FED0F1F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift */; };
+		B31FED121F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31FED0F1F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift */; };
 		B337BEFB1F0962EA00518323 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF81F0962E000518323 /* Stage.swift */; };
 		B337BEFF1F0962EA00518323 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF81F0962E000518323 /* Stage.swift */; };
 		B337BF031F0962EA00518323 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF81F0962E000518323 /* Stage.swift */; };
@@ -103,6 +106,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B31FED0F1F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StageBuildDictionaryProtocolTests.swift; path = SwiftVerTests/StageBuildDictionaryProtocolTests.swift; sourceTree = "<group>"; };
 		B337BEF01F09510E00518323 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B337BEF11F09510E00518323 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B337BEF21F09510E00518323 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
@@ -263,6 +267,7 @@
 				B37840E91D92E033008FE737 /* testVCS.swift */,
 				B378408F1D927A45008FE737 /* VersionControlInfoTests.swift */,
 				B37840931D927A58008FE737 /* VersionControlTypeTests.swift */,
+				B31FED0F1F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -749,6 +754,7 @@
 				B38A19C81F0ACCFE0044B910 /* MockBundle.swift in Sources */,
 				B37840861D927A15008FE737 /* RFC3339DateFormatterTests.swift in Sources */,
 				B37840961D927A58008FE737 /* VersionControlTypeTests.swift in Sources */,
+				B31FED121F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift in Sources */,
 				B378408E1D927A34008FE737 /* IntraVersionTests.swift in Sources */,
 				B378408A1D927A26008FE737 /* SemVerTests.swift in Sources */,
 				B38A19CB1F0ACE7C0044B910 /* GlobalVersionTests.swift in Sources */,
@@ -794,6 +800,7 @@
 				B38A19C71F0ACCFE0044B910 /* MockBundle.swift in Sources */,
 				B37840851D927A15008FE737 /* RFC3339DateFormatterTests.swift in Sources */,
 				B37840951D927A58008FE737 /* VersionControlTypeTests.swift in Sources */,
+				B31FED111F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift in Sources */,
 				B378408D1D927A34008FE737 /* IntraVersionTests.swift in Sources */,
 				B37840891D927A26008FE737 /* SemVerTests.swift in Sources */,
 				B38A19CA1F0ACE7B0044B910 /* GlobalVersionTests.swift in Sources */,
@@ -824,6 +831,7 @@
 				B38A19C61F0ACCFE0044B910 /* MockBundle.swift in Sources */,
 				B37840841D927A15008FE737 /* RFC3339DateFormatterTests.swift in Sources */,
 				B37840941D927A58008FE737 /* VersionControlTypeTests.swift in Sources */,
+				B31FED101F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift in Sources */,
 				B378408C1D927A34008FE737 /* IntraVersionTests.swift in Sources */,
 				B37840881D927A26008FE737 /* SemVerTests.swift in Sources */,
 				B38A19C91F0ACE7B0044B910 /* GlobalVersionTests.swift in Sources */,
