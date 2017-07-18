@@ -71,6 +71,9 @@
 		B38B1A1E1D9210CA007AAAD7 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A141D91D3630085656C /* Version.swift */; };
 		B38B1A1F1D9210CA007AAAD7 /* RFC3339DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A151D91D3630085656C /* RFC3339DateFormatter.swift */; };
 		B38B1A201D9210CA007AAAD7 /* SwiftVer.h in Headers */ = {isa = PBXBuildFile; fileRef = D95E1BE01D88D63300F94976 /* SwiftVer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B39B575C1F1EA10400449235 /* autorevision.json in Resources */ = {isa = PBXBuildFile; fileRef = B39B575A1F1E9DDA00449235 /* autorevision.json */; };
+		B39B575D1F1EA10400449235 /* autorevision.json in Resources */ = {isa = PBXBuildFile; fileRef = B39B575A1F1E9DDA00449235 /* autorevision.json */; };
+		B39B575E1F1EA10500449235 /* autorevision.json in Resources */ = {isa = PBXBuildFile; fileRef = B39B575A1F1E9DDA00449235 /* autorevision.json */; };
 		B3C3A4221F09BD1F00746233 /* StageBuildDictionaryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3A4211F09BD1F00746233 /* StageBuildDictionaryProtocol.swift */; };
 		B3C3A4231F09BD5E00746233 /* StageBuildDictionaryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3A4211F09BD1F00746233 /* StageBuildDictionaryProtocol.swift */; };
 		B3C3A4241F09BD5F00746233 /* StageBuildDictionaryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3A4211F09BD1F00746233 /* StageBuildDictionaryProtocol.swift */; };
@@ -106,15 +109,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B31FED0F1F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StageBuildDictionaryProtocolTests.swift; path = SwiftVerTests/StageBuildDictionaryProtocolTests.swift; sourceTree = "<group>"; };
+		B31FED0F1F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageBuildDictionaryProtocolTests.swift; sourceTree = "<group>"; };
 		B337BEF01F09510E00518323 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B337BEF11F09510E00518323 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B337BEF21F09510E00518323 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 		B337BEF31F09510E00518323 /* SwiftVer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwiftVer.podspec; sourceTree = "<group>"; };
 		B337BEF41F09510E00518323 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		B337BEF81F0962E000518323 /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
-		B35326501F0A830D00604112 /* versions-global.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "versions-global.plist"; path = "SwiftVerTests/versions-global.plist"; sourceTree = "<group>"; };
-		B35326581F0A843B00604112 /* versions-intra.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "versions-intra.plist"; path = "SwiftVerTests/versions-intra.plist"; sourceTree = "<group>"; };
+		B35326501F0A830D00604112 /* versions-global.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "versions-global.plist"; sourceTree = "<group>"; };
+		B35326581F0A843B00604112 /* versions-intra.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "versions-intra.plist"; sourceTree = "<group>"; };
 		B37840541D92757F008FE737 /* VersionControlType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionControlType.swift; sourceTree = "<group>"; };
 		B37840581D927595008FE737 /* VersionControlInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionControlInfo.swift; sourceTree = "<group>"; };
 		B378405C1D9275DB008FE737 /* SemVer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemVer.swift; sourceTree = "<group>"; };
@@ -122,21 +125,22 @@
 		B37840681D92779E008FE737 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		B378406D1D92779E008FE737 /* SwiftVerTests tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftVerTests tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B37840741D92779E008FE737 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
-		B37840831D927A15008FE737 /* RFC3339DateFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RFC3339DateFormatterTests.swift; path = SwiftVerTests/RFC3339DateFormatterTests.swift; sourceTree = "<group>"; };
-		B37840871D927A26008FE737 /* SemVerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SemVerTests.swift; path = SwiftVerTests/SemVerTests.swift; sourceTree = "<group>"; };
-		B378408B1D927A34008FE737 /* IntraVersionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntraVersionTests.swift; path = SwiftVerTests/IntraVersionTests.swift; sourceTree = "<group>"; };
-		B378408F1D927A45008FE737 /* VersionControlInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VersionControlInfoTests.swift; path = SwiftVerTests/VersionControlInfoTests.swift; sourceTree = "<group>"; };
-		B37840931D927A58008FE737 /* VersionControlTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VersionControlTypeTests.swift; path = SwiftVerTests/VersionControlTypeTests.swift; sourceTree = "<group>"; };
+		B37840831D927A15008FE737 /* RFC3339DateFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFC3339DateFormatterTests.swift; sourceTree = "<group>"; };
+		B37840871D927A26008FE737 /* SemVerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemVerTests.swift; sourceTree = "<group>"; };
+		B378408B1D927A34008FE737 /* IntraVersionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntraVersionTests.swift; sourceTree = "<group>"; };
+		B378408F1D927A45008FE737 /* VersionControlInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionControlInfoTests.swift; sourceTree = "<group>"; };
+		B37840931D927A58008FE737 /* VersionControlTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionControlTypeTests.swift; sourceTree = "<group>"; };
 		B37840E41D92DD72008FE737 /* VersionContainerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionContainerProtocol.swift; sourceTree = "<group>"; };
-		B37840E91D92E033008FE737 /* testVCS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = testVCS.swift; path = SwiftVerTests/testVCS.swift; sourceTree = "<group>"; };
-		B38A19C41F0ACCCC0044B910 /* GlobalVersionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GlobalVersionTests.swift; path = SwiftVerTests/GlobalVersionTests.swift; sourceTree = "<group>"; };
-		B38A19C51F0ACCFE0044B910 /* MockBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockBundle.swift; path = SwiftVerTests/MockBundle.swift; sourceTree = "<group>"; };
+		B37840E91D92E033008FE737 /* testVCS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testVCS.swift; sourceTree = "<group>"; };
+		B38A19C41F0ACCCC0044B910 /* GlobalVersionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVersionTests.swift; sourceTree = "<group>"; };
+		B38A19C51F0ACCFE0044B910 /* MockBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBundle.swift; sourceTree = "<group>"; };
 		B38B19F71D92105B007AAAD7 /* SwiftVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38B19FA1D92105B007AAAD7 /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
 		B38B1A041D921090007AAAD7 /* SwiftVer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftVer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38B1A071D921090007AAAD7 /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
 		B38B1A0C1D921090007AAAD7 /* SwiftVerTests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftVerTests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38B1A131D921090007AAAD7 /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
+		B39B575A1F1E9DDA00449235 /* autorevision.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = autorevision.json; sourceTree = "<group>"; };
 		B3C3A4211F09BD1F00746233 /* StageBuildDictionaryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageBuildDictionaryProtocol.swift; sourceTree = "<group>"; };
 		B3FE6A141D91D3630085656C /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		B3FE6A151D91D3630085656C /* RFC3339DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFC3339DateFormatter.swift; sourceTree = "<group>"; };
@@ -203,6 +207,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B39B575B1F1E9E3F00449235 /* SwiftVerTests */ = {
+			isa = PBXGroup;
+			children = (
+				B39B575A1F1E9DDA00449235 /* autorevision.json */,
+				B35326501F0A830D00604112 /* versions-global.plist */,
+				B35326581F0A843B00604112 /* versions-intra.plist */,
+				B38A19C41F0ACCCC0044B910 /* GlobalVersionTests.swift */,
+				B378408B1D927A34008FE737 /* IntraVersionTests.swift */,
+				B38A19C51F0ACCFE0044B910 /* MockBundle.swift */,
+				B37840831D927A15008FE737 /* RFC3339DateFormatterTests.swift */,
+				B37840871D927A26008FE737 /* SemVerTests.swift */,
+				B37840E91D92E033008FE737 /* testVCS.swift */,
+				B378408F1D927A45008FE737 /* VersionControlInfoTests.swift */,
+				B37840931D927A58008FE737 /* VersionControlTypeTests.swift */,
+				B31FED0F1F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift */,
+			);
+			path = SwiftVerTests;
+			sourceTree = "<group>";
+		};
 		D95E1BD31D88D63200F94976 = {
 			isa = PBXGroup;
 			children = (
@@ -254,20 +277,10 @@
 		D95E1BEA1D88D63400F94976 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				B39B575B1F1E9E3F00449235 /* SwiftVerTests */,
 				D95E1BED1D88D63400F94976 /* Info-iOS.plist */,
 				B38B1A131D921090007AAAD7 /* Info-macOS.plist */,
 				B37840741D92779E008FE737 /* Info-tvOS.plist */,
-				B35326501F0A830D00604112 /* versions-global.plist */,
-				B35326581F0A843B00604112 /* versions-intra.plist */,
-				B38A19C41F0ACCCC0044B910 /* GlobalVersionTests.swift */,
-				B378408B1D927A34008FE737 /* IntraVersionTests.swift */,
-				B38A19C51F0ACCFE0044B910 /* MockBundle.swift */,
-				B37840831D927A15008FE737 /* RFC3339DateFormatterTests.swift */,
-				B37840871D927A26008FE737 /* SemVerTests.swift */,
-				B37840E91D92E033008FE737 /* testVCS.swift */,
-				B378408F1D927A45008FE737 /* VersionControlInfoTests.swift */,
-				B37840931D927A58008FE737 /* VersionControlTypeTests.swift */,
-				B31FED0F1F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -531,6 +544,7 @@
 			files = (
 				B353265B1F0A846800604112 /* versions-intra.plist in Resources */,
 				B35326571F0A841200604112 /* versions-global.plist in Resources */,
+				B39B575E1F1EA10500449235 /* autorevision.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +568,7 @@
 			files = (
 				B353265A1F0A846800604112 /* versions-intra.plist in Resources */,
 				B35326561F0A841100604112 /* versions-global.plist in Resources */,
+				B39B575D1F1EA10400449235 /* autorevision.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +585,7 @@
 			files = (
 				B35326591F0A846700604112 /* versions-intra.plist in Resources */,
 				B35326551F0A841100604112 /* versions-global.plist in Resources */,
+				B39B575C1F1EA10400449235 /* autorevision.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
