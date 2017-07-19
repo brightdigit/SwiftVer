@@ -32,7 +32,7 @@ class VersionControlInfoTests: XCTestCase {
     XCTAssertEqual(versionControlInfo.BASENAME, VCS_BASENAME)
     XCTAssertEqual(versionControlInfo.UUID, VCS_UUID)
     XCTAssertEqual(versionControlInfo.NUM, VCS_NUM)
-    XCTAssertEqual(versionControlInfo.DATE, RFC3339DateFormatter.instance.date(from: VCS_DATE))
+    XCTAssertEqual(versionControlInfo.DATE, DateFormatter.rfc3339DateFormatter.date(from: VCS_DATE))
     XCTAssertEqual(versionControlInfo.BRANCH, VCS_BRANCH)
     XCTAssertEqual(versionControlInfo.TAG, VCS_TAG)
     XCTAssertEqual(versionControlInfo.TICK, VCS_TICK)
@@ -59,12 +59,12 @@ class VersionControlInfoTests: XCTestCase {
   }
 
   func testInitJsonResource() {
-    let versionControlInfoJson = VersionControlInfo(jsonResource: "autorevision", fromBundle: Bundle(for: VersionControlInfoTests))!
+    let versionControlInfoJson = VersionControlInfo(jsonResource: "autorevision", fromBundle: Bundle(for: VersionControlInfoTests.self))!
     XCTAssertEqual(versionControlInfoJson.TYPE.description.caseInsensitiveCompare("git"), .orderedSame)
     XCTAssertEqual(versionControlInfoJson.BASENAME, "swiftvertests")
     XCTAssertEqual(versionControlInfoJson.UUID, "dba359e6621e2e2243d8eb2d42b6c07860976fd9")
     XCTAssertEqual(versionControlInfoJson.NUM, 425)
-    XCTAssertEqual(versionControlInfoJson.DATE, RFC3339DateFormatter.instance.date(from: "2017-07-03T13:23:17Z"))
+    XCTAssertEqual(versionControlInfoJson.DATE, DateFormatter.rfc3339DateFormatter.date(from: "2017-07-03T13:23:17Z"))
     XCTAssertEqual(versionControlInfoJson.BRANCH, "feature/swiftver-v1.1.0")
     XCTAssertEqual(versionControlInfoJson.TAG, "1.1.0-alpha3")
     XCTAssertEqual(versionControlInfoJson.TICK, 7)

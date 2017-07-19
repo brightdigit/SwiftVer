@@ -35,7 +35,7 @@ public struct VersionControlInfo {
     self.BASENAME = BASENAME
     self.UUID = UUID
     self.NUM = NUM
-    self.DATE = RFC3339DateFormatter.instance.date(from: DATE)
+    self.DATE = DateFormatter.rfc3339DateFormatter.date(from: DATE)
     self.BRANCH = BRANCH
     self.TAG = TAG
     self.TICK = TICK
@@ -119,7 +119,7 @@ public struct VersionControlInfo {
 
     let date_value: Date?
     if let date_string = dictionary["VCS_DATE"] as? String {
-      date_value = RFC3339DateFormatter.instance.date(from: date_string)
+      date_value = DateFormatter.rfc3339DateFormatter.date(from: date_string)
     } else {
       date_value = nil
     }
