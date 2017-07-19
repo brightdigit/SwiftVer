@@ -110,19 +110,17 @@ public struct Version: CustomStringConvertible {
       return "\(semver)-\(stage)\(build - minimumBuild)"
     }
   }
-  //
-  //  public static func from(
-  //    bundle: VersionContainerProtocol,
-  //    dictionary: StageBuildDictionaryProtocol,
-  //    buildNumberCumulative: Bool,
-  //    withVersionControlInfoWithJsonResource resource: String) -> Version? {
-  //    let versionControlInfo = VersionControlInfo(jsonResource: resource, fromBundle: bundle)
-  //    return Version(
-  //      bundle: bundle,
-  //      dictionary: dictionary,
-  //      buildNumberCumulative: buildNumberCumulative,
-  //      versionControl: versionControlInfo)
-  //  }
+
+  public static func from(
+    bundle: Bundle,
+    dictionary: StageBuildDictionaryProtocol,
+    withVersionControlInfoWithJsonResource resource: String) -> Version? {
+    let versionControlInfo = VersionControlInfo(jsonResource: resource, fromBundle: bundle)
+    return Version(
+      bundle: bundle,
+      dictionary: dictionary,
+      versionControl: versionControlInfo)
+  }
 
   public init(semver: SemVer, nonCumulativeBuildNumber: UInt8,
               dictionary: StageBuildDictionaryProtocol) {
