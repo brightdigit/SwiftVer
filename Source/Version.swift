@@ -21,7 +21,6 @@ public struct Version: CustomStringConvertible {
   public init?(
     bundle: VersionContainerProtocol,
     dictionary: StageBuildDictionaryProtocol,
-    buildNumberCumulative _: Bool,
     versionControl: VersionControlInfo? = nil) {
     let keys = type(of: self).InfoDictionaryKeys.self
 
@@ -111,19 +110,19 @@ public struct Version: CustomStringConvertible {
       return "\(semver)-\(stage)\(build - minimumBuild)"
     }
   }
-
-  public static func from(
-    bundle: Bundle,
-    dictionary: StageBuildDictionaryProtocol,
-    buildNumberCumulative: Bool,
-    withVersionControlInfoWithJsonResource resource: String) -> Version? {
-    let versionControlInfo = VersionControlInfo(jsonResource: resource, fromBundle: bundle)
-    return Version(
-      bundle: bundle,
-      dictionary: dictionary,
-      buildNumberCumulative: buildNumberCumulative,
-      versionControl: versionControlInfo)
-  }
+  //
+  //  public static func from(
+  //    bundle: VersionContainerProtocol,
+  //    dictionary: StageBuildDictionaryProtocol,
+  //    buildNumberCumulative: Bool,
+  //    withVersionControlInfoWithJsonResource resource: String) -> Version? {
+  //    let versionControlInfo = VersionControlInfo(jsonResource: resource, fromBundle: bundle)
+  //    return Version(
+  //      bundle: bundle,
+  //      dictionary: dictionary,
+  //      buildNumberCumulative: buildNumberCumulative,
+  //      versionControl: versionControlInfo)
+  //  }
 
   public init(semver: SemVer, nonCumulativeBuildNumber: UInt8,
               dictionary: StageBuildDictionaryProtocol) {
@@ -141,7 +140,7 @@ public struct Version: CustomStringConvertible {
 
     let pair = semverMinBuilds.filter {
       $0.minBuildNumber <= cumulativeBuildNumber
-    }.min(by: {
+    }.max(by: {
       $0.minBuildNumber < $1.minBuildNumber
     })!
     self.dictionary = dictionary
