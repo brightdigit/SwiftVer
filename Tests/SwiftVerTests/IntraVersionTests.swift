@@ -77,4 +77,68 @@ class IntraVersionTests: XCTestCase {
 
     XCTAssertNil(version)
   }
+
+  public func testdescription() {
+
+    let bundle = MockBundle(version: "1.0.0", build: 8)
+    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, buildNumberCumulative: false, versionControl: versionControlInfo)
+    XCTAssertEqual(version?.description, version?.shortDescription)
+  }
+
+  public func testStageBuildNumber() {
+
+    let bundle = MockBundle(version: "1.0.0", build: 8)
+    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, buildNumberCumulative: false, versionControl: versionControlInfo)
+    XCTAssertEqual(version?.stageBuildNumber, 3)
+  }
+
+  public func testSemverBuildNumber() {
+    let bundle = MockBundle(version: "1.0.0", build: 8)
+    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, buildNumberCumulative: false, versionControl: versionControlInfo)
+    XCTAssertEqual(version?.semverBuildNumber, 8)
+  }
+
+  public func testStage() {
+    let bundle = MockBundle(version: "1.0.0", build: 8)
+    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, buildNumberCumulative: false, versionControl: versionControlInfo)
+    XCTAssertEqual(version?.stage, .beta)
+  }
+
+  //  public func testfullDescription() {
+  //    let suffix = self.suffix
+  //    let suffixString = Version.suffixFormatter.string(for: suffix)!.components(separatedBy: ".")[1]
+  //    return "\(semver).\(suffixString)"
+  //  }
+  //
+  //  public func testsuffix() {
+  //    return (Double(semverMiniumBuild) +
+  //      (Double(versionControl?.TICK ?? 0) + extra / 1000.0)
+  //      / 10000.0) / 100.0
+  //  }
+  //
+  //  public func testextra() {
+  //    if let extraString = self.versionControl?.EXTRA {
+  //      return Double(extraString) ?? 0
+  //    } else {
+  //      return 0
+  //    }
+  //  }
+  //
+  //  public func testshortDescription() {
+  //    let stage: Stage
+  //    let minimumBuild: UInt8
+  //    if let stagebuild = self.dictionary.stage(withBuildForVersion: self) {
+  //      stage = stagebuild.stage
+  //      minimumBuild = stagebuild.minimum - 1
+  //    } else {
+  //      stage = .production
+  //      minimumBuild = 0
+  //    }
+  //    switch stage {
+  //    case .production:
+  //      return "\(semver) (\(String(format: "%04X", build)))"
+  //    default:
+  //      return "\(semver)-\(stage)\(build - minimumBuild)"
+  //    }
+  //  }
 }

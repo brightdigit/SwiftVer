@@ -77,4 +77,57 @@ class GlobalVersionTests: XCTestCase {
 
     XCTAssertNil(version)
   }
+  //
+  //  public func testdescription() {
+  //  }
+  //
+  //  public func testbuildNumber() {
+  //    return Int(build) - dictionary.minimumStageBuildNumber(forSemVer: semver) + 1
+  //  }
+  //
+  //  public func testsemverMiniumBuild() {
+  //    return Int(build) - dictionary.minimumSemVerBuildNumber(forSemVer: semver) + 1
+  //  }
+  //
+  //  public func teststage() {
+  //    return dictionary.stage(withBuildForVersion: self)?.stage
+  //  }
+  //
+  //  public func testfullDescription() {
+  //    let suffix = self.suffix
+  //    let suffixString = Version.suffixFormatter.string(for: suffix)!.components(separatedBy: ".")[1]
+  //    return "\(semver).\(suffixString)"
+  //  }
+  //
+  //  public func testsuffix() {
+  //    return (Double(semverMiniumBuild) +
+  //      (Double(versionControl?.TICK ?? 0) + extra / 1000.0)
+  //      / 10000.0) / 100.0
+  //  }
+  //
+  //  public func testextra() {
+  //    if let extraString = self.versionControl?.EXTRA {
+  //      return Double(extraString) ?? 0
+  //    } else {
+  //      return 0
+  //    }
+  //  }
+  //
+  //  public func testshortDescription() {
+  //    let stage: Stage
+  //    let minimumBuild: UInt8
+  //    if let stagebuild = self.dictionary.stage(withBuildForVersion: self) {
+  //      stage = stagebuild.stage
+  //      minimumBuild = stagebuild.minimum - 1
+  //    } else {
+  //      stage = .production
+  //      minimumBuild = 0
+  //    }
+  //    switch stage {
+  //    case .production:
+  //      return "\(semver) (\(String(format: "%04X", build)))"
+  //    default:
+  //      return "\(semver)-\(stage)\(build - minimumBuild)"
+  //    }
+  //  }
 }

@@ -10,9 +10,11 @@
 	<key>1.0.0</key>
 	<dict>
 		<key>beta</key>
-		<integer>1</integer>
+		<integer>6</integer>
+		<key>alpha</key>
+		<integer>2</integer>
 		<key>production</key>
-		<integer>3</integer>
+		<integer>9</integer>
 	</dict>
 </dict>
 </plist>

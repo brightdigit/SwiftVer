@@ -2,19 +2,19 @@ import Foundation
 @testable import SwiftVer
 
 struct MockBundle: VersionContainerProtocol {
-  public static let globalBuildNumberDictionary: StageBuildDictionaryProtocol! =
+  public static let globalBuildNumberDictionary: StageBuildDictionaryProtocol =
     Stage.dictionary(
       fromPlistAtURL:
         Bundle(for: GlobalVersionTests.self).url(
           forResource: "versions-global",
-          withExtension: "plist")!)
+          withExtension: "plist")!)!
 
-  public static let intraBuildNumberDictionary: StageBuildDictionaryProtocol! =
+  public static let intraBuildNumberDictionary: StageBuildDictionaryProtocol =
     Stage.dictionary(
       fromPlistAtURL:
         Bundle(for: IntraVersionTests.self).url(
           forResource: "versions-intra",
-          withExtension: "plist")!)
+          withExtension: "plist")!)!
 
   public let infoDictionary: [String: Any]?
 

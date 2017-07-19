@@ -21,7 +21,7 @@ public struct Version: CustomStringConvertible {
   public init?(
     bundle: VersionContainerProtocol,
     dictionary: StageBuildDictionaryProtocol,
-    buildNumberCumulative: Bool,
+    buildNumberCumulative _: Bool,
     versionControl: VersionControlInfo? = nil) {
     let keys = type(of: self).InfoDictionaryKeys.self
 
@@ -52,10 +52,7 @@ public struct Version: CustomStringConvertible {
     }
 
     self.dictionary = dictionary
-    self.build = buildNumberCumulative ?
-      UInt8(build - dictionary.minimumStageBuildNumber(forSemVer: semver)
-        + 1) :
-      UInt8(build)
+    self.build = UInt8(build)
     self.semver = semver
     self.versionControl = versionControl
   }
@@ -63,11 +60,14 @@ public struct Version: CustomStringConvertible {
     return shortDescription
   }
 
-  public var buildNumber: Int {
-    return Int(build) - dictionary.minimumStageBuildNumber(forSemVer: semver) + 1
+  public var stageBuildNumber: Int? {
+    guard let stage = self.stage else {
+      return nil
+    }
+    return Int(build) - dictionary.minimumStageBuildNumber(forSemVer: semver, atStage: stage) + 1
   }
 
-  public var semverMiniumBuild: Int {
+  public var semverBuildNumber: Int {
     return Int(build) - dictionary.minimumSemVerBuildNumber(forSemVer: semver) + 1
   }
 
@@ -82,7 +82,7 @@ public struct Version: CustomStringConvertible {
   }
 
   public var suffix: Double {
-    return (Double(semverMiniumBuild) +
+    return (Double(semverBuildNumber) +
       (Double(versionControl?.TICK ?? 0) + extra / 1000.0)
       / 10000.0) / 100.0
   }
@@ -137,7 +137,7 @@ public struct Version: CustomStringConvertible {
   public init(cumulativeBuildNumber: Int, dictionary: StageBuildDictionaryProtocol) {
     let semvers = dictionary.semvers
     let semverMinBuilds = semvers.map {
-      (semver: $0, minBuildNumber: dictionary.minimumStageBuildNumber(forSemVer: $0))
+      (semver: $0, minBuildNumber: dictionary.minimumSemVerBuildNumber(forSemVer: $0))
     }
 
     let pair = semverMinBuilds.filter {
@@ -147,7 +147,7 @@ public struct Version: CustomStringConvertible {
     })!
     self.dictionary = dictionary
     semver = pair.semver
-    build = UInt8(cumulativeBuildNumber - pair.minBuildNumber + 1)
+    build = UInt8(cumulativeBuildNumber)
     versionControl = nil
   }
 }

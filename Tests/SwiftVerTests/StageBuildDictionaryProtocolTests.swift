@@ -3,6 +3,10 @@ import XCTest
 
 class StageBuildDictionaryProtocolTests: XCTestCase {
   struct MockStageBuildDictionary: StageBuildDictionaryProtocol {
+    func minimumStageBuildNumber(forSemVer _: SemVer, atStage _: Stage) -> Int {
+      return Int(minimum)
+    }
+
     public let stage: Stage = Stage.beta
     public let minimum: UInt8 = 200
 
@@ -32,7 +36,7 @@ class StageBuildDictionaryProtocolTests: XCTestCase {
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     let semver = SemVer(major: UInt8(truncatingBitPattern: 1), minor: UInt8(truncatingBitPattern: 1))
     let dictionary = MockStageBuildDictionary(semvers: [semver])
-    let minimum = dictionary.minimumStageBuildNumber(forSemVer: semver)
+    let minimum = dictionary.minimumStageBuildNumber(forSemVer: semver, atStage: .beta)
     XCTAssertEqual(minimum, Int(dictionary.minimum))
   }
 
@@ -41,7 +45,7 @@ class StageBuildDictionaryProtocolTests: XCTestCase {
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     let semver = SemVer(major: UInt8(truncatingBitPattern: 1), minor: UInt8(truncatingBitPattern: 1))
     let dictionary = MockStageBuildDictionary(semvers: [semver])
-    let minimum = dictionary.minimumStageBuildNumber(forSemVer: semver)
+    let minimum = dictionary.minimumStageBuildNumber(forSemVer: semver, atStage: .beta)
     XCTAssertEqual(minimum, Int(dictionary.minimum))
   }
 
