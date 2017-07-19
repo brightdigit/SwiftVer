@@ -1,7 +1,7 @@
 import Foundation
 @testable import SwiftVer
 
-struct MockBundle: VersionContainerProtocol {
+struct MockBundle: InfoDictionaryContainerProtocol, ResourceContainerProtocol {
   public static let globalBuildNumberDictionary: StageBuildDictionaryProtocol =
     Stage.dictionary(
       fromPlistAtURL:
@@ -30,5 +30,12 @@ struct MockBundle: VersionContainerProtocol {
     }
 
     self.infoDictionary = infoDictionary.count > 0 ? infoDictionary : nil
+  }
+
+  public func url(forResource name: String?, withExtension ext: String?, subdirectory subpath: String?) -> URL? {
+    return Bundle(for: IntraVersionTests.self).url(
+      forResource: name,
+      withExtension: ext,
+      subdirectory: subpath)
   }
 }

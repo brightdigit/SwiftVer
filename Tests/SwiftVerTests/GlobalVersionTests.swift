@@ -143,4 +143,12 @@ class GlobalVersionTests: XCTestCase {
 
     XCTAssertEqual(version.shortDescription, "1.1.0-beta4")
   }
+
+  public func testFromBundle() {
+    let bundle = MockBundle(version: "1.1.0", build: 32)
+    // let version = Version(bundle: bundle, dictionary: MockBundle.globalBuildNumberDictionary, versionControl: versionControlInfo)
+    let version = Version.from(bundle: bundle, dictionary: MockBundle.globalBuildNumberDictionary, withVersionControlInfoWithJsonResource: "versions-global")
+
+    XCTAssertEqual(version?.shortDescription, "1.1.0 (0020)")
+  }
 }

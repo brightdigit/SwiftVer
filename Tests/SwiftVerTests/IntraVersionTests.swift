@@ -144,4 +144,12 @@ class IntraVersionTests: XCTestCase {
 
     XCTAssertEqual(version.shortDescription, "1.0.0-beta3")
   }
+
+  public func testFromBundle() {
+    let bundle = MockBundle(version: "1.0.0", build: 8)
+    // let version = Version(bundle: bundle, dictionary: MockBundle.globalBuildNumberDictionary, versionControl: versionControlInfo)
+    let version = Version.from(bundle: bundle, dictionary: MockBundle.globalBuildNumberDictionary, withVersionControlInfoWithJsonResource: "versions-intra")
+
+    XCTAssertEqual(version?.shortDescription, "1.0.0-beta3")
+  }
 }

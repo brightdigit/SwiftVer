@@ -1,5 +1,12 @@
 import Foundation
 
+public protocol ResourceContainerProtocol {
+  func url(forResource name: String?, withExtension ext: String?, subdirectory subpath: String?) -> URL?
+}
+
+extension Bundle: ResourceContainerProtocol {
+}
+
 public struct Version: CustomStringConvertible {
   public let semver: SemVer
   public let build: UInt8
@@ -19,7 +26,7 @@ public struct Version: CustomStringConvertible {
   }()
 
   public init?(
-    bundle: VersionContainerProtocol,
+    bundle: InfoDictionaryContainerProtocol,
     dictionary: StageBuildDictionaryProtocol,
     versionControl: VersionControlInfo? = nil) {
     let keys = type(of: self).InfoDictionaryKeys.self
@@ -112,7 +119,7 @@ public struct Version: CustomStringConvertible {
   }
 
   public static func from(
-    bundle: Bundle,
+    bundle: ResourceContainerProtocol & InfoDictionaryContainerProtocol,
     dictionary: StageBuildDictionaryProtocol,
     withVersionControlInfoWithJsonResource resource: String) -> Version? {
     let versionControlInfo = VersionControlInfo(jsonResource: resource, fromBundle: bundle)

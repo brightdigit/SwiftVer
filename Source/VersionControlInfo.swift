@@ -62,7 +62,7 @@ public struct VersionControlInfo {
 
   public init?(
     jsonResource: String,
-    fromBundle bundle: Bundle,
+    fromBundle bundle: ResourceContainerProtocol,
     inDirectory directory: String? = nil
   ) {
     guard let url = bundle.url(

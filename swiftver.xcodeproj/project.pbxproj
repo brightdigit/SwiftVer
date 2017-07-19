@@ -51,10 +51,10 @@
 		B37840941D927A58008FE737 /* VersionControlTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840931D927A58008FE737 /* VersionControlTypeTests.swift */; };
 		B37840951D927A58008FE737 /* VersionControlTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840931D927A58008FE737 /* VersionControlTypeTests.swift */; };
 		B37840961D927A58008FE737 /* VersionControlTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840931D927A58008FE737 /* VersionControlTypeTests.swift */; };
-		B37840E51D92DD72008FE737 /* VersionContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840E41D92DD72008FE737 /* VersionContainerProtocol.swift */; };
-		B37840E61D92DD72008FE737 /* VersionContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840E41D92DD72008FE737 /* VersionContainerProtocol.swift */; };
-		B37840E71D92DD72008FE737 /* VersionContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840E41D92DD72008FE737 /* VersionContainerProtocol.swift */; };
-		B37840E81D92DD72008FE737 /* VersionContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840E41D92DD72008FE737 /* VersionContainerProtocol.swift */; };
+		B37840E51D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840E41D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift */; };
+		B37840E61D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840E41D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift */; };
+		B37840E71D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840E41D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift */; };
+		B37840E81D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840E41D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift */; };
 		B37840EA1D92E033008FE737 /* testVCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840E91D92E033008FE737 /* testVCS.swift */; };
 		B37840EB1D92E033008FE737 /* testVCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840E91D92E033008FE737 /* testVCS.swift */; };
 		B37840EC1D92E033008FE737 /* testVCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840E91D92E033008FE737 /* testVCS.swift */; };
@@ -130,7 +130,7 @@
 		B378408B1D927A34008FE737 /* IntraVersionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntraVersionTests.swift; sourceTree = "<group>"; };
 		B378408F1D927A45008FE737 /* VersionControlInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionControlInfoTests.swift; sourceTree = "<group>"; };
 		B37840931D927A58008FE737 /* VersionControlTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionControlTypeTests.swift; sourceTree = "<group>"; };
-		B37840E41D92DD72008FE737 /* VersionContainerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionContainerProtocol.swift; sourceTree = "<group>"; };
+		B37840E41D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoDictionaryContainerProtocol.swift; sourceTree = "<group>"; };
 		B37840E91D92E033008FE737 /* testVCS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testVCS.swift; sourceTree = "<group>"; };
 		B38A19C41F0ACCCC0044B910 /* GlobalVersionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVersionTests.swift; sourceTree = "<group>"; };
 		B38A19C51F0ACCFE0044B910 /* MockBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBundle.swift; sourceTree = "<group>"; };
@@ -267,7 +267,7 @@
 				B337BEF81F0962E000518323 /* Stage.swift */,
 				B3C3A4211F09BD1F00746233 /* StageBuildDictionaryProtocol.swift */,
 				B3FE6A141D91D3630085656C /* Version.swift */,
-				B37840E41D92DD72008FE737 /* VersionContainerProtocol.swift */,
+				B37840E41D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift */,
 				B37840581D927595008FE737 /* VersionControlInfo.swift */,
 				B37840541D92757F008FE737 /* VersionControlType.swift */,
 			);
@@ -752,7 +752,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B37840E71D92DD72008FE737 /* VersionContainerProtocol.swift in Sources */,
+				B37840E71D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift in Sources */,
 				B378407C1D9277DD008FE737 /* Version.swift in Sources */,
 				B378407D1D9277DD008FE737 /* RFC3339DateFormatter.swift in Sources */,
 				B337BF031F0962EA00518323 /* Stage.swift in Sources */,
@@ -783,7 +783,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B37840E81D92DD72008FE737 /* VersionContainerProtocol.swift in Sources */,
+				B37840E81D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift in Sources */,
 				B38B1A1B1D9210CA007AAAD7 /* Version.swift in Sources */,
 				B38B1A1C1D9210CA007AAAD7 /* RFC3339DateFormatter.swift in Sources */,
 				B337BF071F0962EB00518323 /* Stage.swift in Sources */,
@@ -798,7 +798,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B37840E61D92DD72008FE737 /* VersionContainerProtocol.swift in Sources */,
+				B37840E61D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift in Sources */,
 				B38B1A1E1D9210CA007AAAD7 /* Version.swift in Sources */,
 				B38B1A1F1D9210CA007AAAD7 /* RFC3339DateFormatter.swift in Sources */,
 				B337BEFF1F0962EA00518323 /* Stage.swift in Sources */,
@@ -829,7 +829,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B37840E51D92DD72008FE737 /* VersionContainerProtocol.swift in Sources */,
+				B37840E51D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift in Sources */,
 				B3FE6A161D91D3630085656C /* Version.swift in Sources */,
 				B3FE6A171D91D3630085656C /* RFC3339DateFormatter.swift in Sources */,
 				B337BEFB1F0962EA00518323 /* Stage.swift in Sources */,

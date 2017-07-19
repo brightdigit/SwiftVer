@@ -68,4 +68,8 @@ class StageBuildDictionaryProtocolTests: XCTestCase {
     let minimum = dictionary.minimumSemVerBuildNumber(forSemVer: semverOther)
     XCTAssertEqual(minimum, 1)
   }
+
+  func testEmpty() {
+    XCTAssertEqual(Stage.emptyDictionary.semvers.count, 0)
+  }
 }

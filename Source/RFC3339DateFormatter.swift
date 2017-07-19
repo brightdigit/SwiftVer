@@ -2,7 +2,6 @@ import Foundation
 
 extension DateFormatter {
   func setupRFC3339DateFormatter() {
-
     locale = Locale(identifier: "en_US_POSIX")
     dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssXXX"
     timeZone = TimeZone(secondsFromGMT: 0)
