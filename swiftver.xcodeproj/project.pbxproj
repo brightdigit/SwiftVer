@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		B31E2EEA1F2009C7006FA8AF /* Docs */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B31E2EED1F2009C7006FA8AF /* Build configuration list for PBXAggregateTarget "Docs" */;
+			buildPhases = (
+				B31E2EEE1F2009D9006FA8AF /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Docs;
+			productName = Docs;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		B31FED101F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31FED0F1F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift */; };
 		B31FED111F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31FED0F1F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift */; };
@@ -470,6 +484,10 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "BrightDigit, LLC";
 				TargetAttributes = {
+					B31E2EEA1F2009C7006FA8AF = {
+						CreatedOnToolsVersion = 9.0;
+						DevelopmentTeam = MLT7M394S7;
+					};
 					B37840641D92779E008FE737 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = MLT7M394S7;
@@ -526,6 +544,7 @@
 				D95E1BE51D88D63400F94976 /* SwiftVerTests iOS */,
 				B38B1A0B1D921090007AAAD7 /* SwiftVerTests macOS */,
 				B378406C1D92779E008FE737 /* SwiftVerTests tvOS */,
+				B31E2EEA1F2009C7006FA8AF /* Docs */,
 			);
 		};
 /* End PBXProject section */
@@ -592,6 +611,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		B31E2EEE1F2009D9006FA8AF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rbenv install 2.1.0\nrbenv local 2.1.0\nrbenv exec gem install jazzy\nrbenv exec jazzy --config .jazzy.yml";
+		};
 		B35AF9D91F0957710025CBCF /* swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -877,6 +909,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		B31E2EEB1F2009C7006FA8AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B31E2EEC1F2009C7006FA8AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = MLT7M394S7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		B37840771D92779E008FE737 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1258,6 +1306,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B31E2EED1F2009C7006FA8AF /* Build configuration list for PBXAggregateTarget "Docs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B31E2EEB1F2009C7006FA8AF /* Debug */,
+				B31E2EEC1F2009C7006FA8AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		B37840761D92779E008FE737 /* Build configuration list for PBXNativeTarget "SwiftVer tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

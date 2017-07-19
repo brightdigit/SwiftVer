@@ -1,0 +1,136 @@
+# exclude:
+#   - "**/bridge/*.swift"
+
+author: BrightDigit
+author_url: http://www.brightdigit.com
+disable_search: true
+module: "SwiftVer"
+#theme: theme
+#
+# custom_categories:
+#   - name: Preferences
+#     children:
+#     - KeyCodeTransformer
+#     - KeyTransformer
+#     - KeyCombo
+#
+#   - name: Notifications
+#     children:
+#     - NSUserNotification
+#     - UserNotificationFactory
+#     - UserNotificationFactoryProtocol
+#     - UserNotificationHandler
+#     - UserNotificationHandlerProtocol
+#     - UserNotificationManager
+#     - UserNotificationManagerFactory
+#     - UserNotificationManagerFactoryProtocol
+#     - UserNotificationManagerProtocol
+#     - UserNotificationType
+#
+#   - name: Events
+#     children:
+#     - ApplicationConfiguration
+#     - ApplicationConfigurationProtocol
+#     - ConferencesApp
+#     - ConferencesBundles
+#     - ConferencesKeys
+#     - ConferencesNotificationNames
+#     - PollWindowManager
+#     - PollWindowManagerProtocol
+#     - PresentationChangeEventHandlerFactory
+#     - PresentationChangeEventHandler
+#     - PresentationChangeEventHandlerDelegate
+#     - PresentationChangeEventHandlerFactoryProtocol
+#     - PresentationChangeEventHandlerProtocol
+#
+#   - name: UI
+#     children:
+#     - AboutMenuItem
+#     - AboutViewController
+#     - ActiveMenuItemViewController
+#     - CheckForUpdateMenuItem
+#     - ConferencesWindow
+#     - ConferencesWindowPresentationActionDelegate
+#     - DisableMenuItem
+#     - HelpDocumentationMenuItem
+#     - LearnMoreMenuItem
+#     - MenuItem
+#     - PreferencesMenuItem
+#     - QuitMenuItem
+#     - StatusMenuController
+#     - StatusMenuProtocol
+#     - URLMenuItem
+#     - VersionMenuItem
+#     - WebViewController
+#
+#   - name: Polls
+#     children:
+#     - ManualTriggerExtension
+#     - ManualTriggerExtensionParser
+#     - ManualTriggerJavaScriptCode
+#     - NSScreen
+#     - PollSpecifications
+#     - PollSpecificationsExtensionParserProtocol
+#     - PollSpecificationsExtensionProtocol
+#     - PollSpecificationsParser
+#     - PollSpecificationsParserProtocol
+#     - PollSpecificationsProtocol
+#     - PresentationSlideDetails
+#     - PresentationSlideSpecifications
+#     - PresentationSlideSpecificationsParser
+#     - QueryParameterParserProtocol
+#     - SpecsParserFactory
+#     - SpecsParserFactoryProtocol
+#     - PresentationSlideSpecificationsParserProtocol
+#     - PresentationSlideSpecificationsProtocol
+#     - SlideDetails
+#     - SlideDetailsProtocol
+#     - SlideSourceId
+#     - String
+#     - CGRect
+#
+#   - name: Updates
+#     children:
+#     - FeedURLProvider
+#     - SemVer
+#     - SemVerSequence
+#     - SparkleUpdateManager
+#     - SparkleUpdateManagerFactory
+#     - Stage
+#     - StageBuildDictionaryProtocol
+#     - UpdateConfiguration
+#     - UpdateConfigurationProtocol
+#     - UpdateConfigurationRequest
+#     - UpdateConfigurationRequestProtocol
+#     - UpdateManagerDelegate
+#     - UpdateManagerFactoryProtocol
+#     - UpdateManagerProtocol
+#     - UpdateRepositoryProtocol
+#     - Version
+#     - VersionControlInfo
+#
+#   - name: Presentations
+#     children:
+#     - ActiveApplicationProtocol
+#     - NSRunningApplication
+#     - ApplicationPresentationSource
+#     - ApplicationRepository
+#     - ApplicationRepositoryProtocol
+#     - ApplicationSourceProtocol
+#     - ApplicationWindow
+#     - ApplicationWindowCollectionIdentifier
+#     - ApplicationWindowCollectionIdentifierProtocol
+#     - ApplicationWindowFactory
+#     - ApplicationWindowFactoryProtocol
+#     - ApplicationWindowProtocol
+#     - ConferencesWindowFactory
+#     - ConferencesWindowFactoryProtocol
+#     - KeynoteSource
+#     - PowerPointNotesCompiler
+#     - PowerPointNotesCompilerProtocol
+#     - PowerPointShapeParser
+#     - PowerPointShapeParserProtocol
+#     - PowerPointSource
+#     - PresentationAction
+#     - PresentationSource
+#     - PresentationSourceId
