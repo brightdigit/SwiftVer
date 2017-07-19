@@ -13,7 +13,7 @@ public struct Version: CustomStringConvertible {
 
   public static let suffixFormatter: NumberFormatter = {
     let formatter = NumberFormatter()
-    formatter.minimumFractionDigits = 9
+    formatter.minimumFractionDigits = 10
     formatter.minimumIntegerDigits = 1
     return formatter
   }()
@@ -76,12 +76,11 @@ public struct Version: CustomStringConvertible {
   }
 
   public var fullDescription: String {
-    let suffix = self.suffix
-    let suffixString = Version.suffixFormatter.string(for: suffix)!.components(separatedBy: ".")[1]
+    let suffixString = Version.suffixFormatter.string(for: subSemVerValue)!.components(separatedBy: ".")[1]
     return "\(semver).\(suffixString)"
   }
 
-  public var suffix: Double {
+  public var subSemVerValue: Double {
     return (Double(semverBuildNumber) +
       (Double(versionControl?.TICK ?? 0) + extra / 1000.0)
       / 10000.0) / 100.0
