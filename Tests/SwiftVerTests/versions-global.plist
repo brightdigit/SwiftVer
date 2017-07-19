@@ -4,6 +4,10 @@
 <dict>
 	<key>1.1.0</key>
 	<dict>
+		<key>beta</key>
+		<integer>23</integer>
+		<key>production</key>
+		<integer>32</integer>
 		<key>alpha</key>
 		<integer>18</integer>
 	</dict>

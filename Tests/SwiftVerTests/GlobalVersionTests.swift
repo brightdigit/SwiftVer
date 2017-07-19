@@ -77,21 +77,32 @@ class GlobalVersionTests: XCTestCase {
 
     XCTAssertNil(version)
   }
-  //
-  //  public func testdescription() {
-  //  }
-  //
-  //  public func testbuildNumber() {
-  //    return Int(build) - dictionary.minimumStageBuildNumber(forSemVer: semver) + 1
-  //  }
-  //
-  //  public func testsemverMiniumBuild() {
-  //    return Int(build) - dictionary.minimumSemVerBuildNumber(forSemVer: semver) + 1
-  //  }
-  //
-  //  public func teststage() {
-  //    return dictionary.stage(withBuildForVersion: self)?.stage
-  //  }
+
+  public func testdescription() {
+
+    let bundle = MockBundle(version: "1.1.0", build: 26)
+    let version = Version(bundle: bundle, dictionary: MockBundle.globalBuildNumberDictionary, buildNumberCumulative: true, versionControl: versionControlInfo)
+    XCTAssertEqual(version?.description, version?.shortDescription)
+  }
+
+  public func testStageBuildNumber() {
+
+    let bundle = MockBundle(version: "1.1.0", build: 26)
+    let version = Version(bundle: bundle, dictionary: MockBundle.globalBuildNumberDictionary, buildNumberCumulative: true, versionControl: versionControlInfo)
+    XCTAssertEqual(version?.stageBuildNumber, 4)
+  }
+
+  public func testSemverBuildNumber() {
+    let bundle = MockBundle(version: "1.1.0", build: 26)
+    let version = Version(bundle: bundle, dictionary: MockBundle.globalBuildNumberDictionary, buildNumberCumulative: true, versionControl: versionControlInfo)
+    XCTAssertEqual(version?.semverBuildNumber, 9)
+  }
+
+  public func testStage() {
+    let bundle = MockBundle(version: "1.1.0", build: 26)
+    let version = Version(bundle: bundle, dictionary: MockBundle.globalBuildNumberDictionary, buildNumberCumulative: true, versionControl: versionControlInfo)
+    XCTAssertEqual(version?.stage, .beta)
+  }
   //
   //  public func testfullDescription() {
   //    let suffix = self.suffix
