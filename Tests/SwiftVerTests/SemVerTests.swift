@@ -44,4 +44,28 @@ class SemVerTests: XCTestCase {
     XCTAssertNil(semver)
     XCTAssertNil(semver?.description)
   }
+
+  func testGoodSemVerMMPWithPatch() {
+    let versionString = "1.2.3"
+    let semver = SemVer(major: "1", minor: "2", patch: "3")
+    XCTAssertEqual(semver?.major, 1)
+    XCTAssertEqual(semver?.minor, 2)
+    XCTAssertEqual(semver?.patch, 3)
+    XCTAssertEqual(versionString, semver?.description)
+  }
+
+  func testGoodSemVerMMPWithNoPatch() {
+    let versionString = "1.2"
+    let semver = SemVer(major: "1", minor: "2")
+    XCTAssertEqual(semver?.major, 1)
+    XCTAssertEqual(semver?.minor, 2)
+    XCTAssertNil(semver?.patch)
+    XCTAssertEqual(versionString, semver?.description)
+  }
+
+  func testBadSemVerMMPString() {
+    let semver = SemVer(major: "1", minor: "x", patch: "3")
+    XCTAssertNil(semver)
+    XCTAssertNil(semver?.description)
+  }
 }
