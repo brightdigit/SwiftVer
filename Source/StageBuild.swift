@@ -1,10 +1,6 @@
-//
-//  StageBuild.swift
-//  SwiftVer iOS
-//
-//  Created by Leo Dion on 7/20/17.
-//  Copyright © 2017 BrightDigit, LLC. All rights reserved.
-//
-
 import Foundation
+
+/**
+ Tuple containing the stage and its minimum build number.
+ */
 public typealias StageBuild = (stage: Stage, minimum: UInt8)

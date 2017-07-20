@@ -42,6 +42,10 @@
 		B35326591F0A846700604112 /* versions-intra.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35326581F0A843B00604112 /* versions-intra.plist */; };
 		B353265A1F0A846800604112 /* versions-intra.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35326581F0A843B00604112 /* versions-intra.plist */; };
 		B353265B1F0A846800604112 /* versions-intra.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35326581F0A843B00604112 /* versions-intra.plist */; };
+		B366BF011F211B3500AC0195 /* ResourceContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B366BF001F211B3500AC0195 /* ResourceContainerProtocol.swift */; };
+		B366BF021F211B3500AC0195 /* ResourceContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B366BF001F211B3500AC0195 /* ResourceContainerProtocol.swift */; };
+		B366BF031F211B3500AC0195 /* ResourceContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B366BF001F211B3500AC0195 /* ResourceContainerProtocol.swift */; };
+		B366BF041F211B3500AC0195 /* ResourceContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B366BF001F211B3500AC0195 /* ResourceContainerProtocol.swift */; };
 		B37840551D92757F008FE737 /* VersionControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840541D92757F008FE737 /* VersionControlType.swift */; };
 		B37840561D92757F008FE737 /* VersionControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840541D92757F008FE737 /* VersionControlType.swift */; };
 		B37840571D92757F008FE737 /* VersionControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840541D92757F008FE737 /* VersionControlType.swift */; };
@@ -142,6 +146,7 @@
 		B338FE671F21001300617EA6 /* StageBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageBuild.swift; sourceTree = "<group>"; };
 		B35326501F0A830D00604112 /* versions-global.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "versions-global.plist"; sourceTree = "<group>"; };
 		B35326581F0A843B00604112 /* versions-intra.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "versions-intra.plist"; sourceTree = "<group>"; };
+		B366BF001F211B3500AC0195 /* ResourceContainerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceContainerProtocol.swift; sourceTree = "<group>"; };
 		B37840541D92757F008FE737 /* VersionControlType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionControlType.swift; sourceTree = "<group>"; };
 		B37840581D927595008FE737 /* VersionControlInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionControlInfo.swift; sourceTree = "<group>"; };
 		B378405C1D9275DB008FE737 /* SemVer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemVer.swift; sourceTree = "<group>"; };
@@ -296,6 +301,7 @@
 				B37840541D92757F008FE737 /* VersionControlType.swift */,
 				B338FE651F20FFFD00617EA6 /* StageBuildDictionaryBase.swift */,
 				B338FE671F21001300617EA6 /* StageBuild.swift */,
+				B366BF001F211B3500AC0195 /* ResourceContainerProtocol.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -537,7 +543,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D95E1BD71D88D63300F94976 /* Build configuration list for PBXProject "swiftver" */;
+			buildConfigurationList = D95E1BD71D88D63300F94976 /* Build configuration list for PBXProject "SwiftVer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -799,6 +805,7 @@
 				B37840E71D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift in Sources */,
 				B378407C1D9277DD008FE737 /* Version.swift in Sources */,
 				B378407D1D9277DD008FE737 /* RFC3339DateFormatter.swift in Sources */,
+				B366BF031F211B3500AC0195 /* ResourceContainerProtocol.swift in Sources */,
 				B337BF031F0962EA00518323 /* Stage.swift in Sources */,
 				B37840801D9277DD008FE737 /* VersionControlInfo.swift in Sources */,
 				B37840811D9277DD008FE737 /* SemVer.swift in Sources */,
@@ -832,6 +839,7 @@
 				B37840E81D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift in Sources */,
 				B38B1A1B1D9210CA007AAAD7 /* Version.swift in Sources */,
 				B38B1A1C1D9210CA007AAAD7 /* RFC3339DateFormatter.swift in Sources */,
+				B366BF041F211B3500AC0195 /* ResourceContainerProtocol.swift in Sources */,
 				B337BF071F0962EB00518323 /* Stage.swift in Sources */,
 				B378405B1D927595008FE737 /* VersionControlInfo.swift in Sources */,
 				B378405F1D9275DB008FE737 /* SemVer.swift in Sources */,
@@ -849,6 +857,7 @@
 				B37840E61D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift in Sources */,
 				B38B1A1E1D9210CA007AAAD7 /* Version.swift in Sources */,
 				B38B1A1F1D9210CA007AAAD7 /* RFC3339DateFormatter.swift in Sources */,
+				B366BF021F211B3500AC0195 /* ResourceContainerProtocol.swift in Sources */,
 				B337BEFF1F0962EA00518323 /* Stage.swift in Sources */,
 				B378405A1D927595008FE737 /* VersionControlInfo.swift in Sources */,
 				B378405E1D9275DB008FE737 /* SemVer.swift in Sources */,
@@ -882,6 +891,7 @@
 				B37840E51D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift in Sources */,
 				B3FE6A161D91D3630085656C /* Version.swift in Sources */,
 				B3FE6A171D91D3630085656C /* RFC3339DateFormatter.swift in Sources */,
+				B366BF011F211B3500AC0195 /* ResourceContainerProtocol.swift in Sources */,
 				B337BEFB1F0962EA00518323 /* Stage.swift in Sources */,
 				B37840591D927595008FE737 /* VersionControlInfo.swift in Sources */,
 				B378405D1D9275DB008FE737 /* SemVer.swift in Sources */,
@@ -1380,7 +1390,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D95E1BD71D88D63300F94976 /* Build configuration list for PBXProject "swiftver" */ = {
+		D95E1BD71D88D63300F94976 /* Build configuration list for PBXProject "SwiftVer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D95E1BEF1D88D63400F94976 /* Debug */,

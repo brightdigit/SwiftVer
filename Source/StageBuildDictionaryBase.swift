@@ -1,10 +1,6 @@
-//
-//  StageBuildDictionaryBase.swift
-//  SwiftVer iOS
-//
-//  Created by Leo Dion on 7/20/17.
-//  Copyright © 2017 BrightDigit, LLC. All rights reserved.
-//
-
 import Foundation
+
+/**
+ Dictionary base mapping Semantic Version to Stages and Minimum Builds.
+ */
 public typealias StageBuildDictionaryBase = [SemVer: [Stage: UInt8]]

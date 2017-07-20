@@ -1,8 +1,12 @@
 import Foundation
 
-
-
+/**
+ Stage Enumeration.
+ */
 public enum Stage: CustomStringConvertible {
+  /**
+   Builds a StageBuildDictionaryProtocol from a plist.
+   */
   public static func dictionary(fromPlistAtURL url: URL) -> StageBuildDictionaryProtocol? {
 
     guard let data = try? Data(contentsOf: url) else {
@@ -32,6 +36,9 @@ public enum Stage: CustomStringConvertible {
     return Stage.StageBuildDictionary(dictionary: dictionary)
   }
 
+  /**
+   Returns an empty StageBuildDictionaryProtocol.
+   */
   public static var emptyDictionary: StageBuildDictionaryProtocol {
     return StageBuildDictionary.empty
   }
@@ -78,9 +85,29 @@ public enum Stage: CustomStringConvertible {
     }
   }
 
+  /**
+   A list of all the stages.
+   */
   public static let all: Set<Stage> = [.alpha, .beta, .production]
-  case alpha, beta, production
 
+  /**
+   Alpha
+   */
+  case alpha,
+
+    /**
+      Beta
+      */
+    beta,
+
+    /**
+      Production
+      */
+    production
+
+  /**
+   Returns a String Description of the Stage.
+   */
   public var description: String {
     switch self {
     case .alpha:
@@ -92,6 +119,9 @@ public enum Stage: CustomStringConvertible {
     }
   }
 
+  /**
+   Tries to create the Stage based on the String.
+   */
   public init?(string: String) {
     for stage in Stage.all {
       if string.compare(

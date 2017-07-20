@@ -1,12 +1,5 @@
 import Foundation
 
-public protocol ResourceContainerProtocol {
-  func url(forResource name: String?, withExtension ext: String?, subdirectory subpath: String?) -> URL?
-}
-
-extension Bundle: ResourceContainerProtocol {
-}
-
 public struct Version: CustomStringConvertible {
   public let semver: SemVer
   public let build: UInt8

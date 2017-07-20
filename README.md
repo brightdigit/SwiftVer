@@ -130,6 +130,7 @@ public struct VersionControlInfo {
 * [Extensions](docs/Extensions.md)
 * [Protocols](docs/Protocols.md)
 * [Structs](docs/Structs.md)
+* [Typealiases](docs/Typealiases.md)
 ### Types
 #### Enums
 * [Stage](docs/Enums/Stage.md)
