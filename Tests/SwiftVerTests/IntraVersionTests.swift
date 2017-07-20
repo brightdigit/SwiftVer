@@ -139,15 +139,6 @@ class IntraVersionTests: XCTestCase {
     XCTAssertEqual(version?.subSemVerValue, 0.0700250000)
   }
 
-  public func testExtra() {
-    let bundle = MockBundle(version: "1.0.0", build: 8)
-    let version = Version(bundle: bundle,
-                          dictionary: MockBundle.intraBuildNumberDictionary,
-                          versionControl: versionControlInfo)
-
-    XCTAssertEqual(version?.extra, 0)
-  }
-
   public func testShortDescription() {
     let bundle = MockBundle(version: "1.0.0", build: 8)
     let version = Version(bundle: bundle,
@@ -169,7 +160,7 @@ class IntraVersionTests: XCTestCase {
   public func testInitSemVer() {
     let version = Version(
       semver: SemVer(major: 1, minor: 0, patch: 0),
-      nonCumulativeBuildNumber: 8,
+      build: 8,
       dictionary: MockBundle.intraBuildNumberDictionary)
 
     XCTAssertEqual(version.shortDescription, "1.0.0-beta3")

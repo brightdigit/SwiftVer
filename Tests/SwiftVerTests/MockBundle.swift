@@ -22,11 +22,11 @@ struct MockBundle: InfoDictionaryContainerProtocol, ResourceContainerProtocol {
     var infoDictionary = [String: Any]()
 
     if let version = version {
-      infoDictionary[Version.InfoDictionaryKeys.version] = version
+      infoDictionary["CFBundleShortVersionString"] = version
     }
 
     if let build = build {
-      infoDictionary[Version.InfoDictionaryKeys.build] = build
+      infoDictionary["CFBundleVersion"] = build
     }
 
     self.infoDictionary = infoDictionary.count > 0 ? infoDictionary : nil

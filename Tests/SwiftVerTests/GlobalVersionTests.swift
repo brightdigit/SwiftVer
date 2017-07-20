@@ -140,15 +140,6 @@ class GlobalVersionTests: XCTestCase {
     XCTAssertEqual(version?.subSemVerValue, 0.0900250000)
   }
 
-  public func testExtra() {
-    let bundle = MockBundle(version: "1.1.0", build: 26)
-    let version = Version(bundle: bundle,
-                          dictionary: MockBundle.globalBuildNumberDictionary,
-                          versionControl: versionControlInfo)
-
-    XCTAssertEqual(version?.extra, 0)
-  }
-
   public func testShortDescription() {
     let bundle = MockBundle(version: "1.1.0", build: 26)
     let version = Version(bundle: bundle,
