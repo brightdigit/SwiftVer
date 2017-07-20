@@ -290,18 +290,18 @@
 				B38B1A071D921090007AAAD7 /* Info-macOS.plist */,
 				B37840681D92779E008FE737 /* Info-tvOS.plist */,
 				B38B19FA1D92105B007AAAD7 /* Info-watchOS.plist */,
-				D95E1BE01D88D63300F94976 /* SwiftVer.h */,
+				B37840E41D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift */,
+				B366BF001F211B3500AC0195 /* ResourceContainerProtocol.swift */,
 				B3FE6A151D91D3630085656C /* RFC3339DateFormatter.swift */,
 				B378405C1D9275DB008FE737 /* SemVer.swift */,
 				B337BEF81F0962E000518323 /* Stage.swift */,
+				B338FE671F21001300617EA6 /* StageBuild.swift */,
+				B338FE651F20FFFD00617EA6 /* StageBuildDictionaryBase.swift */,
 				B3C3A4211F09BD1F00746233 /* StageBuildDictionaryProtocol.swift */,
+				D95E1BE01D88D63300F94976 /* SwiftVer.h */,
 				B3FE6A141D91D3630085656C /* Version.swift */,
-				B37840E41D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift */,
 				B37840581D927595008FE737 /* VersionControlInfo.swift */,
 				B37840541D92757F008FE737 /* VersionControlType.swift */,
-				B338FE651F20FFFD00617EA6 /* StageBuildDictionaryBase.swift */,
-				B338FE671F21001300617EA6 /* StageBuild.swift */,
-				B366BF001F211B3500AC0195 /* ResourceContainerProtocol.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";

@@ -44,12 +44,17 @@ public enum Stage: CustomStringConvertible {
   }
 
   private struct StageBuildDictionary: StageBuildDictionaryProtocol {
-    func minimumStageBuildNumber(forSemVer semver: SemVer, atStage stage: Stage) -> Int {
-      guard let value = self.dictionary[semver]?[stage] else {
-        return 1
+    func minimumBuild(forSemVer semver: SemVer, atStage stage: Stage?) -> Int? {
+      if let stage = stage {
+        guard let value = self.dictionary[semver]?[stage] else {
+          return 1
+        }
+        return Int(value)
+      } else if let value = dictionary[semver]?.min(by: type(of: self).compare(lhs:rhs:))?.value {
+        return Int(value)
+      } else {
+        return nil
       }
-
-      return Int(value)
     }
 
     public static let empty = StageBuildDictionary(dictionary: StageBuildDictionaryBase())
@@ -74,10 +79,6 @@ public enum Stage: CustomStringConvertible {
       lhs: (key: Stage, value: UInt8),
       rhs: (key: Stage, value: UInt8)) -> Bool {
       return lhs.value < rhs.value
-    }
-
-    public func minimumBuild(forSemVer semVer: SemVer) -> UInt8? {
-      return dictionary[semVer]?.min(by: type(of: self).compare(lhs:rhs:))?.value
     }
 
     public init(dictionary: StageBuildDictionaryBase) {

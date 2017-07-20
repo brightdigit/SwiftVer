@@ -60,14 +60,14 @@ public struct Version: CustomStringConvertible {
   }
 
   public var stageBuildNumber: Int? {
-    guard let stage = self.stage else {
+    guard let stage = self.stage, let minimumBuild = dictionary.minimumBuild(forSemVer: semver, atStage: stage) else {
       return nil
     }
-    return Int(build) - dictionary.minimumStageBuildNumber(forSemVer: semver, atStage: stage) + 1
+    return Int(build) - minimumBuild + 1
   }
 
   public var semverBuildNumber: Int {
-    return Int(build) - dictionary.minimumSemVerBuildNumber(forSemVer: semver) + 1
+    return Int(build) - (dictionary.minimumBuild(forSemVer: semver) ?? 1) + 1
   }
 
   public var stage: Stage? {
@@ -133,7 +133,7 @@ public struct Version: CustomStringConvertible {
   public init(cumulativeBuildNumber: Int, dictionary: StageBuildDictionaryProtocol) {
     let semvers = dictionary.semvers
     let semverMinBuilds = semvers.map {
-      (semver: $0, minBuildNumber: dictionary.minimumSemVerBuildNumber(forSemVer: $0))
+      (semver: $0, minBuildNumber: dictionary.minimumBuild(forSemVer: $0) ?? Int.max)
     }
 
     let pair = semverMinBuilds.filter {
