@@ -1,5 +1,8 @@
 import Foundation
 
+/**
+ Complete Version Information.
+ */
 public struct Version: CustomStringConvertible {
 
   private struct InfoDictionaryKeys {

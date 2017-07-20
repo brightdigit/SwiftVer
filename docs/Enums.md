@@ -8,6 +8,8 @@
 
 [See more](Enums/Stage.md)
 ### VersionControlType
-<p>Undocumented</p>
+<pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">VersionControlType</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+
+<p>Version Control Type.</p>
 
 [See more](Enums/VersionControlType.md)
