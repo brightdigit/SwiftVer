@@ -16,57 +16,8 @@
     },
     {
       "file": "/Users/leo/Documents/Projects/swiftver/Source/RFC3339DateFormatter.swift",
-      "line": 18,
-      "symbol": "DateFormatter.rfc3339DateFormatter",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/leo/Documents/Projects/swiftver/Source/SemVer.swift",
-      "line": 3,
-      "symbol": "SemVer",
-      "symbol_kind": "source.lang.swift.decl.struct",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/leo/Documents/Projects/swiftver/Source/SemVer.swift",
-      "line": 4,
-      "symbol": "SemVer.major",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/leo/Documents/Projects/swiftver/Source/SemVer.swift",
-      "line": 5,
-      "symbol": "SemVer.minor",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/leo/Documents/Projects/swiftver/Source/SemVer.swift",
-      "line": 6,
-      "symbol": "SemVer.patch",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/leo/Documents/Projects/swiftver/Source/SemVer.swift",
-      "line": 8,
-      "symbol": "SemVer.init(major:minor:patch:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/leo/Documents/Projects/swiftver/Source/SemVer.swift",
-      "line": 14,
-      "symbol": "SemVer.init(versionString:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/leo/Documents/Projects/swiftver/Source/SemVer.swift",
-      "line": 34,
-      "symbol": "SemVer.init(major:minor:patch:)",
+      "line": 11,
+      "symbol": "DateFormatter.setupRFC3339DateFormatter()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },

@@ -7,7 +7,7 @@ fileprivate let _rfc3339DateFormatter = {
   return formatter
 }()
 
-extension DateFormatter {
+public extension DateFormatter {
   func setupRFC3339DateFormatter() {
 
     locale = Locale(identifier: "en_US_POSIX")
@@ -15,6 +15,9 @@ extension DateFormatter {
     timeZone = TimeZone(secondsFromGMT: 0)
   }
 
+  /**
+   RFC3339 DateFormatter for reading dates from autorevision.
+   */
   public static var rfc3339DateFormatter: DateFormatter {
     return _rfc3339DateFormatter
   }

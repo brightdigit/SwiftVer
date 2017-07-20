@@ -1,16 +1,37 @@
 import Foundation
 
+/**
+ Semantic Version.
+ */
 public struct SemVer: CustomStringConvertible, Comparable, Equatable, Hashable {
+
+  /**
+   Major version number when you make incompatible API changes.
+   */
   public let major: UInt8
+
+  /**
+   Minor version when you add functionality in a backwards-compatible manner.
+   */
   public let minor: UInt8
+
+  /**
+   Patch version when you make backwards-compatible bug fixes.
+   */
   public let patch: UInt8?
 
+  /**
+   Creates Semantic Version Object.
+   */
   public init(major: UInt8, minor: UInt8, patch: UInt8? = nil) {
     self.major = major
     self.minor = minor
     self.patch = patch
   }
 
+  /**
+   Creates Semantic Version Object from a String.
+   */
   public init?(versionString: String) {
     let values = versionString.components(separatedBy: ".").map { UInt8($0) }
 
@@ -23,14 +44,9 @@ public struct SemVer: CustomStringConvertible, Comparable, Equatable, Hashable {
     }
   }
 
-  public var description: String {
-    if let patch = self.patch {
-      return "\(major).\(minor).\(patch)"
-    } else {
-      return "\(major).\(minor)"
-    }
-  }
-
+  /**
+   Creates Semantic Version Object from a series of Strings.
+   */
   public init?(major: String, minor: String, patch: String? = nil) {
     guard let majorValue = UInt8(major) else {
       return nil
@@ -55,23 +71,43 @@ public struct SemVer: CustomStringConvertible, Comparable, Equatable, Hashable {
     self.patch = patchValue
   }
 
+  /**
+   Formatted SemVer String.
+   */
+  public var description: String {
+    if let patch = self.patch {
+      return "\(major).\(minor).\(patch)"
+    } else {
+      return "\(major).\(minor)"
+    }
+  }
+
+  /**
+   HashValue for comparison.
+   */
+  public var hashValue: Int {
+    return description.hashValue
+  }
+
   private var patchCalculated: UInt8 {
     return patch ?? 0
   }
 
+  /**
+   Equality comparison of SemVer objects.
+   */
   public static func == (lhs: SemVer, rhs: SemVer) -> Bool {
     return lhs.major == rhs.major &&
       lhs.minor == rhs.minor &&
       lhs.patch == rhs.patch
   }
 
+  /**
+   Comparison of SemVer objects.
+   */
   public static func < (lhs: SemVer, rhs: SemVer) -> Bool {
     return lhs.major < rhs.major ||
       (lhs.major == rhs.major && lhs.minor < rhs.minor) ||
       (lhs.major == rhs.major && lhs.minor == rhs.minor && lhs.patchCalculated < rhs.patchCalculated)
-  }
-
-  public var hashValue: Int {
-    return description.hashValue
   }
 }
