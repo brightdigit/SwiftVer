@@ -622,7 +622,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rbenv install 2.1.0\nrbenv local 2.1.0\nrbenv exec gem install jazzy\nrbenv exec jazzy --config .jazzy.yml";
+			shellScript = "rbenv install 2.1.0\nrbenv local 2.1.0\nrbenv exec gem install jazzy\nrbenv exec jazzy --config .jazzy.yml -o .tmp/htmldocs\nrm -rf docs\ncp -rf .tmp/htmldocs docs && sh markdown/markdown.sh docs\nsh markdown/readme.sh README.md docs docs-header.md";
 		};
 		B35AF9D91F0957710025CBCF /* swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1313,6 +1313,7 @@
 				B31E2EEC1F2009C7006FA8AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B37840761D92779E008FE737 /* Build configuration list for PBXNativeTarget "SwiftVer tvOS" */ = {
 			isa = XCConfigurationList;

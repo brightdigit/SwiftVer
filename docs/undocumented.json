@@ -1,0 +1,502 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/InfoDictionaryContainerProtocol.swift",
+      "line": 3,
+      "symbol": "InfoDictionaryContainerProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/InfoDictionaryContainerProtocol.swift",
+      "line": 4,
+      "symbol": "InfoDictionaryContainerProtocol.infoDictionary",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/RFC3339DateFormatter.swift",
+      "line": 18,
+      "symbol": "DateFormatter.rfc3339DateFormatter",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/SemVer.swift",
+      "line": 3,
+      "symbol": "SemVer",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/SemVer.swift",
+      "line": 4,
+      "symbol": "SemVer.major",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/SemVer.swift",
+      "line": 5,
+      "symbol": "SemVer.minor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/SemVer.swift",
+      "line": 6,
+      "symbol": "SemVer.patch",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/SemVer.swift",
+      "line": 8,
+      "symbol": "SemVer.init(major:minor:patch:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/SemVer.swift",
+      "line": 14,
+      "symbol": "SemVer.init(versionString:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/SemVer.swift",
+      "line": 34,
+      "symbol": "SemVer.init(major:minor:patch:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Stage.swift",
+      "line": 7,
+      "symbol": "Stage",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Stage.swift",
+      "line": 8,
+      "symbol": "Stage.dictionary(fromPlistAtURL:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Stage.swift",
+      "line": 37,
+      "symbol": "Stage.emptyDictionary",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Stage.swift",
+      "line": 83,
+      "symbol": "Stage.all",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Stage.swift",
+      "line": 84,
+      "symbol": "Stage.alpha",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Stage.swift",
+      "line": 84,
+      "symbol": "Stage.beta",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Stage.swift",
+      "line": 84,
+      "symbol": "Stage.production",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Stage.swift",
+      "line": 97,
+      "symbol": "Stage.init(string:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/StageBuildDictionaryProtocol.swift",
+      "line": null,
+      "symbol": "StageBuildDictionaryProtocol",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/StageBuildDictionaryProtocol.swift",
+      "line": 3,
+      "symbol": "StageBuildDictionaryProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/StageBuildDictionaryProtocol.swift",
+      "line": 4,
+      "symbol": "StageBuildDictionaryProtocol.stage(withBuildForVersion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/StageBuildDictionaryProtocol.swift",
+      "line": 5,
+      "symbol": "StageBuildDictionaryProtocol.minimumBuild(forSemVer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/StageBuildDictionaryProtocol.swift",
+      "line": 6,
+      "symbol": "StageBuildDictionaryProtocol.semvers",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/StageBuildDictionaryProtocol.swift",
+      "line": 7,
+      "symbol": "StageBuildDictionaryProtocol.minimumStageBuildNumber(forSemVer:atStage:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/StageBuildDictionaryProtocol.swift",
+      "line": 11,
+      "symbol": "StageBuildDictionaryProtocol.minimumSemVerBuildNumber(forSemVer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Version.swift",
+      "line": 3,
+      "symbol": "ResourceContainerProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Version.swift",
+      "line": 4,
+      "symbol": "ResourceContainerProtocol.url(forResource:withExtension:subdirectory:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Version.swift",
+      "line": 10,
+      "symbol": "Version",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Version.swift",
+      "line": 11,
+      "symbol": "Version.semver",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Version.swift",
+      "line": 12,
+      "symbol": "Version.build",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Version.swift",
+      "line": 13,
+      "symbol": "Version.versionControl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Version.swift",
+      "line": 14,
+      "symbol": "Version.dictionary",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Version.swift",
+      "line": 16,
+      "symbol": "Version.InfoDictionaryKeys",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Version.swift",
+      "line": 17,
+      "symbol": "Version.InfoDictionaryKeys.version",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Version.swift",
+      "line": 18,
+      "symbol": "Version.InfoDictionaryKeys.build",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Version.swift",
+      "line": 21,
+      "symbol": "Version.suffixFormatter",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Version.swift",
+      "line": 28,
+      "symbol": "Version.init(bundle:dictionary:versionControl:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Version.swift",
+      "line": 69,
+      "symbol": "Version.stageBuildNumber",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Version.swift",
+      "line": 76,
+      "symbol": "Version.semverBuildNumber",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Version.swift",
+      "line": 80,
+      "symbol": "Version.stage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Version.swift",
+      "line": 84,
+      "symbol": "Version.fullDescription",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Version.swift",
+      "line": 89,
+      "symbol": "Version.subSemVerValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Version.swift",
+      "line": 95,
+      "symbol": "Version.extra",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Version.swift",
+      "line": 103,
+      "symbol": "Version.shortDescription",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Version.swift",
+      "line": 121,
+      "symbol": "Version.from(bundle:dictionary:withVersionControlInfoWithJsonResource:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Version.swift",
+      "line": 132,
+      "symbol": "Version.init(semver:nonCumulativeBuildNumber:dictionary:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Version.swift",
+      "line": 140,
+      "symbol": "Version.init(cumulativeBuildNumber:dictionary:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
+      "line": 4,
+      "symbol": "VersionControlInfo",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
+      "line": 5,
+      "symbol": "VersionControlInfo.TYPE",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
+      "line": 6,
+      "symbol": "VersionControlInfo.BASENAME",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
+      "line": 7,
+      "symbol": "VersionControlInfo.UUID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
+      "line": 8,
+      "symbol": "VersionControlInfo.NUM",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
+      "line": 9,
+      "symbol": "VersionControlInfo.DATE",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
+      "line": 10,
+      "symbol": "VersionControlInfo.BRANCH",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
+      "line": 11,
+      "symbol": "VersionControlInfo.TAG",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
+      "line": 12,
+      "symbol": "VersionControlInfo.TICK",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
+      "line": 13,
+      "symbol": "VersionControlInfo.EXTRA",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
+      "line": 15,
+      "symbol": "VersionControlInfo.FULLHASH",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
+      "line": 16,
+      "symbol": "VersionControlInfo.SHORTHASH",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
+      "line": 18,
+      "symbol": "VersionControlInfo.MODIFIED",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
+      "line": 20,
+      "symbol": "VersionControlInfo.init(TYPE:BASENAME:UUID:NUM:DATE:BRANCH:TAG:TICK:EXTRA:FULLHASH:SHORTHASH:MODIFIED:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
+      "line": 48,
+      "symbol": "VersionControlInfo.init(basedOn:TICK:EXTRA:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
+      "line": 63,
+      "symbol": "VersionControlInfo.init(jsonResource:fromBundle:inDirectory:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlType.swift",
+      "line": 9,
+      "symbol": "VersionControlType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlType.swift",
+      "line": 10,
+      "symbol": "VersionControlType.lookup",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlType.swift",
+      "line": 17,
+      "symbol": "VersionControlType.bazaar",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlType.swift",
+      "line": 17,
+      "symbol": "VersionControlType.git",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlType.swift",
+      "line": 17,
+      "symbol": "VersionControlType.mercurial",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlType.swift",
+      "line": 17,
+      "symbol": "VersionControlType.subversion",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlType.swift",
+      "line": 17,
+      "symbol": "VersionControlType.unknown",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlType.swift",
+      "line": 19,
+      "symbol": "VersionControlType.init(TYPE:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/leo/Documents/Projects/swiftver"
+}

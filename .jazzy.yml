@@ -5,7 +5,7 @@ author: BrightDigit
 author_url: http://www.brightdigit.com
 disable_search: true
 module: "SwiftVer"
-#theme: theme
+theme: markdown
 #
 # custom_categories:
 #   - name: Preferences

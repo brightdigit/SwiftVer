@@ -131,24 +131,3 @@ Leo G Dion, [BrightDigit, LLC](http://www.brightdigit.com)
 ## License
 
 SwiftVer is available under the MIT license. See the LICENSE file for more info.
-\n\n## Categories\n
-* [Enums](docs/Enums.md)
-* [Extensions](docs/Extensions.md)
-* [Protocols](docs/Protocols.md)
-* [Structs](docs/Structs.md)
-\n## Types
-\n### Enums\n
-* [Stage](docs/Enums/Stage.md)
-* [VersionControlType](docs/Enums/VersionControlType.md)
-\n### Extensions\n
-* [DateFormatter](docs/Extensions/DateFormatter.md)
-\n### Protocols\n
-* [InfoDictionaryContainerProtocol](docs/Protocols/InfoDictionaryContainerProtocol.md)
-* [ResourceContainerProtocol](docs/Protocols/ResourceContainerProtocol.md)
-* [StageBuildDictionaryProtocol](docs/Protocols/StageBuildDictionaryProtocol.md)
-\n### Structs\n
-* [SemVer](docs/Structs/SemVer.md)
-* [Version](docs/Structs/Version.md)
-* [VersionControlInfo](docs/Structs/VersionControlInfo.md)
-\n### Version\n
-* [InfoDictionaryKeys](docs/Version/InfoDictionaryKeys.md)
