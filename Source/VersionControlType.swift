@@ -45,8 +45,8 @@ public enum VersionControlType: CustomStringConvertible {
   /**
    Creates a **VersionControlType** based on the type **String**.
    */
-  public init(TYPE: String) {
-    if let value = VersionControlType.lookup[TYPE.lowercased()] {
+  public init(string: String) {
+    if let value = VersionControlType.lookup[string.lowercased()] {
       self = value
     } else {
       self = .unknown

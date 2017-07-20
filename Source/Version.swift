@@ -132,7 +132,7 @@ public struct Version: CustomStringConvertible {
   }
 
   private var extra: Double {
-    if let extraString = self.versionControl?.EXTRA {
+    if let extraString = self.versionControl?.extra {
       return Double(extraString) ?? 0
     } else {
       return 0
@@ -186,7 +186,7 @@ public struct Version: CustomStringConvertible {
    */
   public var subSemVerValue: Double {
     return (Double(semverBuildNumber) +
-      (Double(versionControl?.TICK ?? 0) + extra / 1000.0)
+      (Double(versionControl?.tick ?? 0) + extra / 1000.0)
       / 10000.0) / 100.0
   }
 

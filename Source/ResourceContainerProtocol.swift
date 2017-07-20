@@ -6,7 +6,8 @@ import Foundation
 public protocol ResourceContainerProtocol {
 
   /**
-   Returns the file URL for the resource file identified by the specified name and extension and residing in a given bundle directory.
+   Returns the file URL for the resource file identified by
+   the specified name and extension and residing in a given bundle directory.
    */
   func url(forResource name: String?, withExtension ext: String?, subdirectory subpath: String?) -> URL?
 }
