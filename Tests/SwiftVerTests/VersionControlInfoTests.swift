@@ -59,7 +59,9 @@ class VersionControlInfoTests: XCTestCase {
   }
 
   func testInitJsonResource() {
-    let versionControlInfoJson = VersionControlInfo(jsonResource: "autorevision", fromBundle: Bundle(for: VersionControlInfoTests.self))!
+    let versionControlInfoJson =
+      VersionControlInfo(jsonResource: "autorevision",
+                         fromBundle: Bundle(for: VersionControlInfoTests.self))!
     XCTAssertEqual(versionControlInfoJson.TYPE.description.caseInsensitiveCompare("git"), .orderedSame)
     XCTAssertEqual(versionControlInfoJson.BASENAME, "swiftvertests")
     XCTAssertEqual(versionControlInfoJson.UUID, "dba359e6621e2e2243d8eb2d42b6c07860976fd9")

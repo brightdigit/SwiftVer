@@ -17,7 +17,9 @@ class IntraVersionTests: XCTestCase {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     let bundle = MockBundle(version: "1.2.3", build: 4)
-    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, versionControl: versionControlInfo)
+    let version = Version(bundle: bundle,
+                          dictionary: MockBundle.intraBuildNumberDictionary,
+                          versionControl: versionControlInfo)
 
     XCTAssertEqual(version?.semver.major, 1)
     XCTAssertEqual(version?.semver.minor, 2)
@@ -43,7 +45,9 @@ class IntraVersionTests: XCTestCase {
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 
     let bundle = MockBundle(version: nil, build: 4)
-    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, versionControl: versionControlInfo)
+    let version = Version(bundle: bundle,
+                          dictionary: MockBundle.intraBuildNumberDictionary,
+                          versionControl: versionControlInfo)
 
     XCTAssertNil(version)
   }
@@ -53,7 +57,9 @@ class IntraVersionTests: XCTestCase {
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 
     let bundle = MockBundle(version: "dfasdfs", build: 4)
-    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, versionControl: versionControlInfo)
+    let version = Version(bundle: bundle,
+                          dictionary: MockBundle.intraBuildNumberDictionary,
+                          versionControl: versionControlInfo)
 
     XCTAssertNil(version)
   }
@@ -63,7 +69,9 @@ class IntraVersionTests: XCTestCase {
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 
     let bundle = MockBundle(version: "1.2.3", build: nil)
-    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, versionControl: versionControlInfo)
+    let version = Version(bundle: bundle,
+                          dictionary: MockBundle.intraBuildNumberDictionary,
+                          versionControl: versionControlInfo)
 
     XCTAssertNil(version)
   }
@@ -73,7 +81,9 @@ class IntraVersionTests: XCTestCase {
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 
     let bundle = MockBundle(version: "1.2.3", build: "asdfdsaf")
-    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, versionControl: versionControlInfo)
+    let version = Version(bundle: bundle,
+                          dictionary: MockBundle.intraBuildNumberDictionary,
+                          versionControl: versionControlInfo)
 
     XCTAssertNil(version)
   }
@@ -81,73 +91,95 @@ class IntraVersionTests: XCTestCase {
   public func testdescription() {
 
     let bundle = MockBundle(version: "1.0.0", build: 8)
-    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, versionControl: versionControlInfo)
+    let version = Version(bundle: bundle,
+                          dictionary: MockBundle.intraBuildNumberDictionary,
+                          versionControl: versionControlInfo)
     XCTAssertEqual(version?.description, version?.shortDescription)
   }
 
   public func testStageBuildNumber() {
 
     let bundle = MockBundle(version: "1.0.0", build: 8)
-    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, versionControl: versionControlInfo)
+    let version = Version(bundle: bundle,
+                          dictionary: MockBundle.intraBuildNumberDictionary,
+                          versionControl: versionControlInfo)
     XCTAssertEqual(version?.stageBuildNumber, 3)
   }
 
   public func testSemverBuildNumber() {
     let bundle = MockBundle(version: "1.0.0", build: 8)
-    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, versionControl: versionControlInfo)
+    let version = Version(bundle: bundle,
+                          dictionary: MockBundle.intraBuildNumberDictionary,
+                          versionControl: versionControlInfo)
     XCTAssertEqual(version?.semverBuildNumber, 8)
   }
 
   public func testStage() {
     let bundle = MockBundle(version: "1.0.0", build: 8)
-    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, versionControl: versionControlInfo)
+    let version = Version(bundle: bundle,
+                          dictionary: MockBundle.intraBuildNumberDictionary,
+                          versionControl: versionControlInfo)
     XCTAssertEqual(version?.stage, .beta)
   }
 
   public func testFullDescription() {
     let bundle = MockBundle(version: "1.0.0", build: 8)
-    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, versionControl: versionControlInfo)
+    let version = Version(bundle: bundle,
+                          dictionary: MockBundle.intraBuildNumberDictionary,
+                          versionControl: versionControlInfo)
     XCTAssertEqual(version?.fullDescription, "1.0.0.0800250000")
   }
 
   public func testSubSemVerValue() {
     let bundle = MockBundle(version: "1.0.0", build: 8)
-    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, versionControl: versionControlInfo)
+    let version = Version(bundle: bundle,
+                          dictionary: MockBundle.intraBuildNumberDictionary,
+                          versionControl: versionControlInfo)
 
     XCTAssertEqual(version?.subSemVerValue, 0.0800250000)
   }
 
   public func testExtra() {
     let bundle = MockBundle(version: "1.0.0", build: 8)
-    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, versionControl: versionControlInfo)
+    let version = Version(bundle: bundle,
+                          dictionary: MockBundle.intraBuildNumberDictionary,
+                          versionControl: versionControlInfo)
 
     XCTAssertEqual(version?.extra, 0)
   }
 
   public func testShortDescription() {
     let bundle = MockBundle(version: "1.0.0", build: 8)
-    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, versionControl: versionControlInfo)
+    let version = Version(bundle: bundle,
+                          dictionary: MockBundle.intraBuildNumberDictionary,
+                          versionControl: versionControlInfo)
 
     XCTAssertEqual(version?.shortDescription, "1.0.0-beta3")
   }
 
   public func testShortDescriptionProduction() {
     let bundle = MockBundle(version: "1.0.0", build: 9)
-    let version = Version(bundle: bundle, dictionary: MockBundle.intraBuildNumberDictionary, versionControl: versionControlInfo)
+    let version = Version(bundle: bundle,
+                          dictionary: MockBundle.intraBuildNumberDictionary,
+                          versionControl: versionControlInfo)
 
     XCTAssertEqual(version?.shortDescription, "1.0.0 (0009)")
   }
 
   public func testInitSemVer() {
-    let version = Version(semver: SemVer(major: 1, minor: 0, patch: 0), nonCumulativeBuildNumber: 8, dictionary: MockBundle.intraBuildNumberDictionary)
+    let version = Version(
+      semver: SemVer(major: 1, minor: 0, patch: 0),
+      nonCumulativeBuildNumber: 8,
+      dictionary: MockBundle.intraBuildNumberDictionary)
 
     XCTAssertEqual(version.shortDescription, "1.0.0-beta3")
   }
 
   public func testFromBundle() {
     let bundle = MockBundle(version: "1.0.0", build: 8)
-    // let version = Version(bundle: bundle, dictionary: MockBundle.globalBuildNumberDictionary, versionControl: versionControlInfo)
-    let version = Version.from(bundle: bundle, dictionary: MockBundle.globalBuildNumberDictionary, withVersionControlInfoWithJsonResource: "versions-intra")
+    let version = Version.from(bundle: bundle,
+                               dictionary: MockBundle.globalBuildNumberDictionary,
+                               withVersionControlInfoWithJsonResource: "versions-intra")
 
     XCTAssertEqual(version?.shortDescription, "1.0.0-beta3")
   }
