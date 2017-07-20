@@ -1,8 +1,6 @@
 import Foundation
 
-public typealias StageBuildDictionaryBase = [SemVer: [Stage: UInt8]]
 
-public typealias StageBuild = (stage: Stage, minimum: UInt8)
 
 public enum Stage: CustomStringConvertible {
   public static func dictionary(fromPlistAtURL url: URL) -> StageBuildDictionaryProtocol? {

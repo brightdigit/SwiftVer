@@ -28,6 +28,14 @@
 		B337BEFF1F0962EA00518323 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF81F0962E000518323 /* Stage.swift */; };
 		B337BF031F0962EA00518323 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF81F0962E000518323 /* Stage.swift */; };
 		B337BF071F0962EB00518323 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B337BEF81F0962E000518323 /* Stage.swift */; };
+		B338FE661F20FFFD00617EA6 /* StageBuildDictionaryBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338FE651F20FFFD00617EA6 /* StageBuildDictionaryBase.swift */; };
+		B338FE681F21001300617EA6 /* StageBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338FE671F21001300617EA6 /* StageBuild.swift */; };
+		B338FE691F21002900617EA6 /* StageBuildDictionaryBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338FE651F20FFFD00617EA6 /* StageBuildDictionaryBase.swift */; };
+		B338FE6A1F21002900617EA6 /* StageBuildDictionaryBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338FE651F20FFFD00617EA6 /* StageBuildDictionaryBase.swift */; };
+		B338FE6B1F21002A00617EA6 /* StageBuildDictionaryBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338FE651F20FFFD00617EA6 /* StageBuildDictionaryBase.swift */; };
+		B338FE6C1F21002D00617EA6 /* StageBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338FE671F21001300617EA6 /* StageBuild.swift */; };
+		B338FE6D1F21002D00617EA6 /* StageBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338FE671F21001300617EA6 /* StageBuild.swift */; };
+		B338FE6E1F21002E00617EA6 /* StageBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = B338FE671F21001300617EA6 /* StageBuild.swift */; };
 		B35326551F0A841100604112 /* versions-global.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35326501F0A830D00604112 /* versions-global.plist */; };
 		B35326561F0A841100604112 /* versions-global.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35326501F0A830D00604112 /* versions-global.plist */; };
 		B35326571F0A841200604112 /* versions-global.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35326501F0A830D00604112 /* versions-global.plist */; };
@@ -130,6 +138,8 @@
 		B337BEF31F09510E00518323 /* SwiftVer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwiftVer.podspec; sourceTree = "<group>"; };
 		B337BEF41F09510E00518323 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		B337BEF81F0962E000518323 /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
+		B338FE651F20FFFD00617EA6 /* StageBuildDictionaryBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageBuildDictionaryBase.swift; sourceTree = "<group>"; };
+		B338FE671F21001300617EA6 /* StageBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageBuild.swift; sourceTree = "<group>"; };
 		B35326501F0A830D00604112 /* versions-global.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "versions-global.plist"; sourceTree = "<group>"; };
 		B35326581F0A843B00604112 /* versions-intra.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "versions-intra.plist"; sourceTree = "<group>"; };
 		B37840541D92757F008FE737 /* VersionControlType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionControlType.swift; sourceTree = "<group>"; };
@@ -284,6 +294,8 @@
 				B37840E41D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift */,
 				B37840581D927595008FE737 /* VersionControlInfo.swift */,
 				B37840541D92757F008FE737 /* VersionControlType.swift */,
+				B338FE651F20FFFD00617EA6 /* StageBuildDictionaryBase.swift */,
+				B338FE671F21001300617EA6 /* StageBuild.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -525,7 +537,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D95E1BD71D88D63300F94976 /* Build configuration list for PBXProject "SwiftVer" */;
+			buildConfigurationList = D95E1BD71D88D63300F94976 /* Build configuration list for PBXProject "swiftver" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -790,6 +802,8 @@
 				B337BF031F0962EA00518323 /* Stage.swift in Sources */,
 				B37840801D9277DD008FE737 /* VersionControlInfo.swift in Sources */,
 				B37840811D9277DD008FE737 /* SemVer.swift in Sources */,
+				B338FE6A1F21002900617EA6 /* StageBuildDictionaryBase.swift in Sources */,
+				B338FE6D1F21002D00617EA6 /* StageBuild.swift in Sources */,
 				B3C3A4241F09BD5F00746233 /* StageBuildDictionaryProtocol.swift in Sources */,
 				B378407F1D9277DD008FE737 /* VersionControlType.swift in Sources */,
 			);
@@ -821,6 +835,8 @@
 				B337BF071F0962EB00518323 /* Stage.swift in Sources */,
 				B378405B1D927595008FE737 /* VersionControlInfo.swift in Sources */,
 				B378405F1D9275DB008FE737 /* SemVer.swift in Sources */,
+				B338FE6B1F21002A00617EA6 /* StageBuildDictionaryBase.swift in Sources */,
+				B338FE6E1F21002E00617EA6 /* StageBuild.swift in Sources */,
 				B3C3A4251F09BD5F00746233 /* StageBuildDictionaryProtocol.swift in Sources */,
 				B37840571D92757F008FE737 /* VersionControlType.swift in Sources */,
 			);
@@ -836,6 +852,8 @@
 				B337BEFF1F0962EA00518323 /* Stage.swift in Sources */,
 				B378405A1D927595008FE737 /* VersionControlInfo.swift in Sources */,
 				B378405E1D9275DB008FE737 /* SemVer.swift in Sources */,
+				B338FE691F21002900617EA6 /* StageBuildDictionaryBase.swift in Sources */,
+				B338FE6C1F21002D00617EA6 /* StageBuild.swift in Sources */,
 				B3C3A4231F09BD5E00746233 /* StageBuildDictionaryProtocol.swift in Sources */,
 				B37840561D92757F008FE737 /* VersionControlType.swift in Sources */,
 			);
@@ -867,6 +885,8 @@
 				B337BEFB1F0962EA00518323 /* Stage.swift in Sources */,
 				B37840591D927595008FE737 /* VersionControlInfo.swift in Sources */,
 				B378405D1D9275DB008FE737 /* SemVer.swift in Sources */,
+				B338FE661F20FFFD00617EA6 /* StageBuildDictionaryBase.swift in Sources */,
+				B338FE681F21001300617EA6 /* StageBuild.swift in Sources */,
 				B3C3A4221F09BD1F00746233 /* StageBuildDictionaryProtocol.swift in Sources */,
 				B37840551D92757F008FE737 /* VersionControlType.swift in Sources */,
 			);
@@ -1360,7 +1380,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D95E1BD71D88D63300F94976 /* Build configuration list for PBXProject "SwiftVer" */ = {
+		D95E1BD71D88D63300F94976 /* Build configuration list for PBXProject "swiftver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D95E1BEF1D88D63400F94976 /* Debug */,

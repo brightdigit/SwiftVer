@@ -1,10 +1,10 @@
 import Foundation
 
 public protocol StageBuildDictionaryProtocol {
-  func stage(withBuildForVersion version: Version) -> StageBuild?
-  func minimumBuild(forSemVer semVer: SemVer) -> UInt8?
   var semvers: [SemVer] { get }
+  func minimumBuild(forSemVer semVer: SemVer) -> UInt8?
   func minimumStageBuildNumber(forSemVer semver: SemVer, atStage stage: Stage) -> Int
+  func stage(withBuildForVersion version: Version) -> StageBuild?
 }
 
 extension StageBuildDictionaryProtocol {
