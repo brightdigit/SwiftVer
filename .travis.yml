@@ -2,7 +2,7 @@ language: objective-c
 os: osx
 osx_image: xcode9
 script:
-  - gem install xcpretty-travis-formatter
+  - gem install xcpretty-travis-formatter cocoapods
   - brew update
   - brew tap Homebrew/bundle
   - brew bundle
