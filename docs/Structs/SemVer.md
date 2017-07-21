@@ -4,22 +4,22 @@
 <p>Semantic Version.</p>
 
 ### major
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">major</span><span class="p">:</span> <span class="kt">UInt8</span></code></pre>
+<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">major</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
 
 <p>Major version number when you make incompatible API changes.</p>
 
 ### minor
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">minor</span><span class="p">:</span> <span class="kt">UInt8</span></code></pre>
+<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">minor</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
 
 <p>Minor version when you add functionality in a backwards-compatible manner.</p>
 
 ### patch
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">patch</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">?</span></code></pre>
+<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">patch</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
 
 <p>Patch version when you make backwards-compatible bug fixes.</p>
 
 ### init(major:minor:patch:)
-<pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">major</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="nv">minor</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="nv">patch</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+<pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">major</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">minor</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">patch</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
 <p>Creates Semantic Version Object.</p>
 

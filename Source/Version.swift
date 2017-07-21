@@ -25,7 +25,7 @@ public struct Version: CustomStringConvertible {
   /**
    Build Number.
    */
-  public let build: UInt8
+  public let build: Int
 
   /**
    Autorevision Version Control Info.
@@ -41,7 +41,7 @@ public struct Version: CustomStringConvertible {
    Create a Version based on a **SemVer**, Build Number, **StageBuildDictionaryProtocol**,
    and an optional **VersionControlInfo**.
    */
-  public init(semver: SemVer, build: UInt8,
+  public init(semver: SemVer, build: Int,
               dictionary: StageBuildDictionaryProtocol,
               versionControlInfo: VersionControlInfo? = nil) {
     self.semver = semver
@@ -70,7 +70,7 @@ public struct Version: CustomStringConvertible {
     })!
     self.dictionary = dictionary
     semver = pair.semver
-    build = UInt8(cumulativeBuildNumber)
+    build = Int(cumulativeBuildNumber)
     versionControl = versionControlInfo
   }
 
@@ -111,7 +111,7 @@ public struct Version: CustomStringConvertible {
     }
 
     self.dictionary = dictionary
-    self.build = UInt8(build)
+    self.build = Int(build)
     self.semver = semver
     self.versionControl = versionControl
   }
@@ -195,7 +195,7 @@ public struct Version: CustomStringConvertible {
    */
   public var shortDescription: String {
     let stage: Stage
-    let minimumBuild: UInt8
+    let minimumBuild: Int
     if let stagebuild = self.dictionary.stage(withBuildForVersion: self) {
       stage = stagebuild.stage
       minimumBuild = stagebuild.minimum - 1

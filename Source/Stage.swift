@@ -25,9 +25,9 @@ public enum Stage: CustomStringConvertible {
       StageBuildDictionaryBase(), { (previous, pair) -> StageBuildDictionaryBase in
         var mutable = previous
         mutable[SemVer(versionString: pair.key)!] = pair.value.reduce(
-          [Stage: UInt8](), { (previous, pair) -> [Stage: UInt8] in
+          [Stage: Int](), { (previous, pair) -> [Stage: Int] in
             var mutable = previous
-            mutable[Stage(string: pair.key)!] = UInt8(pair.value)
+            mutable[Stage(string: pair.key)!] = Int(pair.value)
             return mutable
         })
         return mutable
@@ -76,8 +76,8 @@ public enum Stage: CustomStringConvertible {
     }
 
     static func compare(
-      lhs: (key: Stage, value: UInt8),
-      rhs: (key: Stage, value: UInt8)) -> Bool {
+      lhs: (key: Stage, value: Int),
+      rhs: (key: Stage, value: Int)) -> Bool {
       return lhs.value < rhs.value
     }
 

@@ -9,7 +9,7 @@
 <p>Semantic Version.</p>
 
 ### build
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">build</span><span class="p">:</span> <span class="kt">UInt8</span></code></pre>
+<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">build</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
 
 <p>Build Number.</p>
 
@@ -24,7 +24,7 @@
 <p>Semantic Version, Build Number, and Stage Dictionary.</p>
 
 ### init(semver:build:dictionary:versionControlInfo:)
-<pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">semver</span><span class="p">:</span> <span class="kt"><a href="../Structs/SemVer.md">SemVer</a></span><span class="p">,</span> <span class="nv">build</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span>
+<pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">semver</span><span class="p">:</span> <span class="kt"><a href="../Structs/SemVer.md">SemVer</a></span><span class="p">,</span> <span class="nv">build</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
               <span class="nv">dictionary</span><span class="p">:</span> <span class="kt"><a href="../Protocols/StageBuildDictionaryProtocol.md">StageBuildDictionaryProtocol</a></span><span class="p">,</span>
               <span class="nv">versionControlInfo</span><span class="p">:</span> <span class="kt"><a href="../Structs/VersionControlInfo.md">VersionControlInfo</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 

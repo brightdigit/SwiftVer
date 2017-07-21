@@ -8,22 +8,22 @@ public struct SemVer: CustomStringConvertible, Comparable, Equatable, Hashable {
   /**
    Major version number when you make incompatible API changes.
    */
-  public let major: UInt8
+  public let major: Int
 
   /**
    Minor version when you add functionality in a backwards-compatible manner.
    */
-  public let minor: UInt8
+  public let minor: Int
 
   /**
    Patch version when you make backwards-compatible bug fixes.
    */
-  public let patch: UInt8?
+  public let patch: Int?
 
   /**
    Creates Semantic Version Object.
    */
-  public init(major: UInt8, minor: UInt8, patch: UInt8? = nil) {
+  public init(major: Int, minor: Int, patch: Int? = nil) {
     self.major = major
     self.minor = minor
     self.patch = patch
@@ -33,7 +33,7 @@ public struct SemVer: CustomStringConvertible, Comparable, Equatable, Hashable {
    Creates Semantic Version Object from a String.
    */
   public init?(versionString: String) {
-    let values = versionString.components(separatedBy: ".").map { UInt8($0) }
+    let values = versionString.components(separatedBy: ".").map { Int($0) }
 
     if case let major?? = values.first, let minor = values[1], values.count == 2 || values.count == 3 {
       self.major = major
@@ -48,17 +48,17 @@ public struct SemVer: CustomStringConvertible, Comparable, Equatable, Hashable {
    Creates Semantic Version Object from a series of Strings.
    */
   public init?(major: String, minor: String, patch: String? = nil) {
-    guard let majorValue = UInt8(major) else {
+    guard let majorValue = Int(major) else {
       return nil
     }
 
-    guard let minorValue = UInt8(minor) else {
+    guard let minorValue = Int(minor) else {
       return nil
     }
 
-    let patchValue: UInt8?
+    let patchValue: Int?
     if let patchStr = patch {
-      guard let _patchValue = UInt8(patchStr) else {
+      guard let _patchValue = Int(patchStr) else {
         return nil
       }
       patchValue = _patchValue
@@ -89,7 +89,7 @@ public struct SemVer: CustomStringConvertible, Comparable, Equatable, Hashable {
     return description.hashValue
   }
 
-  private var patchCalculated: UInt8 {
+  private var patchCalculated: Int {
     return patch ?? 0
   }
 

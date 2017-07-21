@@ -5,7 +5,7 @@ class StageBuildDictionaryProtocolTests: XCTestCase {
   struct MockStageBuildDictionary: StageBuildDictionaryProtocol {
 
     public let stage: Stage = Stage.beta
-    public let minimum: UInt8 = 200
+    public let minimum: Int = 200
 
     func stage(withBuildForVersion _: Version) -> StageBuild? {
       return (stage: stage, minimum: minimum)
@@ -31,7 +31,7 @@ class StageBuildDictionaryProtocolTests: XCTestCase {
   func testminimumStageBuildNumberNotNil() {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
-    let semver = SemVer(major: UInt8(truncatingBitPattern: 1), minor: UInt8(truncatingBitPattern: 1))
+    let semver = SemVer(major: 1, minor: 1)
     let dictionary = MockStageBuildDictionary(semvers: [semver])
     let minimum = dictionary.minimumBuild(forSemVer: semver, atStage: .beta)
     XCTAssertEqual(minimum, Int(dictionary.minimum))
@@ -40,7 +40,7 @@ class StageBuildDictionaryProtocolTests: XCTestCase {
   func testminimumStageBuildNumberNotFound() {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
-    let semver = SemVer(major: UInt8(truncatingBitPattern: 1), minor: UInt8(truncatingBitPattern: 1))
+    let semver = SemVer(major: 1, minor: 1)
     let dictionary = MockStageBuildDictionary(semvers: [semver])
     let minimum = dictionary.minimumBuild(forSemVer: semver, atStage: .beta)
     XCTAssertEqual(minimum, Int(dictionary.minimum))
@@ -49,8 +49,8 @@ class StageBuildDictionaryProtocolTests: XCTestCase {
   func testminimumSemVerBuildNumberNotNil() {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
-    let semver = SemVer(major: UInt8(truncatingBitPattern: 1), minor: UInt8(truncatingBitPattern: 0))
-    let semverOther = SemVer(major: UInt8(truncatingBitPattern: 1), minor: UInt8(truncatingBitPattern: 0))
+    let semver = SemVer(major: 1, minor: 0)
+    let semverOther = SemVer(major: 1, minor: 0)
     let dictionary = MockStageBuildDictionary(semvers: [semver])
     let minimum = dictionary.minimumBuild(forSemVer: semverOther)
     XCTAssertEqual(minimum, Int(dictionary.minimum))
@@ -59,8 +59,8 @@ class StageBuildDictionaryProtocolTests: XCTestCase {
   func testminimumSemVerBuildNumberNil() {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
-    let semver = SemVer(major: UInt8(truncatingBitPattern: 1), minor: UInt8(truncatingBitPattern: 1))
-    let semverOther = SemVer(major: UInt8(truncatingBitPattern: 1), minor: UInt8(truncatingBitPattern: 0))
+    let semver = SemVer(major: 1, minor: 1)
+    let semverOther = SemVer(major: 1, minor: 0)
     let dictionary = MockStageBuildDictionary(semvers: [semver])
     let minimum = dictionary.minimumBuild(forSemVer: semverOther)
     XCTAssertEqual(minimum, nil)
