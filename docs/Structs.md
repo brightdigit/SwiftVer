@@ -7,9 +7,10 @@
 <p>Complete Version Information.</p>
 
 [See more](Structs/Version.md)
-## TODO: replace properties with friendly names
 ### VersionControlInfo
-<p>Undocumented</p>
+<pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">VersionControlInfo</span></code></pre>
+
+<p>The Current-Revision Metadata from the Version Control Repository.</p>
 
 [See more](Structs/VersionControlInfo.md)
 ### SemVer

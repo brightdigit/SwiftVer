@@ -1,21 +1,69 @@
 import Foundation
 
-// TODO: replace properties with friendly names
+/**
+ The Current-Revision Metadata from the Version Control Repository.
+ */
 public struct VersionControlInfo {
+
+  /**
+   The VersionControlType.
+   */
   public let type: VersionControlType
+
+  /**
+   The basename of the directory root.
+   */
   public let baseName: String
+
+  /**
+   A universally unique identifier, generated from the root commit in git and hg;
+   for svn it uses the supplied UUID.
+   */
   public let uuid: Hash?
+
+  /**
+   A count of revisions between the current one and the initial one; useful for reporting build numbers.
+   */
   public let number: Int
+
+  /**
+   The date of the most recent commit.
+   */
   public let date: Date?
+
+  /**
+   The name of the branch of the commit graph that was selected when autoversion was run.
+   */
   public let branch: String
+
+  /**
+   The name of the most recent tag ancestral to the current commit.
+   */
   public let tag: String?
+
+  /**
+   A count of commits since most recent tag ancestral to the current commit.
+   */
   public let tick: Int?
+
+  /**
+   A symbol set aside specifically to be set by the user through the environment or via scripts.
+   */
   public let extra: String?
 
+  /**
+   A full unique identifier for the current revision.
+   */
   public let hash: Hash
 
+  /**
+   If the current working directory has been modified.
+   */
   public let isWorkingCopyModified: Bool
 
+  /**
+   Creates a VersionControlInfo object.
+   */
   public init(type: String,
               baseName: String,
               uuid: Hash?,
@@ -41,6 +89,9 @@ public struct VersionControlInfo {
     self.isWorkingCopyModified = isWorkingCopyModified
   }
 
+  /**
+   Creates a VersionControlInfo object based a previous one with an updated tick and extra info.
+   */
   public init(basedOn parent: VersionControlInfo, tick: Int, extra: String?) {
     type = parent.type
     baseName = parent.baseName
@@ -55,6 +106,9 @@ public struct VersionControlInfo {
     isWorkingCopyModified = parent.isWorkingCopyModified
   }
 
+  /**
+   Tries to parse the json resource from the bundle based on the directory.
+   */
   public init?(
     jsonResource: String,
     fromBundle bundle: ResourceContainerProtocol,
