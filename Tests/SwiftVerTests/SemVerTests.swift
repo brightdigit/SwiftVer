@@ -68,4 +68,13 @@ class SemVerTests: XCTestCase {
     XCTAssertNil(semver)
     XCTAssertNil(semver?.description)
   }
+
+  func testComparison() {
+    XCTAssertGreaterThan(
+      SemVer(major: 1, minor: 0, patch: 1), SemVer(major: 1, minor: 0, patch: 0))
+    XCTAssertGreaterThan(
+      SemVer(major: 1, minor: 1, patch: 1), SemVer(major: 1, minor: 0, patch: 1))
+    XCTAssertGreaterThan(
+      SemVer(major: 2, minor: 1, patch: 1), SemVer(major: 1, minor: 0, patch: 1))
+  }
 }
