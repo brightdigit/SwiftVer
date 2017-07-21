@@ -106,16 +106,13 @@ public struct VersionControlInfo {
     isWorkingCopyModified = parent.isWorkingCopyModified
   }
 
-  /**
-   Tries to parse the json resource from the bundle based on the directory.
-   */
-  public init?(
-    jsonResource: String,
-    fromBundle bundle: ResourceContainerProtocol,
-    inDirectory directory: String? = nil
-  ) {
+  private static func autorevisionDictionary(
+    fromJsonResource name: String,
+    bundle: ResourceContainerProtocol,
+    inDirectory directory: String? = nil) -> [String: Any]? {
+
     guard let url = bundle.url(
-      forResource: jsonResource,
+      forResource: name,
       withExtension: "json",
       subdirectory: directory) else {
       return nil
@@ -132,6 +129,24 @@ public struct VersionControlInfo {
     }
 
     guard let dictionary: [String: Any] = jsonObject as? [String: Any] else {
+      return nil
+    }
+
+    return dictionary
+  }
+
+  /**
+   Tries to parse the json resource from the bundle based on the directory.
+   */
+  public init?(
+    jsonResource: String,
+    fromBundle bundle: ResourceContainerProtocol,
+    inDirectory directory: String? = nil
+  ) {
+    guard let dictionary = VersionControlInfo.autorevisionDictionary(
+      fromJsonResource: jsonResource,
+      bundle: bundle,
+      inDirectory: directory) else {
       return nil
     }
 
