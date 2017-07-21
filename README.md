@@ -1,43 +1,47 @@
-# WARNING
-
-Thank you for using SwiftVer. Before you release your awesome project to the world, complete the following steps.
-
-THIS LIST IS EASY, CHECK IT OFF ONE-BY-ONE BABY!
-
- - [ ] Open the project in Xcode and add features to SwiftVer
- - [ ] Make sure you are using Swift 3 ("Convert to latest Swift syntax")
- - [ ] Fix all build errors and warnings, add tests (yes really)
- - [ ] Add a screenshot or AT LEAST some picture, and fill in this readme
- - [ ] Add all details to your [Podspec](SwiftVer.podspec)
- - [ ] Delete all this crap up here
- - [ ] Make one release (full steps are in [CONTRIBUTING.md] in case you forget)
-
-THEN YOU'RE DONE, GO STAR [swift3-module-template](https://github.com/fulldecent/swift3-module-template) FOR UPDATES.
-
-----
-
-[![header](https://raw.githubusercontent.com/brightdigit/swiftver/release/1.0.1/Assets/Images/Logo.png)](https://business.ramotion.com?utm_source=gthb&utm_medium=special&utm_campaign=paper-onboarding-logo)
+![header](https://raw.githubusercontent.com/brightdigit/swiftver/master/Assets/Images/Logo.png)
 
 # SwiftVer
 
-[![CI Status](http://img.shields.io/travis/brightdigit/SwiftVer.svg?style=flat)](https://travis-ci.org/brightdigit/SwiftVer)
+[![Twitter](https://img.shields.io/badge/Twitter-@BrightDigit-blue.svg?style=flat)](http://twitter.com/brightdigit)
+[![Codecov](https://img.shields.io/codecov/c/github/brightdigit/swiftver.svg)](https://codecov.io/gh/brightdigit/swiftver)
+[![Travis](https://img.shields.io/travis/brightdigit/swiftver.svg)](https://travis-ci.org/brightdigit/swiftver)
+[![Beerpay](https://img.shields.io/beerpay/brightdigit/swiftver.svg?maxAge=2592000)](https://beerpay.io/brightdigit/swiftver)
+[![Gitter](https://img.shields.io/gitter/room/swiftver-framework/Lobby.js.svg?maxAge=2592000)](https://gitter.im/swiftver-framework/Lobby)
+[![Analytics](https://ga-beacon.appspot.com/UA-33667276-5/brightdigit/swiftver?flat&useReferer)](https://github.com/igrigorik/ga-beacon)
 [![Version](https://img.shields.io/cocoapods/v/SwiftVer.svg?style=flat)](https://cocoapods.org/pods/SwiftVer)
 [![License](https://img.shields.io/cocoapods/l/SwiftVer.svg?style=flat)](https://cocoapods.org/pods/SwiftVer)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftVer.svg?style=flat)](https://cocoapods.org/pods/SwiftVer)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-<a href="https://placehold.it/400?text=Screen+shot"><img width=200 height=200 src="https://placehold.it/400?text=Screen+shot" alt="Screenshot" /></a>
+Manage versioning in MacOS, iOS, watchOS, and tvOS projects by parsing your bundle and revision metadata from your VCS repository.
+
+![screenshoot](https://raw.githubusercontent.com/brightdigit/swiftver/master/Assets/Images/sample-image.png)
+
+## Contents
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-## Example
+- [Requirements](#requirements)
+- [Installation](#installation)
+  - [CocoaPods](#cocoapods)
+  - [Carthage](#carthage)
+- [Usage](#usage)
+  - [Parsing the Version from a Bundle](#parsing-the-version-from-a-bundle)
+  - [Integrating Version Control Info with Autorevision](#integrating-version-control-info-with-autorevision)
+  - [Using a StageBuildDictionary to parse Stage](#using-a-stagebuilddictionary-to-parse-stage)
+- [Documentation](#documentation)
+  - [Categories](#categories)
+- [Author](#author)
+- [License](#license)
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Requirements
 
 - XCode 8.0
-- macOS 10.10+, iOS 8.0+, watchOS 2.0+
+- macOS 10.10+, iOS 8.1+, watchOS 2.0+
 
 ## Installation
 
@@ -78,20 +82,112 @@ $ brew install carthage
 To integrate SwiftVer into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "brightdigit/SwiftVer" ~> 0.1
+github "brightdigit/SwiftVer" ~> 2.0.0
 ```
 
 Run `carthage update` to build the framework and drag the built `SwiftVer.framework` into your Xcode project.
 
 
-## Usage 
-https://raw.githubusercontent.com/Autorevision/autorevision/master/autorevision.sh
+## Usage
 
+### Parsing the Version from a Bundle
+
+The `Version` bundle initializer takes in a bundle and failable. If your Bundle does to contain a valid version string in the format of `major.minor` or `major.minor.patch`, the initializer will fail.
+
+```swift
+guard let version = Version(bundle: Bundle.main) else {
+	// invalid version format
+}
+
+```
+
+#### Valid
+![xcode screenshot version 1.0.1](https://raw.githubusercontent.com/brightdigit/swiftver/master/Assets/Images/version_format_xcode_1.0.1.png)
+
+#### Valid
+![xcode screenshot version 1.0](https://raw.githubusercontent.com/brightdigit/swiftver/master/Assets/Images/version_format_xcode_1.0.png)
+
+#### Invalid
+![xcode screenshot version 1](https://raw.githubusercontent.com/brightdigit/swiftver/master/Assets/Images/version_format_xcode_1.png)
+
+### Integrating Version Control Info with [Autorevision](https://autorevision.github.io)
+
+You can revision metadata from your VCS repository using [Autorevision](https://autorevision.github.io).
+
+1. Add the bash script from [Autorevision](https://autorevision.github.io).
+
+2. Add a Run Script build phase to your project.
+
+``` base
+"${SRCROOT}/autorevision.sh" -t <format> >${SRCROOT}/framework/autorevision.<format>
+```
+
+3. Include the output in your bundle.
+
+4. Parse the output and call the `VersionControlInfo` initializer.
+
+``` swift
+public struct VersionControlInfo {  
+	public init(type: String,
+              baseName: String,
+              uuid: Hash?,
+              number: Int,
+              date: String,
+              branch: String,
+              tag: String?,
+              tick: Int?,
+              extra: String?,
+              hash: String,
+
+              isWorkingCopyModified: Bool)
+}
+```
+
+### Using a StageBuildDictionary to parse Stage
+
+In version 2.0.0, you can parse the stage based on a StageBuildDictionary. The StageBuildDictionary is a plist which maps the Semantic Versions to Stages and their minimum build number.
+
+#### Plist where the Build Number Resets at Each Semantic Version (iOS)
+![intra build stage dictionary plist screenshot ](/Assets/Images/stagebuilddictionary-intra.png)
+
+#### Plist where the Build Number does not Reset at Each Semantic Version (Sparkle-compatible macOS)
+![global build stage dictionary plist screenshot ](/Assets/Images/stagebuilddictionary-global.png)
+
+To create the dictionary pass it to the following method:
+
+``` swift
+public enum Stage {
+  public static func dictionary(fromPlistAtURL url: URL) -> StageBuildDictionaryProtocol?
+}
+```
+
+## Documentation
+### Categories
+* [Enums](docs/Enums.md)
+* [Extensions](docs/Extensions.md)
+* [Protocols](docs/Protocols.md)
+* [Structs](docs/Structs.md)
+* [Typealiases](docs/Typealiases.md)
+### Types
+#### Enums
+* [Stage](docs/Enums/Stage.md)
+* [VersionControlType](docs/Enums/VersionControlType.md)
+#### Extensions
+* [Data](docs/Extensions/Data.md)
+* [DateFormatter](docs/Extensions/DateFormatter.md)
+#### Protocols
+* [InfoDictionaryContainerProtocol](docs/Protocols/InfoDictionaryContainerProtocol.md)
+* [ResourceContainerProtocol](docs/Protocols/ResourceContainerProtocol.md)
+* [StageBuildDictionaryProtocol](docs/Protocols/StageBuildDictionaryProtocol.md)
+#### Structs
+* [Hash](docs/Structs/Hash.md)
+* [SemVer](docs/Structs/SemVer.md)
+* [Version](docs/Structs/Version.md)
+* [VersionControlInfo](docs/Structs/VersionControlInfo.md)
 
 ## Author
 
-Leo G Dion
-
+Leo G Dion, [BrightDigit, LLC](http://www.brightdigit.com)
 
 ## License
 
