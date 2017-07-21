@@ -69,7 +69,7 @@ for svn it uses the supplied UUID.</p>
               <span class="nv">tag</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
               <span class="nv">tick</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span>
               <span class="nv">extra</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
-              <span class="nv">hash</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+              <span class="nv">hash</span><span class="p">:</span> <span class="kt"><a href="../Structs/Hash.md">Hash</a></span><span class="p">,</span>
 
               <span class="nv">isWorkingCopyModified</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
 

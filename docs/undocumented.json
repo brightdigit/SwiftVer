@@ -1,19 +1,6 @@
 {
   "warnings": [
-    {
-      "file": "/Users/leo/Documents/Projects/swiftver/Source/Hash.swift",
-      "line": 3,
-      "symbol": "Hash",
-      "symbol_kind": "source.lang.swift.decl.struct",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/leo/Documents/Projects/swiftver/Source/RFC3339DateFormatter.swift",
-      "line": 11,
-      "symbol": "DateFormatter.setupRFC3339DateFormatter()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    }
+
   ],
   "source_directory": "/Users/leo/Documents/Projects/swiftver"
 }

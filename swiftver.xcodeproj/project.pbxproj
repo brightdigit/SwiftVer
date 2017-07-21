@@ -657,7 +657,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rbenv install -s 2.1.0\nrbenv local 2.1.0\nrbenv exec gem install jazzy\nrbenv exec jazzy --config .jazzy.yml -o .tmp/htmldocs\nrm -rf docs\ncp -rf .tmp/htmldocs docs && sh markdown/markdown.sh docs\nsh markdown/readme.sh README.md docs docs-header.md docs-footer.md 3\n";
+			shellScript = "source ~/.nvm/nvm.sh\nnvm use stable\nrbenv install -s 2.1.0\nrbenv local 2.1.0\nrbenv exec gem install jazzy\nrbenv exec jazzy --config .jazzy.yml -o .tmp/htmldocs\nrm -rf docs\ncp -rf .tmp/htmldocs docs && sh markdown/markdown.sh docs\nsh markdown/readme.sh README.md docs docs-header.md docs-footer.md 3\nnpm install -g doctoc\ndoctoc --maxlevel 3 README.md";
 		};
 		B35AF9D91F0957710025CBCF /* swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;

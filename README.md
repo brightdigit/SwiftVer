@@ -17,6 +17,27 @@ Manage versioning in MacOS, iOS, watchOS, and tvOS projects by parsing your bund
 
 ![screenshoot](https://raw.githubusercontent.com/brightdigit/swiftver/master/Assets/Images/sample-image.png)
 
+## Contents
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Requirements](#requirements)
+- [Installation](#installation)
+  - [CocoaPods](#cocoapods)
+  - [Carthage](#carthage)
+- [Usage](#usage)
+  - [Parsing the Version from a Bundle](#parsing-the-version-from-a-bundle)
+  - [Integrating Version Control Info with Autorevision](#integrating-version-control-info-with-autorevision)
+  - [Using a StageBuildDictionary to parse Stage](#using-a-stagebuilddictionary-to-parse-stage)
+- [Documentation](#documentation)
+  - [Categories](#categories)
+- [Author](#author)
+- [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Requirements
 
 - XCode 8.0

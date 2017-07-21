@@ -20,6 +20,8 @@
 
 [See more](Structs/SemVer.md)
 ### Hash
-<p>Undocumented</p>
+<pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Hash</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">Hashable</span></code></pre>
+
+<p>Hash struct used for VersionControlInfo.</p>
 
 [See more](Structs/Hash.md)
