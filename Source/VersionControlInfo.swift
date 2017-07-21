@@ -4,7 +4,7 @@ import Foundation
 public struct VersionControlInfo {
   public let type: VersionControlType
   public let baseName: String
-  public let uuid: UUID?
+  public let uuid: Hash?
   public let number: Int
   public let date: Date?
   public let branch: String
@@ -18,7 +18,7 @@ public struct VersionControlInfo {
 
   public init(type: String,
               baseName: String,
-              uuid: UUID?,
+              uuid: Hash?,
               number: Int,
               date: String,
               branch: String,
@@ -115,9 +115,9 @@ public struct VersionControlInfo {
       date_value = nil
     }
 
-    let uuid: UUID?
+    let uuid: Hash?
     if let uuid_string = dictionary["VCS_UUID"] as? String {
-      uuid = UUID(uuidString: uuid_string)
+      uuid = Hash(string: uuid_string)
     } else {
       uuid = nil
     }

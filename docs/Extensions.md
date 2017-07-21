@@ -4,3 +4,6 @@
 ### DateFormatter
 
 [See more](Extensions/DateFormatter.md)
+### Data
+
+[See more](Extensions/Data.md)

@@ -1,6 +1,13 @@
 {
   "warnings": [
     {
+      "file": "/Users/leo/Documents/Projects/swiftver/Source/Hash.swift",
+      "line": 3,
+      "symbol": "Hash",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/leo/Documents/Projects/swiftver/Source/RFC3339DateFormatter.swift",
       "line": 11,
       "symbol": "DateFormatter.setupRFC3339DateFormatter()",
@@ -17,104 +24,97 @@
     {
       "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
       "line": 5,
-      "symbol": "VersionControlInfo.TYPE",
+      "symbol": "VersionControlInfo.type",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
       "line": 6,
-      "symbol": "VersionControlInfo.BASENAME",
+      "symbol": "VersionControlInfo.baseName",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
       "line": 7,
-      "symbol": "VersionControlInfo.UUID",
+      "symbol": "VersionControlInfo.uuid",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
       "line": 8,
-      "symbol": "VersionControlInfo.NUM",
+      "symbol": "VersionControlInfo.number",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
       "line": 9,
-      "symbol": "VersionControlInfo.DATE",
+      "symbol": "VersionControlInfo.date",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
       "line": 10,
-      "symbol": "VersionControlInfo.BRANCH",
+      "symbol": "VersionControlInfo.branch",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
       "line": 11,
-      "symbol": "VersionControlInfo.TAG",
+      "symbol": "VersionControlInfo.tag",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
       "line": 12,
-      "symbol": "VersionControlInfo.TICK",
+      "symbol": "VersionControlInfo.tick",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
       "line": 13,
-      "symbol": "VersionControlInfo.EXTRA",
+      "symbol": "VersionControlInfo.extra",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
       "line": 15,
-      "symbol": "VersionControlInfo.FULLHASH",
+      "symbol": "VersionControlInfo.hash",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
-      "line": 16,
-      "symbol": "VersionControlInfo.SHORTHASH",
+      "line": 17,
+      "symbol": "VersionControlInfo.isWorkingCopyModified",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
-      "line": 18,
-      "symbol": "VersionControlInfo.MODIFIED",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
-      "line": 20,
-      "symbol": "VersionControlInfo.init(TYPE:BASENAME:UUID:NUM:DATE:BRANCH:TAG:TICK:EXTRA:FULLHASH:SHORTHASH:MODIFIED:)",
+      "line": 19,
+      "symbol": "VersionControlInfo.init(type:baseName:uuid:number:date:branch:tag:tick:extra:hash:isWorkingCopyModified:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
-      "line": 48,
-      "symbol": "VersionControlInfo.init(basedOn:TICK:EXTRA:)",
+      "line": 44,
+      "symbol": "VersionControlInfo.init(basedOn:tick:extra:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/leo/Documents/Projects/swiftver/Source/VersionControlInfo.swift",
-      "line": 63,
+      "line": 58,
       "symbol": "VersionControlInfo.init(jsonResource:fromBundle:inDirectory:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

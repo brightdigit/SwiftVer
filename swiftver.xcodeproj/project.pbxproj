@@ -50,6 +50,9 @@
 		B366BF021F211B3500AC0195 /* ResourceContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B366BF001F211B3500AC0195 /* ResourceContainerProtocol.swift */; };
 		B366BF031F211B3500AC0195 /* ResourceContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B366BF001F211B3500AC0195 /* ResourceContainerProtocol.swift */; };
 		B366BF041F211B3500AC0195 /* ResourceContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B366BF001F211B3500AC0195 /* ResourceContainerProtocol.swift */; };
+		B366BF0D1F2184F300AC0195 /* HashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B366BF0C1F2184F300AC0195 /* HashTests.swift */; };
+		B366BF0E1F2184F300AC0195 /* HashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B366BF0C1F2184F300AC0195 /* HashTests.swift */; };
+		B366BF0F1F2184F300AC0195 /* HashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B366BF0C1F2184F300AC0195 /* HashTests.swift */; };
 		B37840551D92757F008FE737 /* VersionControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840541D92757F008FE737 /* VersionControlType.swift */; };
 		B37840561D92757F008FE737 /* VersionControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840541D92757F008FE737 /* VersionControlType.swift */; };
 		B37840571D92757F008FE737 /* VersionControlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37840541D92757F008FE737 /* VersionControlType.swift */; };
@@ -156,6 +159,7 @@
 		B35326501F0A830D00604112 /* versions-global.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "versions-global.plist"; sourceTree = "<group>"; };
 		B35326581F0A843B00604112 /* versions-intra.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "versions-intra.plist"; sourceTree = "<group>"; };
 		B366BF001F211B3500AC0195 /* ResourceContainerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceContainerProtocol.swift; sourceTree = "<group>"; };
+		B366BF0C1F2184F300AC0195 /* HashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTests.swift; sourceTree = "<group>"; };
 		B37840541D92757F008FE737 /* VersionControlType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionControlType.swift; sourceTree = "<group>"; };
 		B37840581D927595008FE737 /* VersionControlInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionControlInfo.swift; sourceTree = "<group>"; };
 		B378405C1D9275DB008FE737 /* SemVer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemVer.swift; sourceTree = "<group>"; };
@@ -261,6 +265,7 @@
 				B378408F1D927A45008FE737 /* VersionControlInfoTests.swift */,
 				B37840931D927A58008FE737 /* VersionControlTypeTests.swift */,
 				B31FED0F1F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift */,
+				B366BF0C1F2184F300AC0195 /* HashTests.swift */,
 			);
 			path = SwiftVerTests;
 			sourceTree = "<group>";
@@ -555,7 +560,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D95E1BD71D88D63300F94976 /* Build configuration list for PBXProject "swiftver" */;
+			buildConfigurationList = D95E1BD71D88D63300F94976 /* Build configuration list for PBXProject "SwiftVer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -843,6 +848,7 @@
 				B38A19CB1F0ACE7C0044B910 /* GlobalVersionTests.swift in Sources */,
 				B37840EC1D92E033008FE737 /* testVCS.swift in Sources */,
 				B37840921D927A45008FE737 /* VersionControlInfoTests.swift in Sources */,
+				B366BF0F1F2184F300AC0195 /* HashTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -899,6 +905,7 @@
 				B38A19CA1F0ACE7B0044B910 /* GlobalVersionTests.swift in Sources */,
 				B37840EB1D92E033008FE737 /* testVCS.swift in Sources */,
 				B37840911D927A45008FE737 /* VersionControlInfoTests.swift in Sources */,
+				B366BF0E1F2184F300AC0195 /* HashTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -935,6 +942,7 @@
 				B38A19C91F0ACE7B0044B910 /* GlobalVersionTests.swift in Sources */,
 				B37840EA1D92E033008FE737 /* testVCS.swift in Sources */,
 				B37840901D927A45008FE737 /* VersionControlInfoTests.swift in Sources */,
+				B366BF0D1F2184F300AC0195 /* HashTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1410,7 +1418,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D95E1BD71D88D63300F94976 /* Build configuration list for PBXProject "swiftver" */ = {
+		D95E1BD71D88D63300F94976 /* Build configuration list for PBXProject "SwiftVer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D95E1BEF1D88D63400F94976 /* Debug */,

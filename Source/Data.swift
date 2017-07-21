@@ -1,6 +1,9 @@
 import Foundation
 
 public extension Data {
+  /**
+   Creates a Data object based on a hex **String**.
+   */
   public init(hexString: String) {
     var hex = hexString
     self.init()

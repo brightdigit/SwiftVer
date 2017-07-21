@@ -28,8 +28,8 @@
 
 <p>Unknown <strong>VersionControlType</strong></p>
 
-### init(TYPE:)
-<pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="kt">TYPE</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+### init(string:)
+<pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
 <p>Creates a <strong>VersionControlType</strong> based on the type <strong>String</strong>.</p>
 

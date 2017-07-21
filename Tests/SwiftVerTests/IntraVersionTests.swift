@@ -26,18 +26,18 @@ class IntraVersionTests: XCTestCase {
     XCTAssertEqual(version?.semver.patch, 3)
     XCTAssertEqual(version?.build, 4)
 
-    XCTAssertEqual(version?.versionControl?.TYPE, versionControlInfo.TYPE)
-    XCTAssertEqual(version?.versionControl?.BASENAME, versionControlInfo.BASENAME)
-    XCTAssertEqual(version?.versionControl?.UUID, versionControlInfo.UUID)
-    XCTAssertEqual(version?.versionControl?.NUM, versionControlInfo.NUM)
-    XCTAssertEqual(version?.versionControl?.DATE, versionControlInfo.DATE)
-    XCTAssertEqual(version?.versionControl?.BRANCH, versionControlInfo.BRANCH)
-    XCTAssertEqual(version?.versionControl?.TAG, versionControlInfo.TAG)
-    XCTAssertEqual(version?.versionControl?.TICK, versionControlInfo.TICK)
-    XCTAssertEqual(version?.versionControl?.EXTRA, versionControlInfo.EXTRA)
-    XCTAssertEqual(version?.versionControl?.FULLHASH, versionControlInfo.FULLHASH)
-    XCTAssertEqual(version?.versionControl?.SHORTHASH, versionControlInfo.SHORTHASH)
-    XCTAssertEqual(version?.versionControl?.MODIFIED, versionControlInfo.MODIFIED)
+    XCTAssertEqual(version?.versionControl?.type, versionControlInfo.type)
+    XCTAssertEqual(version?.versionControl?.baseName, versionControlInfo.baseName)
+    XCTAssertEqual(version?.versionControl?.uuid, versionControlInfo.uuid)
+    XCTAssertEqual(version?.versionControl?.number, versionControlInfo.number)
+    XCTAssertEqual(version?.versionControl?.date, versionControlInfo.date)
+    XCTAssertEqual(version?.versionControl?.branch, versionControlInfo.branch)
+    XCTAssertEqual(version?.versionControl?.tag, versionControlInfo.tag)
+    XCTAssertEqual(version?.versionControl?.tick, versionControlInfo.tick)
+    XCTAssertEqual(version?.versionControl?.extra, versionControlInfo.extra)
+    XCTAssertEqual(version?.versionControl?.hash, versionControlInfo.hash)
+
+    XCTAssertEqual(version?.versionControl?.isWorkingCopyModified, versionControlInfo.isWorkingCopyModified)
   }
 
   func testMissingBundleVersion() {

@@ -1,46 +1,43 @@
 # VersionControlInfo
 <p>Undocumented</p>
 
-### TYPE
+### type
 <p>Undocumented</p>
 
-### BASENAME
+### baseName
 <p>Undocumented</p>
 
-### UUID
+### uuid
 <p>Undocumented</p>
 
-### NUM
+### number
 <p>Undocumented</p>
 
-### DATE
+### date
 <p>Undocumented</p>
 
-### BRANCH
+### branch
 <p>Undocumented</p>
 
-### TAG
+### tag
 <p>Undocumented</p>
 
-### TICK
+### tick
 <p>Undocumented</p>
 
-### EXTRA
+### extra
 <p>Undocumented</p>
 
-### FULLHASH
+### hash
 <p>Undocumented</p>
 
-### SHORTHASH
+### isWorkingCopyModified
 <p>Undocumented</p>
 
-### MODIFIED
+### init(type:baseName:uuid:number:date:branch:tag:tick:extra:hash:isWorkingCopyModified:)
 <p>Undocumented</p>
 
-### init(TYPE:BASENAME:UUID:NUM:DATE:BRANCH:TAG:TICK:EXTRA:FULLHASH:SHORTHASH:MODIFIED:)
-<p>Undocumented</p>
-
-### init(basedOn:TICK:EXTRA:)
+### init(basedOn:tick:extra:)
 <p>Undocumented</p>
 
 ### init(jsonResource:fromBundle:inDirectory:)

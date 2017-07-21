@@ -136,12 +136,14 @@ public struct VersionControlInfo {
 * [Stage](docs/Enums/Stage.md)
 * [VersionControlType](docs/Enums/VersionControlType.md)
 #### Extensions
+* [Data](docs/Extensions/Data.md)
 * [DateFormatter](docs/Extensions/DateFormatter.md)
 #### Protocols
 * [InfoDictionaryContainerProtocol](docs/Protocols/InfoDictionaryContainerProtocol.md)
 * [ResourceContainerProtocol](docs/Protocols/ResourceContainerProtocol.md)
 * [StageBuildDictionaryProtocol](docs/Protocols/StageBuildDictionaryProtocol.md)
 #### Structs
+* [Hash](docs/Structs/Hash.md)
 * [SemVer](docs/Structs/SemVer.md)
 * [Version](docs/Structs/Version.md)
 * [VersionControlInfo](docs/Structs/VersionControlInfo.md)

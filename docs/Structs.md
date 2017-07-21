@@ -18,3 +18,7 @@
 <p>Semantic Version.</p>
 
 [See more](Structs/SemVer.md)
+### Hash
+<p>Undocumented</p>
+
+[See more](Structs/Hash.md)
