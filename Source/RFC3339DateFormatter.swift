@@ -8,7 +8,7 @@ fileprivate let _rfc3339DateFormatter = {
 }()
 
 public extension DateFormatter {
-  func setupRFC3339DateFormatter() {
+  internal func setupRFC3339DateFormatter() {
 
     locale = Locale(identifier: "en_US_POSIX")
     dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssXXX"

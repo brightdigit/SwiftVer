@@ -11,7 +11,7 @@ let versionControlInfo = VersionControlInfo(
   tag: VCS_TAG,
   tick: VCS_TICK,
   extra: VCS_EXTRA,
-  hash: VCS_FULL_HASH,
+  hash: Hash(string: VCS_FULL_HASH)!,
   isWorkingCopyModified: VCS_WC_MODIFIED)
 
 class VersionControlInfoTests: XCTestCase {

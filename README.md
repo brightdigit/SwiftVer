@@ -61,7 +61,7 @@ $ brew install carthage
 To integrate SwiftVer into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "brightdigit/SwiftVer" ~> 1.1.0
+github "brightdigit/SwiftVer" ~> 2.0.0
 ```
 
 Run `carthage update` to build the framework and drag the built `SwiftVer.framework` into your Xcode project.
@@ -81,7 +81,7 @@ guard let version = Version(bundle: Bundle.main) else {
 ```
 
 #### Valid
-![xcode screenshot version 1.1.0](https://raw.githubusercontent.com/brightdigit/swiftver/master/Assets/Images/version_format_xcode_1.1.0.png)
+![xcode screenshot version 1.0.1](https://raw.githubusercontent.com/brightdigit/swiftver/master/Assets/Images/version_format_xcode_1.0.1.png)
 
 #### Valid
 ![xcode screenshot version 1.0](https://raw.githubusercontent.com/brightdigit/swiftver/master/Assets/Images/version_format_xcode_1.0.png)
@@ -107,20 +107,36 @@ You can revision metadata from your VCS repository using [Autorevision](https://
 
 ``` swift
 public struct VersionControlInfo {  
-  public init (TYPE:String
-    ,BASENAME:String
-    ,UUID: String?
-    ,NUM:  Int
-    ,DATE: String
-    ,BRANCH: String
-    ,TAG:  String?
-    ,TICK: Int?
-    ,EXTRA:  String?
+	public init(type: String,
+              baseName: String,
+              uuid: Hash?,
+              number: Int,
+              date: String,
+              branch: String,
+              tag: String?,
+              tick: Int?,
+              extra: String?,
+              hash: String,
 
-    ,FULL_HASH:    String
-    ,SHORT_HASH:   String
+              isWorkingCopyModified: Bool)
+}
+```
 
-    ,WC_MODIFIED:  Bool)
+### Using a StageBuildDictionary to parse Stage
+
+In version 2.0.0, you can parse the stage based on a StageBuildDictionary. The StageBuildDictionary is a plist which maps the Semantic Versions to Stages and their minimum build number.
+
+#### Plist where the Build Number Resets at Each Semantic Version (iOS)
+![intra build stage dictionary plist screenshot ](/Assets/Images/stagebuilddictionary-intra.png)
+
+#### Plist where the Build Number does not Reset at Each Semantic Version (Sparkle-compatible macOS)
+![global build stage dictionary plist screenshot ](/Assets/Images/stagebuilddictionary-global.png)
+
+To create the dictionary pass it to the following method:
+
+``` swift
+public enum Stage {
+  public static func dictionary(fromPlistAtURL url: URL) -> StageBuildDictionaryProtocol?
 }
 ```
 

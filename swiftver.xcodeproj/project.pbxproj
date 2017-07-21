@@ -301,10 +301,13 @@
 		D95E1BDF1D88D63300F94976 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				D95E1BE01D88D63300F94976 /* SwiftVer.h */,
 				D95E1BE11D88D63300F94976 /* Info-iOS.plist */,
 				B38B1A071D921090007AAAD7 /* Info-macOS.plist */,
 				B37840681D92779E008FE737 /* Info-tvOS.plist */,
 				B38B19FA1D92105B007AAAD7 /* Info-watchOS.plist */,
+				B3E9859B1F217A3500C51FFA /* Data.swift */,
+				B338FE6F1F214CBA00617EA6 /* Hash.swift */,
 				B37840E41D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift */,
 				B366BF001F211B3500AC0195 /* ResourceContainerProtocol.swift */,
 				B3FE6A151D91D3630085656C /* RFC3339DateFormatter.swift */,
@@ -313,12 +316,9 @@
 				B338FE671F21001300617EA6 /* StageBuild.swift */,
 				B338FE651F20FFFD00617EA6 /* StageBuildDictionaryBase.swift */,
 				B3C3A4211F09BD1F00746233 /* StageBuildDictionaryProtocol.swift */,
-				D95E1BE01D88D63300F94976 /* SwiftVer.h */,
 				B3FE6A141D91D3630085656C /* Version.swift */,
 				B37840581D927595008FE737 /* VersionControlInfo.swift */,
 				B37840541D92757F008FE737 /* VersionControlType.swift */,
-				B338FE6F1F214CBA00617EA6 /* Hash.swift */,
-				B3E9859B1F217A3500C51FFA /* Data.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";

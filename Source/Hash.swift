@@ -1,5 +1,8 @@
 import Foundation
 
+/**
+ Hash struct used for VersionControlInfo.
+ */
 public struct Hash: CustomStringConvertible, Equatable, Hashable {
   /**
    The Data of the Hash.
@@ -9,8 +12,12 @@ public struct Hash: CustomStringConvertible, Equatable, Hashable {
   /**
    Creates a Hash object based on a string.
    */
-  public init(string: String) {
-    data = Data(hexString: string)
+  public init?(string: String) {
+    guard let data = Data(hexString: string) else {
+      return nil
+    }
+
+    self.data = data
   }
 
   /**

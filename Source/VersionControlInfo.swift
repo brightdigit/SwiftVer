@@ -73,7 +73,7 @@ public struct VersionControlInfo {
               tag: String?,
               tick: Int?,
               extra: String?,
-              hash: String,
+              hash: Hash,
 
               isWorkingCopyModified: Bool) {
     self.type = VersionControlType(string: type)
@@ -85,7 +85,7 @@ public struct VersionControlInfo {
     self.tag = tag
     self.tick = tick
     self.extra = extra
-    self.hash = Hash(string: hash)
+    self.hash = hash
     self.isWorkingCopyModified = isWorkingCopyModified
   }
 
@@ -162,7 +162,7 @@ public struct VersionControlInfo {
       return nil
     }
 
-    guard let hash_string = dictionary["VCS_FULL_HASH"] as? String else {
+    guard let hash_string = dictionary["VCS_FULL_HASH"] as? String, let hash = Hash(string: hash_string) else {
       return nil
     }
 
@@ -200,7 +200,7 @@ public struct VersionControlInfo {
     tag = dictionary["VCS_TAG"] as? String
     tick = dictionary["VCS_TICK"] as? Int
     extra = dictionary["VCS_EXTRA"] as? String
-    hash = Hash(string: hash_string)
+    self.hash = hash
     isWorkingCopyModified = wc_modified
   }
 }
