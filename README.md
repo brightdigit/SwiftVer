@@ -17,6 +17,27 @@ Manage versioning in MacOS, iOS, watchOS, and tvOS projects by parsing your bund
 
 ![screenshoot](https://raw.githubusercontent.com/brightdigit/swiftver/master/Assets/Images/sample-image.png)
 
+## Contents
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Requirements](#requirements)
+- [Installation](#installation)
+  - [CocoaPods](#cocoapods)
+  - [Carthage](#carthage)
+- [Usage](#usage)
+  - [Parsing the Version from a Bundle](#parsing-the-version-from-a-bundle)
+  - [Integrating Version Control Info with Autorevision](#integrating-version-control-info-with-autorevision)
+  - [Using a StageBuildDictionary to parse Stage](#using-a-stagebuilddictionary-to-parse-stage)
+- [Documentation](#documentation)
+  - [Categories](#categories)
+- [Author](#author)
+- [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Requirements
 
 - XCode 8.0
@@ -61,13 +82,13 @@ $ brew install carthage
 To integrate SwiftVer into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "brightdigit/SwiftVer" ~> 1.0.1
+github "brightdigit/SwiftVer" ~> 2.0.0
 ```
 
 Run `carthage update` to build the framework and drag the built `SwiftVer.framework` into your Xcode project.
 
 
-## Usage 
+## Usage
 
 ### Parsing the Version from a Bundle
 
@@ -75,7 +96,7 @@ The `Version` bundle initializer takes in a bundle and failable. If your Bundle 
 
 ```swift
 guard let version = Version(bundle: Bundle.main) else {
-	// invalid version format 
+	// invalid version format
 }
 
 ```
@@ -107,22 +128,62 @@ You can revision metadata from your VCS repository using [Autorevision](https://
 
 ``` swift
 public struct VersionControlInfo {  
-  public init (TYPE:String
-    ,BASENAME:String
-    ,UUID: String?
-    ,NUM:  Int
-    ,DATE: String
-    ,BRANCH: String
-    ,TAG:  String?
-    ,TICK: Int?
-    ,EXTRA:  String?
-    
-    ,FULL_HASH:    String
-    ,SHORT_HASH:   String
-    
-    ,WC_MODIFIED:  Bool)
+	public init(type: String,
+              baseName: String,
+              uuid: Hash?,
+              number: Int,
+              date: String,
+              branch: String,
+              tag: String?,
+              tick: Int?,
+              extra: String?,
+              hash: String,
+
+              isWorkingCopyModified: Bool)
 }
 ```
+
+### Using a StageBuildDictionary to parse Stage
+
+In version 2.0.0, you can parse the stage based on a StageBuildDictionary. The StageBuildDictionary is a plist which maps the Semantic Versions to Stages and their minimum build number.
+
+#### Plist where the Build Number Resets at Each Semantic Version (iOS)
+![intra build stage dictionary plist screenshot ](/Assets/Images/stagebuilddictionary-intra.png)
+
+#### Plist where the Build Number does not Reset at Each Semantic Version (Sparkle-compatible macOS)
+![global build stage dictionary plist screenshot ](/Assets/Images/stagebuilddictionary-global.png)
+
+To create the dictionary pass it to the following method:
+
+``` swift
+public enum Stage {
+  public static func dictionary(fromPlistAtURL url: URL) -> StageBuildDictionaryProtocol?
+}
+```
+
+## Documentation
+### Categories
+* [Enums](docs/Enums.md)
+* [Extensions](docs/Extensions.md)
+* [Protocols](docs/Protocols.md)
+* [Structs](docs/Structs.md)
+* [Typealiases](docs/Typealiases.md)
+### Types
+#### Enums
+* [Stage](docs/Enums/Stage.md)
+* [VersionControlType](docs/Enums/VersionControlType.md)
+#### Extensions
+* [Data](docs/Extensions/Data.md)
+* [DateFormatter](docs/Extensions/DateFormatter.md)
+#### Protocols
+* [InfoDictionaryContainerProtocol](docs/Protocols/InfoDictionaryContainerProtocol.md)
+* [ResourceContainerProtocol](docs/Protocols/ResourceContainerProtocol.md)
+* [StageBuildDictionaryProtocol](docs/Protocols/StageBuildDictionaryProtocol.md)
+#### Structs
+* [Hash](docs/Structs/Hash.md)
+* [SemVer](docs/Structs/SemVer.md)
+* [Version](docs/Structs/Version.md)
+* [VersionControlInfo](docs/Structs/VersionControlInfo.md)
 
 ## Author
 
