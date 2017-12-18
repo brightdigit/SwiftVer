@@ -3,7 +3,7 @@ import SwiftVer
 
 class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
 
-  @IBOutlet weak var tableView: NSTableView!
+  @IBOutlet var tableView: NSTableView!
   public let values = Version.example.values
 
   override func viewDidLoad() {

@@ -21,6 +21,15 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		B30724EB1FE860FC003DA398 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A141D91D3630085656C /* Version.swift */; };
+		B30724ED1FE864D9003DA398 /* VersionNumberSuffixFormatError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30724EC1FE864D9003DA398 /* VersionNumberSuffixFormatError.swift */; };
+		B30724EE1FE864D9003DA398 /* VersionNumberSuffixFormatError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30724EC1FE864D9003DA398 /* VersionNumberSuffixFormatError.swift */; };
+		B30724EF1FE864D9003DA398 /* VersionNumberSuffixFormatError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30724EC1FE864D9003DA398 /* VersionNumberSuffixFormatError.swift */; };
+		B30724F11FE864F3003DA398 /* VersionNumberSuffixParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30724F01FE864F3003DA398 /* VersionNumberSuffixParseError.swift */; };
+		B30724F21FE864F3003DA398 /* VersionNumberSuffixParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30724F01FE864F3003DA398 /* VersionNumberSuffixParseError.swift */; };
+		B30724F31FE864F3003DA398 /* VersionNumberSuffixParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30724F01FE864F3003DA398 /* VersionNumberSuffixParseError.swift */; };
+		B30724F41FE86525003DA398 /* VersionNumberSuffixFormatError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30724EC1FE864D9003DA398 /* VersionNumberSuffixFormatError.swift */; };
+		B30724F51FE86528003DA398 /* VersionNumberSuffixParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30724F01FE864F3003DA398 /* VersionNumberSuffixParseError.swift */; };
 		B31FED101F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31FED0F1F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift */; };
 		B31FED111F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31FED0F1F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift */; };
 		B31FED121F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31FED0F1F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift */; };
@@ -146,6 +155,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B30724EC1FE864D9003DA398 /* VersionNumberSuffixFormatError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionNumberSuffixFormatError.swift; sourceTree = "<group>"; };
+		B30724F01FE864F3003DA398 /* VersionNumberSuffixParseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionNumberSuffixParseError.swift; sourceTree = "<group>"; };
 		B31FED0F1F1D529A00550DEF /* StageBuildDictionaryProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageBuildDictionaryProtocolTests.swift; sourceTree = "<group>"; };
 		B337BEF01F09510E00518323 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B337BEF11F09510E00518323 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -317,6 +328,8 @@
 				B3FE6A141D91D3630085656C /* Version.swift */,
 				B37840581D927595008FE737 /* VersionControlInfo.swift */,
 				B37840541D92757F008FE737 /* VersionControlType.swift */,
+				B30724EC1FE864D9003DA398 /* VersionNumberSuffixFormatError.swift */,
+				B30724F01FE864F3003DA398 /* VersionNumberSuffixParseError.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -817,6 +830,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B30724F31FE864F3003DA398 /* VersionNumberSuffixParseError.swift in Sources */,
+				B30724EF1FE864D9003DA398 /* VersionNumberSuffixFormatError.swift in Sources */,
 				B37840E71D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift in Sources */,
 				B378407C1D9277DD008FE737 /* Version.swift in Sources */,
 				B378407D1D9277DD008FE737 /* RFC3339DateFormatter.swift in Sources */,
@@ -847,6 +862,7 @@
 				B37840EC1D92E033008FE737 /* testVCS.swift in Sources */,
 				B37840921D927A45008FE737 /* VersionControlInfoTests.swift in Sources */,
 				B366BF0F1F2184F300AC0195 /* HashTests.swift in Sources */,
+				B30724EB1FE860FC003DA398 /* Version.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,6 +870,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B30724F51FE86528003DA398 /* VersionNumberSuffixParseError.swift in Sources */,
+				B30724F41FE86525003DA398 /* VersionNumberSuffixFormatError.swift in Sources */,
 				B37840E81D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift in Sources */,
 				B38B1A1B1D9210CA007AAAD7 /* Version.swift in Sources */,
 				B38B1A1C1D9210CA007AAAD7 /* RFC3339DateFormatter.swift in Sources */,
@@ -874,6 +892,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B30724F21FE864F3003DA398 /* VersionNumberSuffixParseError.swift in Sources */,
+				B30724EE1FE864D9003DA398 /* VersionNumberSuffixFormatError.swift in Sources */,
 				B37840E61D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift in Sources */,
 				B38B1A1E1D9210CA007AAAD7 /* Version.swift in Sources */,
 				B38B1A1F1D9210CA007AAAD7 /* RFC3339DateFormatter.swift in Sources */,
@@ -911,6 +931,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B30724F11FE864F3003DA398 /* VersionNumberSuffixParseError.swift in Sources */,
+				B30724ED1FE864D9003DA398 /* VersionNumberSuffixFormatError.swift in Sources */,
 				B37840E51D92DD72008FE737 /* InfoDictionaryContainerProtocol.swift in Sources */,
 				B3FE6A161D91D3630085656C /* Version.swift in Sources */,
 				B3FE6A171D91D3630085656C /* RFC3339DateFormatter.swift in Sources */,
@@ -1227,7 +1249,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROJECT_BUNDLE_VERSION_SHORT = 2.0.3;
+				PROJECT_BUNDLE_VERSION_SHORT = 2.0.4;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1283,7 +1305,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROJECT_BUNDLE_VERSION_SHORT = 2.0.3;
+				PROJECT_BUNDLE_VERSION_SHORT = 2.0.4;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
