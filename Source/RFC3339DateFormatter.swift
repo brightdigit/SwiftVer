@@ -1,6 +1,6 @@
 import Foundation
 
-fileprivate let _rfc3339DateFormatter = {
+private let _rfc3339DateFormatter = {
   () -> DateFormatter in
   let formatter = DateFormatter()
   formatter.setupRFC3339DateFormatter()
