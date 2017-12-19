@@ -1,5 +1,5 @@
-import XCTest
 @testable import SwiftVer
+import XCTest
 
 class IntraVersionTests: XCTestCase {
 
@@ -127,7 +127,8 @@ class IntraVersionTests: XCTestCase {
     let version = Version(bundle: bundle,
                           dictionary: MockBundle.intraBuildNumberDictionary,
                           versionControl: versionControlInfo)
-    XCTAssertEqual(version?.fullDescription, "1.0.0.0700250000")
+    XCTAssertEqual((try? version?.fullDescription(withLocale: Locale(identifier: "en_US")))!, "1.0.0.0700250000")
+    XCTAssertEqual((try? version?.fullDescription(withLocale: Locale(identifier: "nl_NL")))!, "1.0.0.0700250000")
   }
 
   public func testSubSemVerValue() {

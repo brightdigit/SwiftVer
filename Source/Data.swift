@@ -7,7 +7,7 @@ public extension Data {
   public init?(hexString: String) {
     var hex = hexString
     self.init()
-    while hex.characters.count > 0 {
+    while hex.count > 0 {
       let c: String = hex.substring(to: hex.index(hex.startIndex, offsetBy: 2))
       hex = hex.substring(from: hex.index(hex.startIndex, offsetBy: 2))
       var ch: UInt32 = 0

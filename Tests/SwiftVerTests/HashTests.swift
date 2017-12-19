@@ -1,5 +1,5 @@
-import XCTest
 @testable import SwiftVer
+import XCTest
 
 class HashTests: XCTestCase {
   private let hashStrings = [

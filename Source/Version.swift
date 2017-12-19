@@ -10,12 +10,9 @@ public struct Version: CustomStringConvertible {
     public static let build = "CFBundleVersion"
   }
 
-  private static let suffixFormatter: NumberFormatter = {
-    let formatter = NumberFormatter()
-    formatter.minimumFractionDigits = 10
-    formatter.minimumIntegerDigits = 1
-    return formatter
-  }()
+//  private static let suffixFormatter: NumberFormatter = {
+//    Version.suffixFormatter(forLocale: nil)
+//  }()
 
   /**
    Semantic Version.
@@ -172,13 +169,41 @@ public struct Version: CustomStringConvertible {
     return dictionary.stage(withBuildForVersion: self)?.stage
   }
 
+  public func suffixFormatter(forLocale locale: Locale?) -> NumberFormatter {
+    let formatter = NumberFormatter()
+    if let locale = locale {
+      formatter.locale = locale
+    }
+    formatter.minimumFractionDigits = 10
+    formatter.minimumIntegerDigits = 1
+    return formatter
+  }
+
+  public func fullDescription(withLocale locale: Locale?) throws -> String {
+    let formatter = suffixFormatter(forLocale: locale)
+    return try fullDescription(withFormatter: formatter)
+  }
+
+  public func fullDescription(withFormatter formatter: NumberFormatter) throws -> String {
+    guard let formattedNumber = formatter.string(for: subSemVerValue) else {
+      throw VersionNumberSuffixFormatError(formatter: formatter, value: subSemVerValue)
+    }
+    let components = formattedNumber.components(separatedBy: formatter.decimalSeparator)
+    guard components.count == 2 else {
+      throw VersionNumberSuffixParseError(formatter: formatter, value: subSemVerValue)
+    }
+    let suffixString = components[1]
+    return "\(semver).\(suffixString)"
+  }
+
   /**
    A Full Descripton which also contains the Sub-Semantic Version value
    parsed from the VersionControlInfo.
    */
+  @available(*, deprecated: 2.0.4, message: "Use function calls instead.")
   public var fullDescription: String {
-    let suffixString = Version.suffixFormatter.string(for: subSemVerValue)!.components(separatedBy: ".")[1]
-    return "\(semver).\(suffixString)"
+    // swiftlint:disable:next force_try
+    return try! fullDescription(withLocale: nil)
   }
 
   /**
