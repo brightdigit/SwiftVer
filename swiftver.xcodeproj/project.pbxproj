@@ -21,7 +21,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		B30724EB1FE860FC003DA398 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE6A141D91D3630085656C /* Version.swift */; };
 		B30724ED1FE864D9003DA398 /* VersionNumberSuffixFormatError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30724EC1FE864D9003DA398 /* VersionNumberSuffixFormatError.swift */; };
 		B30724EE1FE864D9003DA398 /* VersionNumberSuffixFormatError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30724EC1FE864D9003DA398 /* VersionNumberSuffixFormatError.swift */; };
 		B30724EF1FE864D9003DA398 /* VersionNumberSuffixFormatError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30724EC1FE864D9003DA398 /* VersionNumberSuffixFormatError.swift */; };
@@ -168,6 +167,8 @@
 		B338FE6F1F214CBA00617EA6 /* Hash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hash.swift; sourceTree = "<group>"; };
 		B35326501F0A830D00604112 /* versions-global.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "versions-global.plist"; sourceTree = "<group>"; };
 		B35326581F0A843B00604112 /* versions-intra.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "versions-intra.plist"; sourceTree = "<group>"; };
+		B35907AB1FE89ED100E2BD61 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		B35907AC1FE89ED200E2BD61 /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
 		B366BF001F211B3500AC0195 /* ResourceContainerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceContainerProtocol.swift; sourceTree = "<group>"; };
 		B366BF0C1F2184F300AC0195 /* HashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTests.swift; sourceTree = "<group>"; };
 		B37840541D92757F008FE737 /* VersionControlType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionControlType.swift; sourceTree = "<group>"; };
@@ -283,6 +284,8 @@
 		D95E1BD31D88D63200F94976 = {
 			isa = PBXGroup;
 			children = (
+				B35907AB1FE89ED100E2BD61 /* .travis.yml */,
+				B35907AC1FE89ED200E2BD61 /* build.sh */,
 				B337BEF01F09510E00518323 /* LICENSE */,
 				B337BEF41F09510E00518323 /* Package.swift */,
 				B337BEF11F09510E00518323 /* README.md */,
@@ -571,7 +574,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D95E1BD71D88D63300F94976 /* Build configuration list for PBXProject "swiftver" */;
+			buildConfigurationList = D95E1BD71D88D63300F94976 /* Build configuration list for PBXProject "SwiftVer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -862,7 +865,6 @@
 				B37840EC1D92E033008FE737 /* testVCS.swift in Sources */,
 				B37840921D927A45008FE737 /* VersionControlInfoTests.swift in Sources */,
 				B366BF0F1F2184F300AC0195 /* HashTests.swift in Sources */,
-				B30724EB1FE860FC003DA398 /* Version.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1438,7 +1440,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D95E1BD71D88D63300F94976 /* Build configuration list for PBXProject "swiftver" */ = {
+		D95E1BD71D88D63300F94976 /* Build configuration list for PBXProject "SwiftVer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D95E1BEF1D88D63400F94976 /* Debug */,

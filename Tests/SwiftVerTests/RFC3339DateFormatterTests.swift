@@ -1,5 +1,5 @@
-import XCTest
 @testable import SwiftVer
+import XCTest
 
 class RFC3339DateFormatterTests: XCTestCase {
 

@@ -1,5 +1,5 @@
-import XCTest
 @testable import SwiftVer
+import XCTest
 
 let versionControlInfo = VersionControlInfo(
   type: VCS_TYPE,
