@@ -7,7 +7,7 @@ script:
   - brew update
   - brew tap Homebrew/bundle
   - brew bundle
-  - ./build.sh
+  #- ./build.sh
 
   # Run `pod lib lint` if specified
   - pod lib lint
