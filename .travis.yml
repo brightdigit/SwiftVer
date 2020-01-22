@@ -18,4 +18,4 @@ script:
   - bash <(curl -s https://codecov.io/bash) -cF iOS -X xcodeplist -g Tests
   - xcodebuild -project SwiftVer.xcodeproj -scheme "SwiftVer tvOS" -destination "platform=tvOS Simulator,name=Apple TV,OS=11.2" -enableCodeCoverage YES test
   - bash <(curl -s https://codecov.io/bash) -cF tvOS -X xcodeplist -g Tests
-  - ruby ./Tests/CheckCocoaPodsQualityIndexes.rb SwiftVer
+  #- ruby ./Tests/CheckCocoaPodsQualityIndexes.rb SwiftVer
