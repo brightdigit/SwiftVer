@@ -2,7 +2,6 @@ import Cocoa
 import SwiftVer
 
 class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
-
   @IBOutlet var tableView: NSTableView!
   public let values = Version.example.values
 
@@ -25,7 +24,6 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
   }
 
   func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-
     let text: String?
     let cellIdentifier: String
 
@@ -33,7 +31,6 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
 
     // 2
     if tableColumn == tableView.tableColumns[0] {
-
       cellIdentifier = "LabelCellID"
       text = pair.label
     } else {

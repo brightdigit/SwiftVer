@@ -2,7 +2,6 @@ import WatchKit
 
 @available(watchOSApplicationExtension 3.0, *)
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
-
   func handle(_ backgroundTasks: Set<WKRefreshBackgroundTask>) {
     for task in backgroundTasks {
       // Use a switch statement to check the task type
@@ -15,7 +14,8 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
         snapshotTask.setTaskCompleted(
           restoredDefaultState: true,
           estimatedSnapshotExpiration: Date.distantFuture,
-          userInfo: nil)
+          userInfo: nil
+        )
       case let connectivityTask as WKWatchConnectivityRefreshBackgroundTask:
         // Be sure to complete the connectivity task once you’re done.
         connectivityTask.setTaskCompleted()

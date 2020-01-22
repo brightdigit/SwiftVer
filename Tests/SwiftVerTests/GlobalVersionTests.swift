@@ -2,7 +2,6 @@
 import XCTest
 
 class GlobalVersionTests: XCTestCase {
-
   override func setUp() {
     super.setUp()
     // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -20,7 +19,8 @@ class GlobalVersionTests: XCTestCase {
     let version = Version(
       bundle: bundle,
       dictionary: MockBundle.globalBuildNumberDictionary,
-      versionControl: versionControlInfo)
+      versionControl: versionControlInfo
+    )
 
     XCTAssertEqual(version?.semver.major, 1)
     XCTAssertEqual(version?.semver.minor, 2)
@@ -90,7 +90,6 @@ class GlobalVersionTests: XCTestCase {
   }
 
   public func testdescription() {
-
     let bundle = MockBundle(version: "1.1.0", build: 26)
     let version = Version(bundle: bundle,
                           dictionary: MockBundle.globalBuildNumberDictionary,
@@ -99,7 +98,6 @@ class GlobalVersionTests: XCTestCase {
   }
 
   public func testStageBuildNumber() {
-
     let bundle = MockBundle(version: "1.1.0", build: 26)
     let version = Version(bundle: bundle,
                           dictionary: MockBundle.globalBuildNumberDictionary,

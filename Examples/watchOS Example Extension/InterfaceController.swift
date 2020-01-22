@@ -1,9 +1,8 @@
-import WatchKit
 import Foundation
 import SwiftVer
+import WatchKit
 
 class InterfaceController: WKInterfaceController {
-
   public let values = Version.example.values
   @IBOutlet var table: WKInterfaceTable!
 

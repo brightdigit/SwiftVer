@@ -22,7 +22,7 @@ public extension StageBuildDictionaryProtocol {
   /**
    Minimum Build Number for a Semantic Version and Stage.
    */
-  public func minimumBuild(forSemVer semver: SemVer) -> Int? {
+  func minimumBuild(forSemVer semver: SemVer) -> Int? {
     return minimumBuild(forSemVer: semver, atStage: nil)
   }
 }

@@ -4,7 +4,6 @@ import Foundation
  Semantic Version.
  */
 public struct SemVer: CustomStringConvertible, Comparable, Equatable, Hashable {
-
   /**
    Major version number when you make incompatible API changes.
    */
@@ -56,16 +55,7 @@ public struct SemVer: CustomStringConvertible, Comparable, Equatable, Hashable {
       return nil
     }
 
-    let patchValue: Int?
-    if let patchStr = patch {
-      guard let _patchValue = Int(patchStr) else {
-        return nil
-      }
-      patchValue = _patchValue
-    } else {
-      patchValue = nil
-    }
-
+    let patchValue = patch.flatMap(Int.init)
     self.major = majorValue
     self.minor = minorValue
     self.patch = patchValue
@@ -85,8 +75,8 @@ public struct SemVer: CustomStringConvertible, Comparable, Equatable, Hashable {
   /**
    HashValue for comparison.
    */
-  public var hashValue: Int {
-    return description.hashValue
+  public func hash(into hasher: inout Hasher) {
+    hasher.combine(description)
   }
 
   private var patchCalculated: Int {

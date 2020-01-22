@@ -4,7 +4,6 @@ import Foundation
  Complete Version Information.
  */
 public struct Version: CustomStringConvertible {
-
   private struct InfoDictionaryKeys {
     public static let version = "CFBundleShortVersionString"
     public static let build = "CFBundleVersion"
@@ -54,7 +53,8 @@ public struct Version: CustomStringConvertible {
   public init(
     cumulativeBuildNumber: Int,
     dictionary: StageBuildDictionaryProtocol,
-    versionControlInfo: VersionControlInfo? = nil) {
+    versionControlInfo: VersionControlInfo? = nil
+  ) {
     let semvers = dictionary.semvers
     let semverMinBuilds = semvers.map {
       (semver: $0, minBuildNumber: dictionary.minimumBuild(forSemVer: $0) ?? Int.max)
@@ -78,7 +78,8 @@ public struct Version: CustomStringConvertible {
   public init?(
     bundle: InfoDictionaryContainerProtocol,
     dictionary: StageBuildDictionaryProtocol,
-    versionControl: VersionControlInfo? = nil) {
+    versionControl: VersionControlInfo? = nil
+  ) {
     let keys = type(of: self).InfoDictionaryKeys.self
 
     guard let versionString = bundle.infoDictionary?[keys.version] as? String else {
@@ -120,12 +121,14 @@ public struct Version: CustomStringConvertible {
   public static func from(
     bundle: ResourceContainerProtocol & InfoDictionaryContainerProtocol,
     dictionary: StageBuildDictionaryProtocol,
-    withVersionControlInfoWithJsonResource resource: String) -> Version? {
+    withVersionControlInfoWithJsonResource resource: String
+  ) -> Version? {
     let versionControlInfo = VersionControlInfo(jsonResource: resource, fromBundle: bundle)
     return Version(
       bundle: bundle,
       dictionary: dictionary,
-      versionControl: versionControlInfo)
+      versionControl: versionControlInfo
+    )
   }
 
   private var extra: Double {
@@ -200,7 +203,7 @@ public struct Version: CustomStringConvertible {
    A Full Descripton which also contains the Sub-Semantic Version value
    parsed from the VersionControlInfo.
    */
-  @available(*, deprecated: 2.0.4, message: "Use function calls instead.")
+  @available(*, deprecated, message: "Use function calls instead.")
   public var fullDescription: String {
     // swiftlint:disable:next force_try
     return try! fullDescription(withLocale: nil)

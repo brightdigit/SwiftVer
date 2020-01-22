@@ -2,7 +2,6 @@
 import XCTest
 
 class SemVerTests: XCTestCase {
-
   override func setUp() {
     super.setUp()
     // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -71,10 +70,13 @@ class SemVerTests: XCTestCase {
 
   func testComparison() {
     XCTAssertGreaterThan(
-      SemVer(major: 1, minor: 0, patch: 1), SemVer(major: 1, minor: 0, patch: 0))
+      SemVer(major: 1, minor: 0, patch: 1), SemVer(major: 1, minor: 0, patch: 0)
+    )
     XCTAssertGreaterThan(
-      SemVer(major: 1, minor: 1, patch: 1), SemVer(major: 1, minor: 0, patch: 1))
+      SemVer(major: 1, minor: 1, patch: 1), SemVer(major: 1, minor: 0, patch: 1)
+    )
     XCTAssertGreaterThan(
-      SemVer(major: 2, minor: 1, patch: 1), SemVer(major: 1, minor: 0, patch: 1))
+      SemVer(major: 2, minor: 1, patch: 1), SemVer(major: 1, minor: 0, patch: 1)
+    )
   }
 }

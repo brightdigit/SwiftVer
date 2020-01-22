@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'SwiftVer'
-  s.version = '2.0.4'
+  s.version = '2.0.5'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.summary = 'Parses bundle and autorevision version information for use in applications and about pages.'
   s.description      = <<-DESC
@@ -17,4 +17,5 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '9.0'
   s.source_files = 'Source/*.swift'
   s.documentation_url = 'https://github.com/brightdigit/swiftver'
+  s.swift_versions = '5.0'
 end

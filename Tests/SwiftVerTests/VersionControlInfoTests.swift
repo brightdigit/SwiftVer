@@ -12,10 +12,10 @@ let versionControlInfo = VersionControlInfo(
   tick: VCS_TICK,
   extra: VCS_EXTRA,
   hash: Hash(string: VCS_FULL_HASH)!,
-  isWorkingCopyModified: VCS_WC_MODIFIED)
+  isWorkingCopyModified: VCS_WC_MODIFIED
+)
 
 class VersionControlInfoTests: XCTestCase {
-
   override func setUp() {
     super.setUp()
     // Put setup code here. This method is called before the invocation of each test method in the class.
