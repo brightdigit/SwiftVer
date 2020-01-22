@@ -203,7 +203,7 @@ public struct Version: CustomStringConvertible {
    A Full Descripton which also contains the Sub-Semantic Version value
    parsed from the VersionControlInfo.
    */
-  @available(*, deprecated: 2.0.4, message: "Use function calls instead.")
+  @available(*, deprecated, message: "Use function calls instead.")
   public var fullDescription: String {
     // swiftlint:disable:next force_try
     return try! fullDescription(withLocale: nil)

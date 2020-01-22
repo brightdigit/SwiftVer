@@ -73,7 +73,6 @@ public struct VersionControlInfo {
               tick: Int?,
               extra: String?,
               hash: Hash,
-              
               isWorkingCopyModified: Bool) {
     self.type = VersionControlType(string: type)
     self.baseName = baseName
@@ -172,26 +171,11 @@ public struct VersionControlInfo {
       return nil
     }
 
-    let type: VersionControlType
-    if let typeString = dictionary["VCS_TYPE"] as? String {
-      type = VersionControlType(string: typeString)
-    } else {
-      type = .unknown
-    }
+    let type = dictionary["VCS_TYPE"].flatMap { $0 as? String }.flatMap(VersionControlType.init) ?? .unknown
 
-    let dateValue: Date?
-    if let dateString = dictionary["VCS_DATE"] as? String {
-      dateValue = DateFormatter.rfc3339DateFormatter.date(from: dateString)
-    } else {
-      dateValue = nil
-    }
+    let dateValue = dictionary["VCS_DATE"].flatMap { $0 as? String }.flatMap(DateFormatter.rfc3339DateFormatter.date)
 
-    let uuid: Hash?
-    if let uuidString = dictionary["VCS_UUID"] as? String {
-      uuid = Hash(string: uuidString)
-    } else {
-      uuid = nil
-    }
+    let uuid = dictionary["VCS_UUID"].flatMap { $0 as? String }.flatMap(Hash.init)
 
     self.type = type
     baseName = basename

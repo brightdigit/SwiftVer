@@ -12,7 +12,12 @@ public enum Stage: CustomStringConvertible {
       return Stage.StageBuildDictionary.empty
     }
 
-    let plistOpt = (try? PropertyListSerialization.propertyList(from: data, options: PropertyListSerialization.ReadOptions(), format: nil)).flatMap { $0 as? [String: [String: Int]] }
+    let plistOpt = (try? PropertyListSerialization.propertyList(
+      from: data,
+      options: PropertyListSerialization.ReadOptions(),
+      format: nil
+    ))
+      .flatMap { $0 as? [String: [String: Int]] }
     guard let plist = plistOpt else {
       return Stage.StageBuildDictionary.empty
     }

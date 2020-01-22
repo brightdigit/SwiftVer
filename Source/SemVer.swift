@@ -75,8 +75,8 @@ public struct SemVer: CustomStringConvertible, Comparable, Equatable, Hashable {
   /**
    HashValue for comparison.
    */
-  public var hashValue: Int {
-    return description.hashValue
+  public func hash(into hasher: inout Hasher) {
+    hasher.combine(description)
   }
 
   private var patchCalculated: Int {

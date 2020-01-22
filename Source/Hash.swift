@@ -30,10 +30,9 @@ public struct Hash: CustomStringConvertible, Equatable, Hashable {
   /**
    Hash value for equality.
    */
-  public var hashValue: Int {
-    return data.hashValue
+  public func hash(into hasher: inout Hasher) {
+    hasher.combine(data)
   }
-
   /**
    Equality comparison of Hash objects.
    */
