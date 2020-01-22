@@ -13,9 +13,9 @@ script:
   - pod lib lint
 
   - xcodebuild -project SwiftVer.xcodeproj -scheme "SwiftVer macOS" -destination 'platform=OS X,arch=x86_64' -enableCodeCoverage YES test
-  - bash <(curl -s https://codecov.io/bash) -cF macOS -X xcodeplist -g Tests
-  - xcodebuild -project SwiftVer.xcodeproj -scheme "SwiftVer iOS" -destination "platform=iOS Simulator,name=iPhone 7 Plus,OS=11.2" -enableCodeCoverage YES test
+  - bash <(curl -s https://codecov.io/bash) -cF macOS -X xcodeplist -g Tests 
+  - xcodebuild -project SwiftVer.xcodeproj -scheme "SwiftVer iOS" -destination "platform=iOS Simulator,name:iPhone 11 Pro Max,OS=13.3" -enableCodeCoverage YES test
   - bash <(curl -s https://codecov.io/bash) -cF iOS -X xcodeplist -g Tests
-  - xcodebuild -project SwiftVer.xcodeproj -scheme "SwiftVer tvOS" -destination "platform=tvOS Simulator,name=Apple TV,OS=11.2" -enableCodeCoverage YES test
+  - xcodebuild -project SwiftVer.xcodeproj -scheme "SwiftVer tvOS" -destination "platform=tvOS Simulator,name=Apple TV,OS=13.3" -enableCodeCoverage YES test
   - bash <(curl -s https://codecov.io/bash) -cF tvOS -X xcodeplist -g Tests
   #- ruby ./Tests/CheckCocoaPodsQualityIndexes.rb SwiftVer
