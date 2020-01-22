@@ -17,4 +17,5 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '9.0'
   s.source_files = 'Source/*.swift'
   s.documentation_url = 'https://github.com/brightdigit/swiftver'
+  s.swift_versions = '5.0'
 end

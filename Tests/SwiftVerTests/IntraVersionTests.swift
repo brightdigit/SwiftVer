@@ -2,7 +2,6 @@
 import XCTest
 
 class IntraVersionTests: XCTestCase {
-
   override func setUp() {
     super.setUp()
     // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -89,7 +88,6 @@ class IntraVersionTests: XCTestCase {
   }
 
   public func testdescription() {
-
     let bundle = MockBundle(version: "1.0.0", build: 8)
     let version = Version(bundle: bundle,
                           dictionary: MockBundle.intraBuildNumberDictionary,
@@ -98,7 +96,6 @@ class IntraVersionTests: XCTestCase {
   }
 
   public func testStageBuildNumber() {
-
     let bundle = MockBundle(version: "1.0.0", build: 8)
     let version = Version(bundle: bundle,
                           dictionary: MockBundle.intraBuildNumberDictionary,
@@ -162,7 +159,8 @@ class IntraVersionTests: XCTestCase {
     let version = Version(
       semver: SemVer(major: 1, minor: 0, patch: 0),
       build: 8,
-      dictionary: MockBundle.intraBuildNumberDictionary)
+      dictionary: MockBundle.intraBuildNumberDictionary
+    )
 
     XCTAssertEqual(version.shortDescription, "1.0.0-beta3")
   }

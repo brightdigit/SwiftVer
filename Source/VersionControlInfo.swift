@@ -4,7 +4,6 @@ import Foundation
  The Current-Revision Metadata from the Version Control Repository.
  */
 public struct VersionControlInfo {
-
   /**
    The VersionControlType.
    */
@@ -74,7 +73,7 @@ public struct VersionControlInfo {
               tick: Int?,
               extra: String?,
               hash: Hash,
-
+              
               isWorkingCopyModified: Bool) {
     self.type = VersionControlType(string: type)
     self.baseName = baseName
@@ -109,12 +108,13 @@ public struct VersionControlInfo {
   private static func autorevisionDictionary(
     fromJsonResource name: String,
     bundle: ResourceContainerProtocol,
-    inDirectory directory: String? = nil) -> [String: Any]? {
-
+    inDirectory directory: String? = nil
+  ) -> [String: Any]? {
     guard let url = bundle.url(
       forResource: name,
       withExtension: "json",
-      subdirectory: directory) else {
+      subdirectory: directory
+    ) else {
       return nil
     }
 
@@ -124,7 +124,8 @@ public struct VersionControlInfo {
 
     guard let jsonObject: Any = try? JSONSerialization.jsonObject(
       with: data,
-      options: JSONSerialization.ReadingOptions()) else {
+      options: JSONSerialization.ReadingOptions()
+    ) else {
       return nil
     }
 
@@ -146,7 +147,8 @@ public struct VersionControlInfo {
     guard let dictionary = VersionControlInfo.autorevisionDictionary(
       fromJsonResource: jsonResource,
       bundle: bundle,
-      inDirectory: directory) else {
+      inDirectory: directory
+    ) else {
       return nil
     }
 
@@ -162,31 +164,31 @@ public struct VersionControlInfo {
       return nil
     }
 
-    guard let hash_string = dictionary["VCS_FULL_HASH"] as? String, let hash = Hash(string: hash_string) else {
+    guard let hashString = dictionary["VCS_FULL_HASH"] as? String, let hash = Hash(string: hashString) else {
       return nil
     }
 
-    guard let wc_modified = dictionary["VCS_WC_MODIFIED"] as? Bool else {
+    guard let wcModified = dictionary["VCS_WC_MODIFIED"] as? Bool else {
       return nil
     }
 
     let type: VersionControlType
-    if let type_string = dictionary["VCS_TYPE"] as? String {
-      type = VersionControlType(string: type_string)
+    if let typeString = dictionary["VCS_TYPE"] as? String {
+      type = VersionControlType(string: typeString)
     } else {
       type = .unknown
     }
 
-    let date_value: Date?
-    if let date_string = dictionary["VCS_DATE"] as? String {
-      date_value = DateFormatter.rfc3339DateFormatter.date(from: date_string)
+    let dateValue: Date?
+    if let dateString = dictionary["VCS_DATE"] as? String {
+      dateValue = DateFormatter.rfc3339DateFormatter.date(from: dateString)
     } else {
-      date_value = nil
+      dateValue = nil
     }
 
     let uuid: Hash?
-    if let uuid_string = dictionary["VCS_UUID"] as? String {
-      uuid = Hash(string: uuid_string)
+    if let uuidString = dictionary["VCS_UUID"] as? String {
+      uuid = Hash(string: uuidString)
     } else {
       uuid = nil
     }
@@ -195,12 +197,12 @@ public struct VersionControlInfo {
     baseName = basename
     self.uuid = uuid
     number = num
-    date = date_value
+    date = dateValue
     self.branch = branch
     tag = dictionary["VCS_TAG"] as? String
     tick = dictionary["VCS_TICK"] as? Int
     extra = dictionary["VCS_EXTRA"] as? String
     self.hash = hash
-    isWorkingCopyModified = wc_modified
+    isWorkingCopyModified = wcModified
   }
 }

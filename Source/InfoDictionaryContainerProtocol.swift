@@ -10,5 +10,4 @@ public protocol InfoDictionaryContainerProtocol {
   var infoDictionary: [String: Any]? { get }
 }
 
-extension Bundle: InfoDictionaryContainerProtocol {
-}
+extension Bundle: InfoDictionaryContainerProtocol {}

@@ -5,16 +5,20 @@ struct MockBundle: InfoDictionaryContainerProtocol, ResourceContainerProtocol {
   public static let globalBuildNumberDictionary: StageBuildDictionaryProtocol =
     Stage.dictionary(
       fromPlistAtURL:
-        Bundle(for: GlobalVersionTests.self).url(
-          forResource: "versions-global",
-          withExtension: "plist")!)!
+      Bundle(for: GlobalVersionTests.self).url(
+        forResource: "versions-global",
+        withExtension: "plist"
+      )!
+    )!
 
   public static let intraBuildNumberDictionary: StageBuildDictionaryProtocol =
     Stage.dictionary(
       fromPlistAtURL:
-        Bundle(for: IntraVersionTests.self).url(
-          forResource: "versions-intra",
-          withExtension: "plist")!)!
+      Bundle(for: IntraVersionTests.self).url(
+        forResource: "versions-intra",
+        withExtension: "plist"
+      )!
+    )!
 
   public let infoDictionary: [String: Any]?
 
@@ -36,6 +40,7 @@ struct MockBundle: InfoDictionaryContainerProtocol, ResourceContainerProtocol {
     return Bundle(for: IntraVersionTests.self).url(
       forResource: name,
       withExtension: ext,
-      subdirectory: subpath)
+      subdirectory: subpath
+    )
   }
 }

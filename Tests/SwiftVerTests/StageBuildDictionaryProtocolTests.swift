@@ -3,7 +3,6 @@ import XCTest
 
 class StageBuildDictionaryProtocolTests: XCTestCase {
   struct MockStageBuildDictionary: StageBuildDictionaryProtocol {
-
     public let stage: Stage = Stage.beta
     public let minimum: Int = 200
 

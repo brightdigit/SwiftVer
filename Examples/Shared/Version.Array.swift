@@ -15,7 +15,9 @@ let exampleVersion = Version(
     EXTRA: VCS_EXTRA,
     FULL_HASH: VCS_FULL_HASH,
     SHORT_HASH: VCS_SHORT_HASH,
-    WC_MODIFIED: VCS_WC_MODIFIED))
+    WC_MODIFIED: VCS_WC_MODIFIED
+  )
+)
 
 extension Version {
   var values: [(label: String, value: String?)] {

@@ -1,8 +1,7 @@
-import UIKit
 import SwiftVer
+import UIKit
 
 class ViewController: UITableViewController {
-
   public let values = Version.example.values
 
   override func viewDidLoad() {
