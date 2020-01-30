@@ -30,6 +30,8 @@ jobs:
       uses: ty0x2333/cocoapods-action@0.2.0
       with:
         additional_build_params: -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.0'
+        test: false
+        use_modern_build_system: true
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
