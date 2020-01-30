@@ -1,0 +1,40 @@
+name: Swift
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+    if: "!contains(github.event.head_commit.message, 'ci skip')"
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Prepare Build
+      run: brew bundle
+    - name: Build
+      run: swift build -v
+    - name: Lint
+      run: swiftformat --lint . && swiftlint 
+    - name: Run tests
+      run: swift test -v --enable-code-coverage
+    - name: Prepare Code Coverage 
+      run: xcrun llvm-cov export -format="lcov" .build/debug/swiftverPackageTests.xctest/Contents/MacOS/swiftverPackageTests -instr-profile .build/debug/codecov/default.profdata > info.lcov
+    - name: Upload to CodeCov.io
+      run: bash <(curl https://codecov.io/bash) -F github -n ${{ github.sha }}
+      env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+    - name: Build Documentation
+      run: sourcedocs generate --spm-module SwiftVer --output-folder docs
+    - name: CocoaPods Action
+      uses: ty0x2333/cocoapods-action@0.2.0
+      with:
+        additional_build_params: -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.0'
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add docs
+        git diff-index --quiet HEAD || git commit -m "[github action] Update Docs"
+    - name: Push changes
+      run: git push
