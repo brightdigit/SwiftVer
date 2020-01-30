@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B37840F01D932E3E008FE737"
-               BuildableName = "tvOS Example.app"
-               BlueprintName = "tvOS Example"
+               BlueprintIdentifier = "D95E1C401D88E71A00F94976"
+               BuildableName = "iOS Example.app"
+               BlueprintName = "iOS Example"
                ReferencedContainer = "container:Examples.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -27,19 +27,17 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <Testables>
-      </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B37840F01D932E3E008FE737"
-            BuildableName = "tvOS Example.app"
-            BlueprintName = "tvOS Example"
+            BlueprintIdentifier = "D95E1C401D88E71A00F94976"
+            BuildableName = "iOS Example.app"
+            BlueprintName = "iOS Example"
             ReferencedContainer = "container:Examples.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
+      <Testables>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -55,14 +53,12 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B37840F01D932E3E008FE737"
-            BuildableName = "tvOS Example.app"
-            BlueprintName = "tvOS Example"
+            BlueprintIdentifier = "D95E1C401D88E71A00F94976"
+            BuildableName = "iOS Example.app"
+            BlueprintName = "iOS Example"
             ReferencedContainer = "container:Examples.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -74,9 +70,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B37840F01D932E3E008FE737"
-            BuildableName = "tvOS Example.app"
-            BlueprintName = "tvOS Example"
+            BlueprintIdentifier = "D95E1C401D88E71A00F94976"
+            BuildableName = "iOS Example.app"
+            BlueprintName = "iOS Example"
             ReferencedContainer = "container:Examples.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
