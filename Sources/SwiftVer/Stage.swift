@@ -47,7 +47,7 @@ public enum Stage: CustomStringConvertible {
   private struct StageBuildDictionary: StageBuildDictionaryProtocol {
     func minimumBuild(forSemVer semver: SemVer, atStage stage: Stage?) -> Int? {
       if let stage = stage {
-        guard let value = self.dictionary[semver]?[stage] else {
+        guard let value = dictionary[semver]?[stage] else {
           return 1
         }
         return Int(value)

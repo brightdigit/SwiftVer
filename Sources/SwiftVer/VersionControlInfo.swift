@@ -117,6 +117,13 @@ public struct VersionControlInfo {
       return nil
     }
 
+    return autorevisionDictionary(fromUrl: url)
+  }
+
+  private static func autorevisionDictionary(
+    fromUrl url: URL,
+    inDirectory _: String? = nil
+  ) -> [String: Any]? {
     guard let data: Data = try? Data(contentsOf: url) else {
       return nil
     }
@@ -163,7 +170,7 @@ public struct VersionControlInfo {
       return nil
     }
 
-    guard let hashString = dictionary["VCS_FULL_HASH"] as? String, let hash = Hash(string: hashString) else {
+    guard let hash = dictionary["VCS_FULL_HASH"].flatMap({ $0 as? String }).flatMap(Hash.init) else {
       return nil
     }
 
@@ -171,17 +178,55 @@ public struct VersionControlInfo {
       return nil
     }
 
-    let type = dictionary["VCS_TYPE"].flatMap { $0 as? String }.flatMap(VersionControlType.init) ?? .unknown
-
-    let dateValue = dictionary["VCS_DATE"].flatMap { $0 as? String }.flatMap(DateFormatter.rfc3339DateFormatter.date)
-
-    let uuid = dictionary["VCS_UUID"].flatMap { $0 as? String }.flatMap(Hash.init)
-
-    self.type = type
+    type = dictionary["VCS_TYPE"].flatMap { $0 as? String }.map(VersionControlType.init) ?? .unknown
     baseName = basename
-    self.uuid = uuid
+    uuid = dictionary["VCS_UUID"].flatMap { $0 as? String }.flatMap(Hash.init(string:))
     number = num
-    date = dateValue
+    date = dictionary["VCS_DATE"].flatMap { $0 as? String }.flatMap(DateFormatter.rfc3339DateFormatter.date)
+    self.branch = branch
+    tag = dictionary["VCS_TAG"] as? String
+    tick = dictionary["VCS_TICK"] as? Int
+    extra = dictionary["VCS_EXTRA"] as? String
+    self.hash = hash
+    isWorkingCopyModified = wcModified
+  }
+
+  /**
+   Tries to parse the json resource from the bundle based on the directory.
+   */
+  public init?(
+    fromUrl url: URL
+  ) {
+    guard let dictionary = VersionControlInfo.autorevisionDictionary(
+      fromUrl: url) else {
+      return nil
+    }
+
+    guard let basename = dictionary["VCS_BASENAME"] as? String else {
+      return nil
+    }
+
+    guard let num = dictionary["VCS_NUM"] as? Int else {
+      return nil
+    }
+
+    guard let branch = dictionary["VCS_BRANCH"] as? String else {
+      return nil
+    }
+
+    guard let hash = dictionary["VCS_FULL_HASH"].flatMap({ $0 as? String }).flatMap(Hash.init) else {
+      return nil
+    }
+
+    guard let wcModified = dictionary["VCS_WC_MODIFIED"] as? Bool else {
+      return nil
+    }
+
+    type = dictionary["VCS_TYPE"].flatMap { $0 as? String }.map(VersionControlType.init) ?? .unknown
+    baseName = basename
+    uuid = dictionary["VCS_UUID"].flatMap { $0 as? String }.flatMap(Hash.init(string:))
+    number = num
+    date = dictionary["VCS_DATE"].flatMap { $0 as? String }.flatMap(DateFormatter.rfc3339DateFormatter.date)
     self.branch = branch
     tag = dictionary["VCS_TAG"] as? String
     tick = dictionary["VCS_TICK"] as? Int

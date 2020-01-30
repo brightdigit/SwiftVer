@@ -132,7 +132,7 @@ public struct Version: CustomStringConvertible {
   }
 
   private var extra: Double {
-    if let extraString = self.versionControl?.extra {
+    if let extraString = versionControl?.extra {
       return Double(extraString) ?? 0
     } else {
       return 0
@@ -224,7 +224,7 @@ public struct Version: CustomStringConvertible {
   public var shortDescription: String {
     let stage: Stage
     let minimumBuild: Int
-    if let stagebuild = self.dictionary.stage(withBuildForVersion: self) {
+    if let stagebuild = dictionary.stage(withBuildForVersion: self) {
       stage = stagebuild.stage
       minimumBuild = stagebuild.minimum - 1
     } else {
