@@ -1,98 +1,170 @@
-# Version
-<pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Version</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+**STRUCT**
 
-<p>Complete Version Information.</p>
+# `Version`
 
-### semver
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">semver</span><span class="p">:</span> <span class="kt"><a href="../Structs/SemVer.md">SemVer</a></span></code></pre>
+```swift
+public struct Version: CustomStringConvertible
+```
 
-<p>Semantic Version.</p>
+> Complete Version Information.
 
-### build
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">build</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+## Properties
+### `semver`
 
-<p>Build Number.</p>
+```swift
+public let semver: SemVer
+```
 
-### versionControl
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">versionControl</span><span class="p">:</span> <span class="kt"><a href="../Structs/VersionControlInfo.md">VersionControlInfo</a></span><span class="p">?</span></code></pre>
+> Semantic Version.
 
-<p>Autorevision Version Control Info.</p>
+### `build`
 
-### dictionary
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dictionary</span><span class="p">:</span> <span class="kt"><a href="../Protocols/StageBuildDictionaryProtocol.md">StageBuildDictionaryProtocol</a></span></code></pre>
+```swift
+public let build: Int
+```
 
-<p>Semantic Version, Build Number, and Stage Dictionary.</p>
+> Build Number.
 
-### init(semver:build:dictionary:versionControlInfo:)
-<pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">semver</span><span class="p">:</span> <span class="kt"><a href="../Structs/SemVer.md">SemVer</a></span><span class="p">,</span> <span class="nv">build</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
-              <span class="nv">dictionary</span><span class="p">:</span> <span class="kt"><a href="../Protocols/StageBuildDictionaryProtocol.md">StageBuildDictionaryProtocol</a></span><span class="p">,</span>
-              <span class="nv">versionControlInfo</span><span class="p">:</span> <span class="kt"><a href="../Structs/VersionControlInfo.md">VersionControlInfo</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+### `versionControl`
 
-<p>Create a Version based on a <strong>SemVer</strong>, Build Number, <strong>StageBuildDictionaryProtocol</strong>,
-and an optional <strong>VersionControlInfo</strong>.</p>
+```swift
+public let versionControl: VersionControlInfo?
+```
 
-### init(cumulativeBuildNumber:dictionary:versionControlInfo:)
-<pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
-    <span class="nv">cumulativeBuildNumber</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
-    <span class="nv">dictionary</span><span class="p">:</span> <span class="kt"><a href="../Protocols/StageBuildDictionaryProtocol.md">StageBuildDictionaryProtocol</a></span><span class="p">,</span>
-    <span class="nv">versionControlInfo</span><span class="p">:</span> <span class="kt"><a href="../Structs/VersionControlInfo.md">VersionControlInfo</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+> Autorevision Version Control Info.
 
-<p>Create a Version based on a Cumulative Build Number, <strong>StageBuildDictionaryProtocol</strong>,
-and an optional <strong>VersionControlInfo</strong>.</p>
+### `dictionary`
 
-### init(bundle:dictionary:versionControl:)
-<pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span>
-    <span class="nv">bundle</span><span class="p">:</span> <span class="kt"><a href="../Protocols/InfoDictionaryContainerProtocol.md">InfoDictionaryContainerProtocol</a></span><span class="p">,</span>
-    <span class="nv">dictionary</span><span class="p">:</span> <span class="kt"><a href="../Protocols/StageBuildDictionaryProtocol.md">StageBuildDictionaryProtocol</a></span><span class="p">,</span>
-    <span class="nv">versionControl</span><span class="p">:</span> <span class="kt"><a href="../Structs/VersionControlInfo.md">VersionControlInfo</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+```swift
+public let dictionary: StageBuildDictionaryProtocol
+```
 
-<p>Create a Version based on a Bundle, <strong>StageBuildDictionaryProtocol</strong>,
-and an optional <strong>VersionControlInfo</strong>.</p>
+> Semantic Version, Build Number, and Stage Dictionary.
 
-### from(bundle:dictionary:withVersionControlInfoWithJsonResource:)
-<pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">from</span><span class="p">(</span>
-    <span class="nv">bundle</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ResourceContainerProtocol.md">ResourceContainerProtocol</a></span> <span class="o">&amp;</span> <span class="kt"><a href="../Protocols/InfoDictionaryContainerProtocol.md">InfoDictionaryContainerProtocol</a></span><span class="p">,</span>
-    <span class="nv">dictionary</span><span class="p">:</span> <span class="kt"><a href="../Protocols/StageBuildDictionaryProtocol.md">StageBuildDictionaryProtocol</a></span><span class="p">,</span>
-    <span class="n">withVersionControlInfoWithJsonResource</span> <span class="nv">resource</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Version</span><span class="p">?</span></code></pre>
+### `description`
 
-<p>Create a Version based on a Bundle, <strong>StageBuildDictionaryProtocol</strong>,
-and the name of the json resource file from autorevision.</p>
+```swift
+public var description: String
+```
 
-### description
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+> Creates a formatted string from the Version.
 
-<p>Creates a formatted string from the Version.</p>
+### `stageBuildNumber`
 
-### stageBuildNumber
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">stageBuildNumber</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+```swift
+public var stageBuildNumber: Int?
+```
 
-<p>The build number offset based on the Version stage.
-Note: Starts at 1.</p>
+> The build number offset based on the Version stage.
+> Note: Starts at 1.
 
-### semverBuildNumber
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">semverBuildNumber</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+### `semverBuildNumber`
 
-<p>The build number offset based on the Version Semantic Version.
-Note: Starts at 1.</p>
+```swift
+public var semverBuildNumber: Int
+```
 
-### stage
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">stage</span><span class="p">:</span> <span class="kt"><a href="../Enums/Stage.md">Stage</a></span><span class="p">?</span></code></pre>
+> The build number offset based on the Version Semantic Version.
+> Note: Starts at 1.
 
-<p>The stage based on the Version.</p>
+### `stage`
 
-### fullDescription
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">fullDescription</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+```swift
+public var stage: Stage?
+```
 
-<p>A Full Descripton which also contains the Sub-Semantic Version value
-parsed from the VersionControlInfo.</p>
+> The stage based on the Version.
 
-### subSemVerValue
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">subSemVerValue</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+### `fullDescription`
 
-<p>The Sub-Semantic Version value parsed from the VersionControlInfo.</p>
+```swift
+public var fullDescription: String
+```
 
-### shortDescription
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">shortDescription</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+> A Full Descripton which also contains the Sub-Semantic Version value
+> parsed from the VersionControlInfo.
 
-<p>Creates a shortened formatted string from the Version.</p>
+### `subSemVerValue`
 
+```swift
+public var subSemVerValue: Double
+```
+
+> The Sub-Semantic Version value parsed from the VersionControlInfo.
+
+### `shortDescription`
+
+```swift
+public var shortDescription: String
+```
+
+> Creates a shortened formatted string from the Version.
+
+## Methods
+### `init(semver:build:dictionary:versionControlInfo:)`
+
+```swift
+public init(semver: SemVer, build: Int,
+            dictionary: StageBuildDictionaryProtocol,
+            versionControlInfo: VersionControlInfo? = nil)
+```
+
+> Create a Version based on a **SemVer**, Build Number, **StageBuildDictionaryProtocol**,
+> and an optional **VersionControlInfo**.
+
+### `init(cumulativeBuildNumber:dictionary:versionControlInfo:)`
+
+```swift
+public init(
+  cumulativeBuildNumber: Int,
+  dictionary: StageBuildDictionaryProtocol,
+  versionControlInfo: VersionControlInfo? = nil
+)
+```
+
+> Create a Version based on a Cumulative Build Number, **StageBuildDictionaryProtocol**,
+> and an optional **VersionControlInfo**.
+
+### `init(bundle:dictionary:versionControl:)`
+
+```swift
+public init?(
+  bundle: InfoDictionaryContainerProtocol,
+  dictionary: StageBuildDictionaryProtocol,
+  versionControl: VersionControlInfo? = nil
+)
+```
+
+> Create a Version based on a Bundle, **StageBuildDictionaryProtocol**,
+> and an optional **VersionControlInfo**.
+
+### `from(bundle:dictionary:withVersionControlInfoWithJsonResource:)`
+
+```swift
+public static func from(
+  bundle: ResourceContainerProtocol & InfoDictionaryContainerProtocol,
+  dictionary: StageBuildDictionaryProtocol,
+  withVersionControlInfoWithJsonResource resource: String
+) -> Version?
+```
+
+> Create a Version based on a Bundle, **StageBuildDictionaryProtocol**,
+> and the name of the json resource file from autorevision.
+
+### `suffixFormatter(forLocale:)`
+
+```swift
+public func suffixFormatter(forLocale locale: Locale?) -> NumberFormatter
+```
+
+### `fullDescription(withLocale:)`
+
+```swift
+public func fullDescription(withLocale locale: Locale?) throws -> String
+```
+
+### `fullDescription(withFormatter:)`
+
+```swift
+public func fullDescription(withFormatter formatter: NumberFormatter) throws -> String
+```

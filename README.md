@@ -31,8 +31,7 @@ Manage versioning in MacOS, iOS, watchOS, and tvOS projects by parsing your bund
   - [Parsing the Version from a Bundle](#parsing-the-version-from-a-bundle)
   - [Integrating Version Control Info with Autorevision](#integrating-version-control-info-with-autorevision)
   - [Using a StageBuildDictionary to parse Stage](#using-a-stagebuilddictionary-to-parse-stage)
-- [Documentation](#documentation)
-  - [Categories](#categories)
+- [Documentation](/docs/README.md)
 - [Author](#author)
 - [License](#license)
 
@@ -162,28 +161,8 @@ public enum Stage {
 ```
 
 ## Documentation
-### Categories
-* [Enums](docs/Enums.md)
-* [Extensions](docs/Extensions.md)
-* [Protocols](docs/Protocols.md)
-* [Structs](docs/Structs.md)
-* [Typealiases](docs/Typealiases.md)
-### Types
-#### Enums
-* [Stage](docs/Enums/Stage.md)
-* [VersionControlType](docs/Enums/VersionControlType.md)
-#### Extensions
-* [Data](docs/Extensions/Data.md)
-* [DateFormatter](docs/Extensions/DateFormatter.md)
-#### Protocols
-* [InfoDictionaryContainerProtocol](docs/Protocols/InfoDictionaryContainerProtocol.md)
-* [ResourceContainerProtocol](docs/Protocols/ResourceContainerProtocol.md)
-* [StageBuildDictionaryProtocol](docs/Protocols/StageBuildDictionaryProtocol.md)
-#### Structs
-* [Hash](docs/Structs/Hash.md)
-* [SemVer](docs/Structs/SemVer.md)
-* [Version](docs/Structs/Version.md)
-* [VersionControlInfo](docs/Structs/VersionControlInfo.md)
+
+[Documentation Here](/docs/README.md)
 
 ## Author
 

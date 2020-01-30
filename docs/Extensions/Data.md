@@ -1,7 +1,12 @@
-# Data
+**EXTENSION**
 
-### init(hexString:)
-<pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="nv">hexString</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+# `Data`
 
-<p>Creates a Data object based on a hex <strong>String</strong>.</p>
+## Methods
+### `init(hexString:)`
 
+```swift
+init?(hexString: String)
+```
+
+> Creates a Data object based on a hex **String**.

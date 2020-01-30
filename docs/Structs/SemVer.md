@@ -1,55 +1,91 @@
-# SemVer
-<pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SemVer</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Comparable</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">Hashable</span></code></pre>
+**STRUCT**
 
-<p>Semantic Version.</p>
+# `SemVer`
 
-### major
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">major</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+```swift
+public struct SemVer: CustomStringConvertible, Comparable, Equatable, Hashable
+```
 
-<p>Major version number when you make incompatible API changes.</p>
+> Semantic Version.
 
-### minor
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">minor</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+## Properties
+### `major`
 
-<p>Minor version when you add functionality in a backwards-compatible manner.</p>
+```swift
+public let major: Int
+```
 
-### patch
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">patch</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+> Major version number when you make incompatible API changes.
 
-<p>Patch version when you make backwards-compatible bug fixes.</p>
+### `minor`
 
-### init(major:minor:patch:)
-<pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">major</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">minor</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">patch</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+```swift
+public let minor: Int
+```
 
-<p>Creates Semantic Version Object.</p>
+> Minor version when you add functionality in a backwards-compatible manner.
 
-### init(versionString:)
-<pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="nv">versionString</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+### `patch`
 
-<p>Creates Semantic Version Object from a String.</p>
+```swift
+public let patch: Int?
+```
 
-### init(major:minor:patch:)
-<pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="nv">major</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">minor</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">patch</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+> Patch version when you make backwards-compatible bug fixes.
 
-<p>Creates Semantic Version Object from a series of Strings.</p>
+### `description`
 
-### description
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+```swift
+public var description: String
+```
 
-<p>Formatted SemVer String.</p>
+> Formatted SemVer String.
 
-### hashValue
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hashValue</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+## Methods
+### `init(major:minor:patch:)`
 
-<p>HashValue for comparison.</p>
+```swift
+public init(major: Int, minor: Int, patch: Int? = nil)
+```
 
-### ==(_:_:)
-<pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">SemVer</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">SemVer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+> Creates Semantic Version Object.
 
-<p>Equality comparison of SemVer objects.</p>
+### `init(versionString:)`
 
-### &lt;(_:_:)
-<pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">&lt;</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">SemVer</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">SemVer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+```swift
+public init?(versionString: String)
+```
 
-<p>Comparison of SemVer objects.</p>
+> Creates Semantic Version Object from a String.
 
+### `init(major:minor:patch:)`
+
+```swift
+public init?(major: String, minor: String, patch: String? = nil)
+```
+
+> Creates Semantic Version Object from a series of Strings.
+
+### `hash(into:)`
+
+```swift
+public func hash(into hasher: inout Hasher)
+```
+
+> HashValue for comparison.
+
+### `==(_:_:)`
+
+```swift
+public static func == (lhs: SemVer, rhs: SemVer) -> Bool
+```
+
+> Equality comparison of SemVer objects.
+
+### `<(_:_:)`
+
+```swift
+public static func < (lhs: SemVer, rhs: SemVer) -> Bool
+```
+
+> Comparison of SemVer objects.
