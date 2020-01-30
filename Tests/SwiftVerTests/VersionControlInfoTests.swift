@@ -56,12 +56,15 @@ class VersionControlInfoTests: XCTestCase {
   }
 
   func testInitJsonResource() {
-    let versionControlInfoJsonOpt =
-      VersionControlInfo(jsonResource: "autorevision",
-                         fromBundle: Bundle(for: VersionControlInfoTests.self)) ?? VersionControlInfo(fromUrl: URL(fileURLWithPath: #file).deletingLastPathComponent().appendingPathComponent("autorevision").appendingPathExtension("json"))
+    let url = Bundle(for: VersionControlInfoTests.self).url(
+      forResource: "autorevision",
+      withExtension: "json"
+    ) ?? URL(fileURLWithPath: #file).deletingLastPathComponent().appendingPathComponent("autorevision").appendingPathExtension("json")
+
+    let versionControlInfoJsonOpt = VersionControlInfo(fromUrl: url)
 
     guard let versionControlInfoJson = versionControlInfoJsonOpt else {
-      XCTFail()
+      XCTFail("Couldn't find autocorrect file")
       return
     }
     XCTAssertEqual(versionControlInfoJson.type.description.caseInsensitiveCompare("git"), .orderedSame)
