@@ -369,6 +369,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B37840BA1D92CD7F008FE737 /* Build configuration list for PBXNativeTarget "watchOS Example" */;
 			buildPhases = (
+				B321B50223E4970F0077D6FE /* ShellScript */,
 				4561057E47803E16B7414854 /* [CP] Check Pods Manifest.lock */,
 				B37840971D92CD7F008FE737 /* Resources */,
 				B37840B91D92CD7F008FE737 /* Embed App Extensions */,
@@ -721,6 +722,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-macOS Example/Pods-macOS Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B321B50223E4970F0077D6FE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Shared/autorevision/autorevision.sh\" -t swift > \"${SRCROOT}/Source/VCS.swift\"\n";
 		};
 		B340201E1D94654A006309EA /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
