@@ -19,4 +19,11 @@ script:
 #  - xcodebuild -project SwiftVer.xcodeproj -scheme "SwiftVer tvOS" -destination "platform=tvOS Simulator,name=Apple TV,OS=13.3" -enableCodeCoverage YES test
 #  - bash <(curl -s https://codecov.io/bash) -cF tvOS -X xcodeplist -g Tests
   #- ruby ./Tests/CheckCocoaPodsQualityIndexes.rb SwiftVer
-  - swift test -v
+  - swiftformat --lint . && swiftlint 
+  - swift test  --enable-code-coverage
+  - xcrun llvm-cov export -format="lcov" .build/debug/swiftverPackageTests.xctest/Contents/MacOS/swiftverPackageTests -instr-profile .build/debug/codecov/default.profdata > info.lcov
+  - bash <(curl https://codecov.io/bash) -F travis-ci
+  - pod install --project-directory=Example
+  - xcodebuild -workspace Example/Examples.xcworkspace -scheme "iOS Example"  ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO  CODE_SIGNING_ALLOWED=NO
+  - xcodebuild -workspace Example/Examples.xcworkspace -scheme "tvOS Example"  ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO  CODE_SIGNING_ALLOWED=NO
+  - xcodebuild -workspace Example/Examples.xcworkspace -scheme "macOS Example"  ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO  CODE_SIGNING_ALLOWED=NO

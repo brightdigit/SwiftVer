@@ -25,21 +25,21 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
 
   func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
     let text: String?
-    let cellIdentifier: String
+    let cellIdentifier: NSUserInterfaceItemIdentifier
 
     let pair = values[row]
 
     // 2
     if tableColumn == tableView.tableColumns[0] {
-      cellIdentifier = "LabelCellID"
+      cellIdentifier = NSUserInterfaceItemIdentifier("LabelCellID")
       text = pair.label
     } else {
       text = pair.value
-      cellIdentifier = "ValueCellID"
+      cellIdentifier = NSUserInterfaceItemIdentifier("ValueCellID")
     }
     // 3
 
-    if let cell = tableView.make(withIdentifier: cellIdentifier, owner: nil) as? NSTableCellView {
+    if let cell = tableView.makeView(withIdentifier: cellIdentifier, owner: nil) as? NSTableCellView {
       cell.textField?.stringValue = (text ?? "Not Set")
       // cell.imageView?.image = image ?? nil
       return cell
