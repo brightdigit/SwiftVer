@@ -22,6 +22,7 @@ script:
     -instr-profile .build/debug/codecov/default.profdata > info.lcov
   - bash <(curl https://codecov.io/bash) -F travis-ci
   - pod install --project-directory=Example
+  - "Example/Shared/autorevision/autorevision.sh" -t swift > "Example/Source/VCS.swift"
   - xcodebuild -workspace Example/Examples.xcworkspace -scheme "iOS Example"  ONLY_ACTIVE_ARCH=NO
     CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO  CODE_SIGNING_ALLOWED=NO
   - xcodebuild -workspace Example/Examples.xcworkspace -scheme "tvOS Example"  ONLY_ACTIVE_ARCH=NO
