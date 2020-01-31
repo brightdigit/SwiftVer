@@ -10,7 +10,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/brightdigit/SwiftVer)
 ![GitHub](https://img.shields.io/github/license/brightdigit/SwiftVer)
 [![Travis](https://img.shields.io/travis/brightdigit/swiftver.svg)](https://travis-ci.org/brightdigit/swiftver)
-[![Beerpay](https://img.shields.io/beerpay/brightdigit/swiftver.svg?maxAge=2592000)](https://beerpay.io/brightdigit/swiftver)
+[![Beerpay](https://img.shields.io/beerpay/brightdigit/SwiftVer.svg?maxAge=2592000)](https://beerpay.io/brightdigit/SwiftVer)
 [![Analytics](https://ga-beacon.appspot.com/UA-33667276-5/brightdigit/swiftver?flat&useReferer)](https://github.com/igrigorik/ga-beacon)
 [![Version](https://img.shields.io/cocoapods/v/SwiftVer.svg?style=flat)](https://cocoapods.org/pods/SwiftVer)
 [![License](https://img.shields.io/cocoapods/l/SwiftVer.svg?style=flat)](https://cocoapods.org/pods/SwiftVer)
