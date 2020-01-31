@@ -587,7 +587,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-tvOS Example/Pods-tvOS Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SwiftVer-tvOS9.0/SwiftVer.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftVer-tvOS/SwiftVer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -649,7 +649,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-iOS Example/Pods-iOS Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SwiftVer-iOS8.4/SwiftVer.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftVer-iOS/SwiftVer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -711,7 +711,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-macOS Example/Pods-macOS Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SwiftVer-macOS10.10/SwiftVer.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftVer-macOS/SwiftVer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -733,7 +733,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Shared/autorevision/autorevision.sh\" -t swift > \"${SRCROOT}/Source/VCS.swift\"";
+			shellScript = "\"${SRCROOT}/Shared/autorevision/autorevision.sh\" -t swift > \"${SRCROOT}/Source/VCS.swift\"\n";
 		};
 		B37841061D932F45008FE737 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -746,7 +746,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Shared/autorevision/autorevision.sh\" -t swift > \"${SRCROOT}/Source/VCS.swift\"";
+			shellScript = "\"${SRCROOT}/Shared/autorevision/autorevision.sh\" -t swift > \"${SRCROOT}/Source/VCS.swift\"\n";
 		};
 		B3D7C88A1D9322D00083D5B6 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -759,7 +759,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Shared/autorevision/autorevision.sh\" -t swift > \"${SRCROOT}/Source/VCS.swift\"";
+			shellScript = "\"${SRCROOT}/Shared/autorevision/autorevision.sh\" -t swift > \"${SRCROOT}/Source/VCS.swift\"\n";
 		};
 		B3DA72621D91A1CD00C95C36 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -772,7 +772,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Shared/autorevision/autorevision.sh\" -t swift > \"${SRCROOT}/Source/VCS.swift\"";
+			shellScript = "\"${SRCROOT}/Shared/autorevision/autorevision.sh\" -t swift > \"${SRCROOT}/Source/VCS.swift\"\n";
 		};
 		C0E2FB3874E77479CC34202D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -803,7 +803,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-watchOS Example Extension/Pods-watchOS Example Extension-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SwiftVer-watchOS2.0/SwiftVer.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftVer-watchOS/SwiftVer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (

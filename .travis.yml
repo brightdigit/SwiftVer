@@ -11,7 +11,6 @@ before_script:
   # bootstrap the dependencies for the project
   # you can remove if you don't have dependencies
   - swift package generate-xcodeproj
-  - carthage bootstrap
 before_deploy:
   - carthage build --no-skip-current
   - carthage archive $FRAMEWORK_NAME
