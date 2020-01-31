@@ -7,7 +7,7 @@ jobs:
 
     runs-on: macos-latest
     if: "!contains(github.event.head_commit.message, 'ci skip')"
-    
+
     steps:
     - uses: actions/checkout@v2
     - name: Prepare Build
@@ -15,10 +15,10 @@ jobs:
     - name: Build
       run: swift build -v
     - name: Lint
-      run: swiftformat --lint . && swiftlint 
+      run: swiftformat --lint . && swiftlint
     - name: Run tests
       run: swift test -v --enable-code-coverage
-    - name: Prepare Code Coverage 
+    - name: Prepare Code Coverage
       run: xcrun llvm-cov export -format="lcov" .build/debug/swiftverPackageTests.xctest/Contents/MacOS/swiftverPackageTests -instr-profile .build/debug/codecov/default.profdata > info.lcov
     - name: Upload to CodeCov.io
       run: bash <(curl https://codecov.io/bash) -F github -n ${{ github.sha }}
