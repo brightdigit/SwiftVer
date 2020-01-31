@@ -1,30 +1,51 @@
-# Hash
-<pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Hash</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">Hashable</span></code></pre>
+**STRUCT**
 
-<p>Hash struct used for VersionControlInfo.</p>
+# `Hash`
 
-### data
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span></code></pre>
+```swift
+public struct Hash: CustomStringConvertible, Equatable, Hashable
+```
 
-<p>The Data of the Hash.</p>
+> Hash struct used for VersionControlInfo.
 
-### init(string:)
-<pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+## Properties
+### `data`
 
-<p>Creates a Hash object based on a string.</p>
+```swift
+public let data: Data
+```
 
-### description
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+> The Data of the Hash.
 
-<p>Formats the data into a hex <strong>String</strong>.</p>
+### `description`
 
-### hashValue
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hashValue</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+```swift
+public var description: String
+```
 
-<p>Hash value for equality.</p>
+> Formats the data into a hex **String**.
 
-### ==(_:_:)
-<pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">Hash</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">Hash</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+## Methods
+### `init(string:)`
 
-<p>Equality comparison of Hash objects.</p>
+```swift
+public init?(string: String)
+```
 
+> Creates a Hash object based on a string.
+
+### `hash(into:)`
+
+```swift
+public func hash(into hasher: inout Hasher)
+```
+
+> Hash value for equality.
+
+### `==(_:_:)`
+
+```swift
+public static func == (lhs: Hash, rhs: Hash) -> Bool
+```
+
+> Equality comparison of Hash objects.

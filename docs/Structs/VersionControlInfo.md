@@ -1,91 +1,148 @@
-# VersionControlInfo
-<pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">VersionControlInfo</span></code></pre>
+**STRUCT**
 
-<p>The Current-Revision Metadata from the Version Control Repository.</p>
+# `VersionControlInfo`
 
-### type
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/VersionControlType.md">VersionControlType</a></span></code></pre>
+```swift
+public struct VersionControlInfo
+```
 
-<p>The VersionControlType.</p>
+> The Current-Revision Metadata from the Version Control Repository.
 
-### baseName
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">baseName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+## Properties
+### `type`
 
-<p>The basename of the directory root.</p>
+```swift
+public let type: VersionControlType
+```
 
-### uuid
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">uuid</span><span class="p">:</span> <span class="kt"><a href="../Structs/Hash.md">Hash</a></span><span class="p">?</span></code></pre>
+> The VersionControlType.
 
-<p>A universally unique identifier, generated from the root commit in git and hg;
-for svn it uses the supplied UUID.</p>
+### `baseName`
 
-### number
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">number</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+```swift
+public let baseName: String
+```
 
-<p>A count of revisions between the current one and the initial one; useful for reporting build numbers.</p>
+> The basename of the directory root.
 
-### date
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">date</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span></code></pre>
+### `uuid`
 
-<p>The date of the most recent commit.</p>
+```swift
+public let uuid: Hash?
+```
 
-### branch
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">branch</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+> A universally unique identifier, generated from the root commit in git and hg;
+> for svn it uses the supplied UUID.
 
-<p>The name of the branch of the commit graph that was selected when autoversion was run.</p>
+### `number`
 
-### tag
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tag</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+```swift
+public let number: Int
+```
 
-<p>The name of the most recent tag ancestral to the current commit.</p>
+> A count of revisions between the current one and the initial one; useful for reporting build numbers.
 
-### tick
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tick</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+### `date`
 
-<p>A count of commits since most recent tag ancestral to the current commit.</p>
+```swift
+public let date: Date?
+```
 
-### extra
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">extra</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+> The date of the most recent commit.
 
-<p>A symbol set aside specifically to be set by the user through the environment or via scripts.</p>
+### `branch`
 
-### hash
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">hash</span><span class="p">:</span> <span class="kt"><a href="../Structs/Hash.md">Hash</a></span></code></pre>
+```swift
+public let branch: String
+```
 
-<p>A full unique identifier for the current revision.</p>
+> The name of the branch of the commit graph that was selected when autoversion was run.
 
-### isWorkingCopyModified
-<pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">isWorkingCopyModified</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+### `tag`
 
-<p>If the current working directory has been modified.</p>
+```swift
+public let tag: String?
+```
 
-### init(type:baseName:uuid:number:date:branch:tag:tick:extra:hash:isWorkingCopyModified:)
-<pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-              <span class="nv">baseName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-              <span class="nv">uuid</span><span class="p">:</span> <span class="kt"><a href="../Structs/Hash.md">Hash</a></span><span class="p">?,</span>
-              <span class="nv">number</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
-              <span class="nv">date</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-              <span class="nv">branch</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-              <span class="nv">tag</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
-              <span class="nv">tick</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span>
-              <span class="nv">extra</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
-              <span class="nv">hash</span><span class="p">:</span> <span class="kt"><a href="../Structs/Hash.md">Hash</a></span><span class="p">,</span>
+> The name of the most recent tag ancestral to the current commit.
 
-              <span class="nv">isWorkingCopyModified</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+### `tick`
 
-<p>Creates a VersionControlInfo object.</p>
+```swift
+public let tick: Int?
+```
 
-### init(basedOn:tick:extra:)
-<pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">basedOn</span> <span class="nv">parent</span><span class="p">:</span> <span class="kt">VersionControlInfo</span><span class="p">,</span> <span class="nv">tick</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">extra</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+> A count of commits since most recent tag ancestral to the current commit.
 
-<p>Creates a VersionControlInfo object based a previous one with an updated tick and extra info.</p>
+### `extra`
 
-### init(jsonResource:fromBundle:inDirectory:)
-<pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span>
-    <span class="nv">jsonResource</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-    <span class="n">fromBundle</span> <span class="nv">bundle</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ResourceContainerProtocol.md">ResourceContainerProtocol</a></span><span class="p">,</span>
-    <span class="n">inDirectory</span> <span class="nv">directory</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
-  <span class="p">)</span></code></pre>
+```swift
+public let extra: String?
+```
 
-<p>Tries to parse the json resource from the bundle based on the directory.</p>
+> A symbol set aside specifically to be set by the user through the environment or via scripts.
 
+### `hash`
+
+```swift
+public let hash: Hash
+```
+
+> A full unique identifier for the current revision.
+
+### `isWorkingCopyModified`
+
+```swift
+public let isWorkingCopyModified: Bool
+```
+
+> If the current working directory has been modified.
+
+## Methods
+### `init(type:baseName:uuid:number:date:branch:tag:tick:extra:hash:isWorkingCopyModified:)`
+
+```swift
+public init(type: String,
+            baseName: String,
+            uuid: Hash?,
+            number: Int,
+            date: String,
+            branch: String,
+            tag: String?,
+            tick: Int?,
+            extra: String?,
+            hash: Hash,
+            isWorkingCopyModified: Bool)
+```
+
+> Creates a VersionControlInfo object.
+
+### `init(basedOn:tick:extra:)`
+
+```swift
+public init(basedOn parent: VersionControlInfo, tick: Int, extra: String?)
+```
+
+> Creates a VersionControlInfo object based a previous one with an updated tick and extra info.
+
+### `init(jsonResource:fromBundle:inDirectory:)`
+
+```swift
+public init?(
+  jsonResource: String,
+  fromBundle bundle: ResourceContainerProtocol,
+  inDirectory directory: String? = nil
+)
+```
+
+> Tries to parse the json resource from the bundle based on the directory.
+
+### `init(fromUrl:)`
+
+```swift
+public init?(
+  fromUrl url: URL
+)
+```
+
+> Tries to parse the json resource from the bundle based on the directory.

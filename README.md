@@ -4,9 +4,13 @@
 
 [![Twitter](https://img.shields.io/badge/Twitter-@BrightDigit-blue.svg?style=flat)](http://twitter.com/brightdigit)
 [![Codecov](https://img.shields.io/codecov/c/github/brightdigit/swiftver.svg)](https://codecov.io/gh/brightdigit/swiftver)
+![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/brightdigit/SwiftVer)
+[![codebeat badge](https://codebeat.co/badges/f8cf9120-d08a-4e13-b4cb-198e0dfd02e3)](https://codebeat.co/projects/github-com-brightdigit-swiftver-master)
+![Swift](https://github.com/brightdigit/SwiftVer/workflows/Swift/badge.svg)
+![GitHub issues](https://img.shields.io/github/issues/brightdigit/SwiftVer)
+![GitHub](https://img.shields.io/github/license/brightdigit/SwiftVer)
 [![Travis](https://img.shields.io/travis/brightdigit/swiftver.svg)](https://travis-ci.org/brightdigit/swiftver)
-[![Beerpay](https://img.shields.io/beerpay/brightdigit/swiftver.svg?maxAge=2592000)](https://beerpay.io/brightdigit/swiftver)
-[![Gitter](https://img.shields.io/gitter/room/swiftver-framework/Lobby.js.svg?maxAge=2592000)](https://gitter.im/swiftver-framework/Lobby)
+[![Beerpay](https://img.shields.io/beerpay/brightdigit/SwiftVer.svg?maxAge=2592000)](https://beerpay.io/brightdigit/SwiftVer)
 [![Analytics](https://ga-beacon.appspot.com/UA-33667276-5/brightdigit/swiftver?flat&useReferer)](https://github.com/igrigorik/ga-beacon)
 [![Version](https://img.shields.io/cocoapods/v/SwiftVer.svg?style=flat)](https://cocoapods.org/pods/SwiftVer)
 [![License](https://img.shields.io/cocoapods/l/SwiftVer.svg?style=flat)](https://cocoapods.org/pods/SwiftVer)
@@ -31,8 +35,7 @@ Manage versioning in MacOS, iOS, watchOS, and tvOS projects by parsing your bund
   - [Parsing the Version from a Bundle](#parsing-the-version-from-a-bundle)
   - [Integrating Version Control Info with Autorevision](#integrating-version-control-info-with-autorevision)
   - [Using a StageBuildDictionary to parse Stage](#using-a-stagebuilddictionary-to-parse-stage)
-- [Documentation](#documentation)
-  - [Categories](#categories)
+- [Documentation](/docs/README.md)
 - [Author](#author)
 - [License](#license)
 
@@ -162,28 +165,8 @@ public enum Stage {
 ```
 
 ## Documentation
-### Categories
-* [Enums](docs/Enums.md)
-* [Extensions](docs/Extensions.md)
-* [Protocols](docs/Protocols.md)
-* [Structs](docs/Structs.md)
-* [Typealiases](docs/Typealiases.md)
-### Types
-#### Enums
-* [Stage](docs/Enums/Stage.md)
-* [VersionControlType](docs/Enums/VersionControlType.md)
-#### Extensions
-* [Data](docs/Extensions/Data.md)
-* [DateFormatter](docs/Extensions/DateFormatter.md)
-#### Protocols
-* [InfoDictionaryContainerProtocol](docs/Protocols/InfoDictionaryContainerProtocol.md)
-* [ResourceContainerProtocol](docs/Protocols/ResourceContainerProtocol.md)
-* [StageBuildDictionaryProtocol](docs/Protocols/StageBuildDictionaryProtocol.md)
-#### Structs
-* [Hash](docs/Structs/Hash.md)
-* [SemVer](docs/Structs/SemVer.md)
-* [Version](docs/Structs/Version.md)
-* [VersionControlInfo](docs/Structs/VersionControlInfo.md)
+
+[Documentation Here](/docs/README.md)
 
 ## Author
 

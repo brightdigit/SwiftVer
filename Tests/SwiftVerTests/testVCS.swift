@@ -1,3 +1,4 @@
+// swiftlint:disable identifier_name
 let VCS_TYPE = "git"
 let VCS_BASENAME = "swiftverTest"
 let VCS_UUID: String? = "1046fb20999149ca0d7a6952c0c0c4db9988087a"

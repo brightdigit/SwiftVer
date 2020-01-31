@@ -1,0 +1,48 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+use_frameworks!
+
+target 'iOS Example' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for iOS Example
+  pod 'SwiftVer', :path => '../'
+
+end
+
+target 'macOS Example' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for macOS Example
+  pod 'SwiftVer', :path => '../'
+
+end
+
+target 'tvOS Example' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for tvOS Example
+  pod 'SwiftVer', :path => '../'
+
+end
+
+target 'watchOS Example' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for watchOS Example
+  pod 'SwiftVer', :path => '../'
+
+end
+
+target 'watchOS Example Extension' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for watchOS Example Extension
+  pod 'SwiftVer', :path => '../'
+
+end

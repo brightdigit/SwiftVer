@@ -1,0 +1,16 @@
+PODS:
+  - SwiftVer (2.0.6)
+
+DEPENDENCIES:
+  - SwiftVer (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftVer:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SwiftVer: bf87a159a5e363059f350f4cc98910ce43184b26
+
+PODFILE CHECKSUM: d67cf5d84b100ebd0525d590cd50799ed32d3b7e
+
+COCOAPODS: 1.8.4

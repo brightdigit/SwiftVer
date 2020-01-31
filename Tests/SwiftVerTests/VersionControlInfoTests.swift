@@ -56,9 +56,17 @@ class VersionControlInfoTests: XCTestCase {
   }
 
   func testInitJsonResource() {
-    let versionControlInfoJson =
-      VersionControlInfo(jsonResource: "autorevision",
-                         fromBundle: Bundle(for: VersionControlInfoTests.self))!
+    let url = Bundle(for: VersionControlInfoTests.self).url(
+      forResource: "autorevision",
+      withExtension: "json"
+    ) ?? URL(fileURLWithPath: #file).deletingLastPathComponent().appendingPathComponent("autorevision").appendingPathExtension("json")
+
+    let versionControlInfoJsonOpt = VersionControlInfo(fromUrl: url)
+
+    guard let versionControlInfoJson = versionControlInfoJsonOpt else {
+      XCTFail("Couldn't find autocorrect file")
+      return
+    }
     XCTAssertEqual(versionControlInfoJson.type.description.caseInsensitiveCompare("git"), .orderedSame)
     XCTAssertEqual(versionControlInfoJson.baseName, "swiftvertests")
     XCTAssertEqual(versionControlInfoJson.uuid?.description, "dba359e6621e2e2243d8eb2d42b6c07860976fd9")

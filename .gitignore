@@ -80,7 +80,8 @@ DerivedData
 # you should judge for yourself, the pros and cons are mentioned at:
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
-# Pods/
+Example/Pods/
+Example/*.xcworkspace
 
 # Carthage
 #
@@ -100,9 +101,11 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
-__PROJECT_NAME__.framework.zip
+SwiftVer.framework.zip
 
 VCS.swift
 
 Products
 .tmp
+.swiftpm
+*.xcodeproj
