@@ -2,6 +2,7 @@ jobs:
   include:
     - os: linux
       dist: bionic
+      sudo: required
     - os: osx
       osx_image: xcode11.3
 env:
