@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $TRAVIS_OS_NAME = 'osx' ]; then
+if [[ $TRAVIS_OS_NAME = 'osx' ]]; then
   cd ..
   pod lib lint
   swiftformat --lint . && swiftlint
@@ -15,4 +15,5 @@ if [ $TRAVIS_OS_NAME = 'osx' ]; then
   xcodebuild -workspace Example/Examples.xcworkspace -scheme "macOS Example"  ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO  CODE_SIGNING_ALLOWED=NO
 else
   # What to do in Ubunutu
+  echo "test"
 fi
