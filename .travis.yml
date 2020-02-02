@@ -1,5 +1,7 @@
 language: objective-c
-os: osx
+os:
+  - linux
+  - osx
 osx_image: xcode11.3
 env:
   global:
