@@ -5,30 +5,15 @@ env:
   global:
     - FRAMEWORK_NAME=SwiftVer
 before_install:
-  - brew update
-  - brew bundle
+  - Scripts/before_install.sh
 before_script:
   # bootstrap the dependencies for the project
   # you can remove if you don't have dependencies
-  - swift package generate-xcodeproj
+  - ./Scripts/before_script.sh
 before_deploy:
-  - carthage build --no-skip-current
-  - carthage archive $FRAMEWORK_NAME
+  - ./Scripts/before_deploy.sh
 script:
-  - pod lib lint
-  - swiftformat --lint . && swiftlint
-  - swift test  --enable-code-coverage
-  - xcrun llvm-cov export -format="lcov" .build/debug/swiftverPackageTests.xctest/Contents/MacOS/swiftverPackageTests
-    -instr-profile .build/debug/codecov/default.profdata > info.lcov
-  - bash <(curl https://codecov.io/bash) -F travis-ci
-  - pod install --project-directory=Example
-  - ./Example/Shared/autorevision/autorevision.sh -t swift > Example/Source/VCS.swift
-  - xcodebuild -workspace Example/Examples.xcworkspace -scheme "iOS Example"  ONLY_ACTIVE_ARCH=NO
-    CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO  CODE_SIGNING_ALLOWED=NO
-  - xcodebuild -workspace Example/Examples.xcworkspace -scheme "tvOS Example"  ONLY_ACTIVE_ARCH=NO
-    CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO  CODE_SIGNING_ALLOWED=NO
-  - xcodebuild -workspace Example/Examples.xcworkspace -scheme "macOS Example"  ONLY_ACTIVE_ARCH=NO
-    CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO  CODE_SIGNING_ALLOWED=NO
+  - ./Scripts/script.sh
 deploy:
   provider: releases
   api_key:
