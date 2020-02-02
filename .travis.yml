@@ -1,4 +1,3 @@
-language: objective-c
 jobs:
   include:
     - os: linux
