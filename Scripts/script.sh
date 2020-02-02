@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ $TRAVIS_OS_NAME = 'osx' ]]; then
-  cd ..
+  
   pod lib lint
   swiftformat --lint . && swiftlint
   swift test  --enable-code-coverage
