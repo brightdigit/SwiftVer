@@ -18,6 +18,6 @@ else
   swift build 
   swift test --enable-code-coverage
   llvm-cov export -format="lcov" .build/x86_64-unknown-linux/debug/SwiftVerPackageTests.xctest -instr-profile .build/debug/codecov/default.profdata > info.lcov
-  llvm-cov export -format="lcov" .build/x86_64-unknown-linux/debug/codecov/SwiftVer.json -instr-profile .build/debug/codecov/default.profdata > info.lcov
-  bash <(curl https://codecov.io/bash) -F travis -F bionic
+  #llvm-cov export -format="lcov" .build/x86_64-unknown-linux/debug/codecov/SwiftVer.json -instr-profile .build/debug/codecov/default.profdata > info.lcov
+  bash <(curl https://codecov.io/bash) -F travis-ci -F bionic
 fi
