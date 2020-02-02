@@ -18,7 +18,7 @@ class HashTests: XCTestCase {
     super.tearDown()
   }
 
-  func testHashValid() {
+  public func testHashValid() {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     for pair in hashStrings {
