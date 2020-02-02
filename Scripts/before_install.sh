@@ -17,5 +17,5 @@ else
   gpg --verify swift-5.1.3-RELEASE-ubuntu18.04.tar.gz.sig
   tar xzf swift-5.1.3-RELEASE-ubuntu18.04.tar.gz
   ls ${PWD}/swift-5.1.3-RELEASE-ubuntu18.04/usr/bin
-  export PATH="${PWD}/swift-5.1.3-RELEASE-ubuntu18.04/usr/bin:${PATH}"
+  export PATH="${PWD}/swift-5.1.3-RELEASE-ubuntu18.04/usr/bin:$PATH"
 fi
