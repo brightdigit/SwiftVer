@@ -16,5 +16,5 @@ else
   wget https://swift.org/builds/swift-5.1.3-release/ubuntu1804/swift-5.1.3-RELEASE/swift-5.1.3-RELEASE-ubuntu18.04.tar.gz
   gpg --verify swift-5.1.3-RELEASE-ubuntu18.04.tar.gz.sig
   tar xzf swift-5.1.3-RELEASE-ubuntu18.04.tar.gz
-  export PATH=${PWD}/usr/bin:${PATH}"
+  export PATH="${PWD}/usr/bin:${PATH}"
 fi
