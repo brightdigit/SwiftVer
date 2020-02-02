@@ -1,40 +1,39 @@
 language: objective-c
-jobs:
-  - os: osx
-  - osx_image: xcode11.3
-  - env:
-    global:
-      - FRAMEWORK_NAME=SwiftVer
-  - before_install:
-    - brew update
-    - brew bundle
-  - before_script:
-    # bootstrap the dependencies for the project
-    # you can remove if you don't have dependencies
-    - swift package generate-xcodeproj
-  - before_deploy:
-    - carthage build --no-skip-current
-    - carthage archive $FRAMEWORK_NAME
-  - script:
-    - pod lib lint
-    - swiftformat --lint . && swiftlint
-    - swift test  --enable-code-coverage
-    - xcrun llvm-cov export -format="lcov" .build/debug/swiftverPackageTests.xctest/Contents/MacOS/swiftverPackageTests
-      -instr-profile .build/debug/codecov/default.profdata > info.lcov
-    - bash <(curl https://codecov.io/bash) -F travis-ci
-    - pod install --project-directory=Example
-    - ./Example/Shared/autorevision/autorevision.sh -t swift > Example/Source/VCS.swift
-    - xcodebuild -workspace Example/Examples.xcworkspace -scheme "iOS Example"  ONLY_ACTIVE_ARCH=NO
-      CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO  CODE_SIGNING_ALLOWED=NO
-    - xcodebuild -workspace Example/Examples.xcworkspace -scheme "tvOS Example"  ONLY_ACTIVE_ARCH=NO
-      CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO  CODE_SIGNING_ALLOWED=NO
-    - xcodebuild -workspace Example/Examples.xcworkspace -scheme "macOS Example"  ONLY_ACTIVE_ARCH=NO
-      CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO  CODE_SIGNING_ALLOWED=NO
-  - deploy:
-      provider: releases
-      api_key:
-        secure: RivF5JkljkIJUlSBsergS78PuyZeZIYrLP1lvnFqmSqQP6Uiop76K8+LEc0XXUeB0M+YP/gR59E689SQLs6NOKt9Xwvw59wkiXib+29bvsY/p7wwKeDfPfutWXUFitI05la8sErZGm77gyRPu6WZcgV+DsRup/xE0ozKtWkHwNjZsnY7cyng7gDsTO274omKkIm3sDXm51vPXnzolIdZGOiPBg/6wzLo/caUgv28yhAWsAq5RmE0U39pV46kPmPfiz+8xIYP5xhMyfaKP1FYT2At5LBDnEInEgSarlUjtqEtKco8xlCa5wPfE8m5ABLPeK5Pqqfu2FW61HBSTAjSQ+rl/iDJQBXjfpR3AdIjmO4lyLPdVtCe7GuBGMdEOHR3Vge25TaCW9UW29frdIt6OhUaiHwSuMUsIMvjM5G7TPExm1Y0csrDa38wlVd1qy5DibrzC3pXhvmWsRK/GbFVtmz0PDWc5PFxf9MzrkZyF2pMQ2e/jAYKo15BhlkSYBNP1hJbCERsS47vfJjIGet+FL0pjZj8QxVjxSe6U41Pz55KYhgsWZnNYWh0Lv7cH+KM7nDkygoBruF9DmapnNmNnyKP1urvbsr+CoBJFTKNZXOpXdhg/B3Fk2aTetBKp1M/VdhBoIEPi8ZVRHG1Ar/+knsqniZOrTVwxL60H5o7MDc=
-      file: "$FRAMEWORK_NAME.framework.zip"
-      on:
-        repo: brightdigit/SwiftVer
-        tags: true
+os: osx
+osx_image: xcode11.3
+env:
+  global:
+    - FRAMEWORK_NAME=SwiftVer
+before_install:
+  - brew update
+  - brew bundle
+before_script:
+  # bootstrap the dependencies for the project
+  # you can remove if you don't have dependencies
+  - swift package generate-xcodeproj
+before_deploy:
+  - carthage build --no-skip-current
+  - carthage archive $FRAMEWORK_NAME
+script:
+  - pod lib lint
+  - swiftformat --lint . && swiftlint
+  - swift test  --enable-code-coverage
+  - xcrun llvm-cov export -format="lcov" .build/debug/swiftverPackageTests.xctest/Contents/MacOS/swiftverPackageTests
+    -instr-profile .build/debug/codecov/default.profdata > info.lcov
+  - bash <(curl https://codecov.io/bash) -F travis-ci
+  - pod install --project-directory=Example
+  - ./Example/Shared/autorevision/autorevision.sh -t swift > Example/Source/VCS.swift
+  - xcodebuild -workspace Example/Examples.xcworkspace -scheme "iOS Example"  ONLY_ACTIVE_ARCH=NO
+    CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO  CODE_SIGNING_ALLOWED=NO
+  - xcodebuild -workspace Example/Examples.xcworkspace -scheme "tvOS Example"  ONLY_ACTIVE_ARCH=NO
+    CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO  CODE_SIGNING_ALLOWED=NO
+  - xcodebuild -workspace Example/Examples.xcworkspace -scheme "macOS Example"  ONLY_ACTIVE_ARCH=NO
+    CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO  CODE_SIGNING_ALLOWED=NO
+deploy:
+  provider: releases
+  api_key:
+    secure: RivF5JkljkIJUlSBsergS78PuyZeZIYrLP1lvnFqmSqQP6Uiop76K8+LEc0XXUeB0M+YP/gR59E689SQLs6NOKt9Xwvw59wkiXib+29bvsY/p7wwKeDfPfutWXUFitI05la8sErZGm77gyRPu6WZcgV+DsRup/xE0ozKtWkHwNjZsnY7cyng7gDsTO274omKkIm3sDXm51vPXnzolIdZGOiPBg/6wzLo/caUgv28yhAWsAq5RmE0U39pV46kPmPfiz+8xIYP5xhMyfaKP1FYT2At5LBDnEInEgSarlUjtqEtKco8xlCa5wPfE8m5ABLPeK5Pqqfu2FW61HBSTAjSQ+rl/iDJQBXjfpR3AdIjmO4lyLPdVtCe7GuBGMdEOHR3Vge25TaCW9UW29frdIt6OhUaiHwSuMUsIMvjM5G7TPExm1Y0csrDa38wlVd1qy5DibrzC3pXhvmWsRK/GbFVtmz0PDWc5PFxf9MzrkZyF2pMQ2e/jAYKo15BhlkSYBNP1hJbCERsS47vfJjIGet+FL0pjZj8QxVjxSe6U41Pz55KYhgsWZnNYWh0Lv7cH+KM7nDkygoBruF9DmapnNmNnyKP1urvbsr+CoBJFTKNZXOpXdhg/B3Fk2aTetBKp1M/VdhBoIEPi8ZVRHG1Ar/+knsqniZOrTVwxL60H5o7MDc=
+  file: "$FRAMEWORK_NAME.framework.zip"
+  on:
+    repo: brightdigit/SwiftVer
+    tags: true
