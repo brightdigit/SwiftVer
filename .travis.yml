@@ -18,11 +18,11 @@ before_deploy:
   - ./Scripts/before_deploy.sh
 script:
   - ./Scripts/script.sh
-deploy:
-  provider: releases
-  api_key:
-    secure: RivF5JkljkIJUlSBsergS78PuyZeZIYrLP1lvnFqmSqQP6Uiop76K8+LEc0XXUeB0M+YP/gR59E689SQLs6NOKt9Xwvw59wkiXib+29bvsY/p7wwKeDfPfutWXUFitI05la8sErZGm77gyRPu6WZcgV+DsRup/xE0ozKtWkHwNjZsnY7cyng7gDsTO274omKkIm3sDXm51vPXnzolIdZGOiPBg/6wzLo/caUgv28yhAWsAq5RmE0U39pV46kPmPfiz+8xIYP5xhMyfaKP1FYT2At5LBDnEInEgSarlUjtqEtKco8xlCa5wPfE8m5ABLPeK5Pqqfu2FW61HBSTAjSQ+rl/iDJQBXjfpR3AdIjmO4lyLPdVtCe7GuBGMdEOHR3Vge25TaCW9UW29frdIt6OhUaiHwSuMUsIMvjM5G7TPExm1Y0csrDa38wlVd1qy5DibrzC3pXhvmWsRK/GbFVtmz0PDWc5PFxf9MzrkZyF2pMQ2e/jAYKo15BhlkSYBNP1hJbCERsS47vfJjIGet+FL0pjZj8QxVjxSe6U41Pz55KYhgsWZnNYWh0Lv7cH+KM7nDkygoBruF9DmapnNmNnyKP1urvbsr+CoBJFTKNZXOpXdhg/B3Fk2aTetBKp1M/VdhBoIEPi8ZVRHG1Ar/+knsqniZOrTVwxL60H5o7MDc=
-  file: "$FRAMEWORK_NAME.framework.zip"
-  on:
-    repo: brightdigit/SwiftVer
-    tags: true
+# deploy:
+#   provider: releases
+#   api_key:
+#     secure: RivF5JkljkIJUlSBsergS78PuyZeZIYrLP1lvnFqmSqQP6Uiop76K8+LEc0XXUeB0M+YP/gR59E689SQLs6NOKt9Xwvw59wkiXib+29bvsY/p7wwKeDfPfutWXUFitI05la8sErZGm77gyRPu6WZcgV+DsRup/xE0ozKtWkHwNjZsnY7cyng7gDsTO274omKkIm3sDXm51vPXnzolIdZGOiPBg/6wzLo/caUgv28yhAWsAq5RmE0U39pV46kPmPfiz+8xIYP5xhMyfaKP1FYT2At5LBDnEInEgSarlUjtqEtKco8xlCa5wPfE8m5ABLPeK5Pqqfu2FW61HBSTAjSQ+rl/iDJQBXjfpR3AdIjmO4lyLPdVtCe7GuBGMdEOHR3Vge25TaCW9UW29frdIt6OhUaiHwSuMUsIMvjM5G7TPExm1Y0csrDa38wlVd1qy5DibrzC3pXhvmWsRK/GbFVtmz0PDWc5PFxf9MzrkZyF2pMQ2e/jAYKo15BhlkSYBNP1hJbCERsS47vfJjIGet+FL0pjZj8QxVjxSe6U41Pz55KYhgsWZnNYWh0Lv7cH+KM7nDkygoBruF9DmapnNmNnyKP1urvbsr+CoBJFTKNZXOpXdhg/B3Fk2aTetBKp1M/VdhBoIEPi8ZVRHG1Ar/+knsqniZOrTVwxL60H5o7MDc=
+#   file: "$FRAMEWORK_NAME.framework.zip"
+#   on:
+#     repo: brightdigit/SwiftVer
+#     tags: true
