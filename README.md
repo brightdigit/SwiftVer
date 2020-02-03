@@ -24,6 +24,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/SwiftVer.svg?style=flat&label=CocoaPods)](https://cocoapods.org/pods/SwiftVer)
 [![Cocoapods doc percentage](https://img.shields.io/cocoapods/metrics/doc-percent/SwiftVer)](https://cocoapods.org/pods/SwiftVer)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
 
 Manage versioning in MacOS, iOS, watchOS, and tvOS projects by parsing your bundle and revision metadata from your VCS repository.
 
