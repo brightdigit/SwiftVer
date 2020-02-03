@@ -15,6 +15,9 @@
 [![Codecov](https://img.shields.io/codecov/c/github/brightdigit/swiftver.svg)](https://codecov.io/gh/brightdigit/swiftver)
 ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/BrightDigit/swiftver?label=codefactor)
 [![codebeat badge](https://codebeat.co/badges/f8cf9120-d08a-4e13-b4cb-198e0dfd02e3)](https://codebeat.co/projects/github-com-brightdigit-swiftver-master)
+![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/brightdigit/SwiftVer)
+![Code Climate technical debt](https://img.shields.io/codeclimate/tech-debt/brightdigit/SwiftVer?label=debt)
+![Code Climate issues](https://img.shields.io/codeclimate/issues/brightdigit/SwiftVer)
 
 [![Version](https://img.shields.io/cocoapods/v/SwiftVer.svg?style=flat)](https://cocoapods.org/pods/SwiftVer)
 [![License](https://img.shields.io/cocoapods/l/SwiftVer.svg?style=flat&label=CocoaPods)](https://cocoapods.org/pods/SwiftVer)
