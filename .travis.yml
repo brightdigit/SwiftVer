@@ -9,9 +9,7 @@ env:
   global:
     - FRAMEWORK_NAME=SwiftVer
 before_install:
-  - Scripts/before_install.sh
-before_script:
-  - ./Scripts/before_script.sh
+  - ./Scripts/before_install.sh
 script:
   - ./Scripts/script.sh
 # deploy:
