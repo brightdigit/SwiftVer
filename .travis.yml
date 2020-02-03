@@ -11,11 +11,7 @@ env:
 before_install:
   - Scripts/before_install.sh
 before_script:
-  # bootstrap the dependencies for the project
-  # you can remove if you don't have dependencies
   - ./Scripts/before_script.sh
-before_deploy:
-  - ./Scripts/before_deploy.sh
 script:
   - ./Scripts/script.sh
 # deploy:
