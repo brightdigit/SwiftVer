@@ -2,9 +2,10 @@
 
 # SwiftVer
 
+[![SwiftPM](https://img.shields.io/badge/SPM-Linux%20%7C%20iOS%20%7C%20macOS%20%7C%20watchOS%20%7C%20tvOS-success?logo=swift)](https://swift.org)
 [![Twitter](https://img.shields.io/badge/Twitter-@BrightDigit-blue.svg?style=flat)](http://twitter.com/brightdigit)
 [![Codecov](https://img.shields.io/codecov/c/github/brightdigit/swiftver.svg)](https://codecov.io/gh/brightdigit/swiftver)
-![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/brightdigit/SwiftVer)
+![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/BrightDigit/swiftver?logo=codefactor)
 [![codebeat badge](https://codebeat.co/badges/f8cf9120-d08a-4e13-b4cb-198e0dfd02e3)](https://codebeat.co/projects/github-com-brightdigit-swiftver-master)
 ![macOS](https://github.com/brightdigit/SwiftVer/workflows/macOS/badge.svg)
 ![ubuntu](https://github.com/brightdigit/SwiftVer/workflows/ubuntu/badge.svg)
@@ -15,7 +16,8 @@
 [![Analytics](https://ga-beacon.appspot.com/UA-33667276-5/brightdigit/swiftver?flat&useReferer)](https://github.com/igrigorik/ga-beacon)
 [![Version](https://img.shields.io/cocoapods/v/SwiftVer.svg?style=flat)](https://cocoapods.org/pods/SwiftVer)
 [![License](https://img.shields.io/cocoapods/l/SwiftVer.svg?style=flat)](https://cocoapods.org/pods/SwiftVer)
-[![Platform](https://img.shields.io/cocoapods/p/SwiftVer.svg?style=flat)](https://cocoapods.org/pods/SwiftVer)
+[![Platform](https://img.shields.io/cocoapods/p/SwiftVer.svg?style=flat&label=CocoaPods)](https://cocoapods.org/pods/SwiftVer)
+[![Cocoapods doc percentage](https://img.shields.io/cocoapods/metrics/doc-percent/SwiftVer)](https://cocoapods.org/pods/SwiftVer)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 Manage versioning in MacOS, iOS, watchOS, and tvOS projects by parsing your bundle and revision metadata from your VCS repository.
