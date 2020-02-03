@@ -1,4 +1,4 @@
-name: Swift
+name: macOS
 
 on: [push]
 
@@ -13,7 +13,7 @@ jobs:
     - name: Prepare Build
       run: brew bundle
     - name: Build
-      run: swift build -v
+      run: swift build
     - name: Lint
       run: swiftformat --lint . && swiftlint
     - name: Run tests

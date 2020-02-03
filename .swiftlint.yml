@@ -7,3 +7,5 @@ type_body_length: 300
 identifier_name:
   excluded: # excluded via string array
     - id
+excluded:
+  - Tests/*/XCTestManifests.swift
