@@ -4,10 +4,11 @@
 version: 2.1
 
 jobs:
-  build:
+  filters:  # using regex filters requires the entire branch to match
     branches:
-      only:
+      only:  # only branches matching the below regex filters will run
         - feature/linux-support
+  build:
     macos:
       xcode: 11.3.1 # Specify the Xcode version to use
 
